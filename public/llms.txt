@@ -1,0 +1,22 @@
+# Ashmit Bohora
+
+> Statistics & Data Science student at UT Austin (Class of 2029, GPA 3.7) who ships real products: a live guitar-learning app, 28 client websites built solo, and the analytics pipeline behind a 6K-follower food brand. Seeking Summer 2027 internships in data science, software engineering, or AI.
+
+## About
+
+- Location: Austin, TX
+- Email: ashmitbohora@utexas.edu
+- GitHub: https://github.com/ashmitbohora
+- LinkedIn: https://www.linkedin.com/in/ashmitbohora
+- Honors: QuestBridge Finalist (2024), UT Austin Impact Scholar ($48,000 merit award)
+
+## Projects
+
+- [PickMyPath](https://pickmypath.app): Live guitar-learning app — chord-aligned lyrics, 5-level practice tracking, recommendation engine. Next.js 16, React 19, TypeScript (327 files), Supabase/PostgreSQL, Python data pipeline. 73-song structured dataset.
+- [Webspansion](https://getwebspansion.org): Web studio founded at 17 — 28 client websites built solo for local businesses and nonprofits, with Python automation pipelines and an Apps Script CRM.
+- BohoBites Analytics: Python/Shiny dashboard processing real TikTok creator data — rolling 30–365 day KPI windows, posting-time models — for a 6K-follower food brand.
+- BoHub: Architecture-complete AI personal OS — Claude API with tiered model routing, SQLite full-text search, prompt-injection defense, 950+ lines of architecture docs.
+
+## Skills
+
+Python, Pandas, TypeScript, React, Next.js, SQL (PostgreSQL, SQLite), R (coursework), Plotly, Shiny, FastAPI, Remotion, Claude API / prompt engineering, Playwright, Git, Vercel.

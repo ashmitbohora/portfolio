@@ -1,0 +1,80 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Ashmit Bohora',
+  url: 'https://ashmitbohora.com',
+  email: 'mailto:ashmitbohora@utexas.edu',
+  jobTitle: 'Statistics & Data Science Student',
+  affiliation: {
+    '@type': 'CollegeOrUniversity',
+    name: 'The University of Texas at Austin',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Austin',
+    addressRegion: 'TX',
+    addressCountry: 'US',
+  },
+  sameAs: [
+    'https://github.com/ashmitbohora',
+    'https://www.linkedin.com/in/ashmitbohora',
+  ],
+  knowsAbout: [
+    'Data Science',
+    'Software Engineering',
+    'Python',
+    'TypeScript',
+    'React',
+    'Next.js',
+    'SQL',
+    'Data Analytics',
+    'AI-assisted Development',
+  ],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="Ashmit Bohora" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caprasimo&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+    <script is:inline>document.documentElement.classList.add('js');</script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
