@@ -3,9 +3,10 @@ import Base from '../layouts/Base.astro';
 ---
 
 <Base
-  title="Ashmit Bohora — Full-stack. Literally."
-  description="Ashmit Bohora is a UT Austin Statistics & Data Science student who ships real products: a live guitar-learning app, 28 client websites, and the analytics pipeline behind a 6K-follower food brand. Seeking Summer 2027 internships in data science, software engineering, or AI."
+  title="Ashmit Bohora — Full-stack. Literally. | UT Austin Data Science"
+  description="Ashmit Bohora: UT Austin Statistics & Data Science student seeking Summer 2027 data science / SWE / AI internships. 28 client sites shipped, one live app."
 >
+  <a class="skip-link" href="#main">Skip to content</a>
   <a class="skip-link" href="#numbers">Skip to the facts</a>
 
   <header class="site">
@@ -17,14 +18,15 @@ import Base from '../layouts/Base.astro';
         <a href="#sides">Sides</a>
         <a href="#nutrition">Skills</a>
         <a href="https://github.com/ashmitbohora">GitHub</a>
+        <a href="https://www.linkedin.com/in/ashmitbohora">LinkedIn</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
     <div class="wrap hero">
-      <p class="kicker">Austin, TX · UT Austin <b>Statistics &amp; Data Science</b> · Class of 2029</p>
-      <h1>Full-stack. <span class="lit">Literally.</span></h1>
+      <p class="kicker"><b>Ashmit Bohora</b> · Austin, TX · UT Austin <b>Statistics &amp; Data Science</b> · Class of 2029</p>
+      <h1><span class="sr-only">Ashmit Bohora — </span>Full-stack. <span class="lit">Literally.</span></h1>
       <p class="dek">
         I'm <b>Ashmit Bohora</b> — I ship real products: a live guitar-learning app,
         28 client websites built solo, and the analytics pipeline behind a 6K-follower
@@ -33,7 +35,7 @@ import Base from '../layouts/Base.astro';
       </p>
       <div class="hero-numbers">
         <div class="hn"><div class="n">28</div><div class="l">client sites shipped</div></div>
-        <div class="hn"><div class="n">327</div><div class="l">TS files in one live app</div></div>
+        <div class="hn"><div class="n">2</div><div class="l">products live in production</div></div>
         <div class="hn"><div class="n">6K+</div><div class="l">followers analyzed</div></div>
         <div class="hn"><div class="n">3.7</div><div class="l">GPA at UT Austin</div></div>
       </div>
@@ -44,7 +46,7 @@ import Base from '../layouts/Base.astro';
       </div>
       <p class="scroll-cue">
         scroll — each layer of the burger is <b>a layer of me</b>
-        <svg class="arrow" viewBox="0 0 14 16" fill="none" aria-hidden="true"><path d="M7 1v13M2 9.5L7 14.5l5-5" stroke="#C0331B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg class="arrow" viewBox="0 0 14 16" fill="none" aria-hidden="true"><path d="M7 1v13M2 9.5L7 14.5l5-5" stroke="#B93018" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </p>
       <a class="skip-facts" href="#numbers">in a hurry? skip to the facts ↓</a>
     </div>
@@ -66,7 +68,7 @@ import Base from '../layouts/Base.astro';
             <span class="tag"><span class="swatch" style="background:#DD9A4E"></span><span class="t"><b>Layer 01</b> · Top bun — Frontend</span></span>
             <h2>PickMyPath</h2>
             <p class="lead">A live guitar-learning app where <span>songs are data.</span></p>
-            <p class="body">Chord-aligned lyrics, 5-level practice tracking, and a recommendation engine that picks your next song by chord, mood, and difficulty. Shipped in Next.js 16 + React 19 and running at pickmypath.app.</p>
+            <p class="body">Chord-aligned lyrics, 5-level practice tracking, and a recommendation engine that picks your next song by chord, mood, and difficulty. Shipped in Next.js 16 + React 19 on Supabase/PostgreSQL, running at pickmypath.app.</p>
             <div class="stats">
               <div class="stat"><div class="n">73</div><div class="l">song dataset</div></div>
               <div class="stat"><div class="n">327</div><div class="l">TypeScript files</div></div>
@@ -89,32 +91,32 @@ import Base from '../layouts/Base.astro';
           </section>
 
           <section class="chapter" data-layer="2">
-            <span class="tag"><span class="swatch" style="background:#F2C14E"></span><span class="t"><b>Layer 03</b> · Cheese — The glue (APIs)</span></span>
-            <h2>Systems that talk to each other</h2>
-            <p class="lead">FastAPI analytics endpoints, REST design, <span>automation everywhere.</span></p>
-            <p class="body">PickMyPath's analytics API, Google Apps Script CRM automation, manifest-driven image generation, a Remotion video pipeline rendering for 4 brands from one codebase. I like making pieces connect.</p>
+            <span class="tag"><span class="swatch" style="background:#F2C14E"></span><span class="t"><b>Layer 03</b> · Cheese — The glue</span></span>
+            <h2>APIs &amp; Automation</h2>
+            <p class="lead">Systems that talk to each other — <span>automation everywhere.</span></p>
+            <p class="body">PickMyPath's FastAPI analytics endpoints, Google Apps Script CRM automation, manifest-driven image generation, a Remotion video pipeline rendering for 4 brands from one codebase. I like making pieces connect.</p>
             <div class="stats">
               <div class="stat"><div class="n">4</div><div class="l">brands, one pipeline</div></div>
               <div class="stat"><div class="n">100%</div><div class="l">automated OG images</div></div>
             </div>
-            <div class="links"><a href="https://github.com/ashmitbohora">GitHub →</a></div>
+            <div class="links"><a href="https://github.com/ashmitbohora" aria-label="GitHub profile — automation and pipeline work">GitHub profile →</a></div>
           </section>
 
           <section class="chapter" data-layer="3">
             <span class="tag"><span class="swatch" style="background:#7C4A22"></span><span class="t"><b>Layer 04</b> · Patty — The substance (Data)</span></span>
             <h2>BohoBites Analytics</h2>
             <p class="lead">The pipeline that decides <span>when 6,000 people see a post.</span></p>
-            <p class="body">End-to-end Python analytics on real TikTok data — schema repair, rolling 365-day KPI windows, posting-time models — in an interactive Shiny dashboard. It runs my actual food brand. (Yes, that's why this site is a burger.)</p>
+            <p class="body">End-to-end Python analytics on real TikTok data — schema repair, rolling 30–365 day KPI windows, posting-time models — in an interactive Shiny dashboard. It runs my actual food brand. (Yes, that's why this site is a burger.)</p>
             <div class="stats">
               <div class="stat"><div class="n">6K+</div><div class="l">followers analyzed</div></div>
               <div class="stat"><div class="n">14K</div><div class="l">rows per refresh</div></div>
-              <div class="stat"><div class="n">365d</div><div class="l">rolling windows</div></div>
+              <div class="stat"><div class="n">30–365d</div><div class="l">rolling windows</div></div>
             </div>
-            <div class="links"><a href="https://github.com/ashmitbohora">GitHub →</a></div>
+            <div class="links"><a href="https://github.com/ashmitbohora/bohobites_dashboard">BohoBites repo on GitHub →</a></div>
           </section>
 
           <section class="chapter" data-layer="4">
-            <span class="tag"><span class="swatch" style="background:#C0331B"></span><span class="t"><b>Layer 05</b> · Special sauce — AI</span></span>
+            <span class="tag"><span class="swatch" style="background:#B93018"></span><span class="t"><b>Layer 05</b> · Special sauce — AI</span></span>
             <h2>I build AI-native</h2>
             <p class="lead">Spec-driven development with <span>AI as the hands, me as the architect.</span></p>
             <p class="body">Designed BoHub, an AI personal OS — Claude API with tiered model routing, SQLite full-text search, prompt-injection defense. I write the constraints and architecture docs first; that's why my AI-built code holds up under questioning.</p>
@@ -122,14 +124,14 @@ import Base from '../layouts/Base.astro';
               <div class="stat"><div class="n">950+</div><div class="l">lines of architecture docs</div></div>
               <div class="stat"><div class="n">3-tier</div><div class="l">LLM routing design</div></div>
             </div>
-            <div class="links"><a href="https://github.com/ashmitbohora">GitHub →</a></div>
+            <div class="links"><a href="https://github.com/ashmitbohora" aria-label="GitHub profile — AI-native builds">GitHub profile →</a></div>
           </section>
 
           <section class="chapter" data-layer="5">
             <span class="tag"><span class="swatch" style="background:#DD9A4E"></span><span class="t"><b>Layer 06</b> · Bottom bun — The foundation</span></span>
             <h2>UT Austin — Statistics &amp; Data Science</h2>
             <p class="lead">The base that holds the whole stack up. <span>Class of 2029.</span></p>
-            <p class="body">3.7 GPA. QuestBridge Finalist. UT Impact Scholar ($48K merit award). Currently a rising sophomore looking for Summer 2027 internships in data science, software engineering, or AI.</p>
+            <p class="body">3.7 GPA. QuestBridge Finalist. UT Impact Scholar ($48K merit award). Currently a rising sophomore looking for Summer 2027 internships in data science, software engineering, machine learning, or AI.</p>
             <div class="stats">
               <div class="stat"><div class="n">3.7</div><div class="l">GPA</div></div>
               <div class="stat"><div class="n">$48K</div><div class="l">merit scholarship</div></div>
@@ -156,12 +158,12 @@ import Base from '../layouts/Base.astro';
     </section>
 
     <!-- ============ numbers ============ -->
-    <section class="flat" id="numbers">
+    <section class="flat" id="numbers" tabindex="-1">
       <div class="wrap">
         <div class="sec-head"><span class="idx">The Numbers</span><h2>Your receipt</h2></div>
         <div class="receipt-zone">
           <div class="receipt">
-            <h3>ASHMIT'S</h3>
+            <p class="rh">ASHMIT'S</p>
             <p class="sub">ORDER #2029 — UT AUSTIN, STATS &amp; DATA SCIENCE<br>SERVER: HIMSELF · TABLE: RISING SOPHOMORE</p>
             <div class="rule"></div>
             <div class="r-row"><span>CLIENT SITES SHIPPED (SOLO)</span><span class="v hot" data-count="28">28</span></div>
@@ -181,7 +183,7 @@ import Base from '../layouts/Base.astro';
             <span class="count"><b data-count="28">28</b> / 100 served</span>
           </div>
           <div class="bar"><div class="fill" data-width="28%"></div></div>
-          <p class="note">LAST DISH OUT THE KITCHEN → pickmypath.app v0.7 · Jun 2026</p>
+          <p class="note">100 REAL THINGS SHIPPED BEFORE GRADUATION — SITES, APPS, PIPELINES.<br>LAST DISH OUT THE KITCHEN → pickmypath.app v0.7 · Jun 2026</p>
         </div>
       </div>
     </section>
@@ -190,9 +192,9 @@ import Base from '../layouts/Base.astro';
       <div class="wrap">
         <div class="sec-head"><span class="idx">Sides</span><h2>Also on the menu</h2></div>
         <div class="menu-list">
+          <div class="dish"><span class="name">WLF Club</span><span class="desc">Summer 2026 internship — built analytics &amp; team tools for a real wellness business</span><span class="dots"></span><span class="stat">internship '26</span></div>
           <div class="dish"><span class="name">BoHub</span><span class="desc">AI personal OS — Claude API, SQLite, security model</span><span class="dots"></span><span class="stat">architecture</span></div>
           <div class="dish"><span class="name">Remotion Studio</span><span class="desc">React video rendering for 4 brands</span><span class="dots"></span><span class="stat">in production</span></div>
-          <div class="dish"><span class="name">WLF Club</span><span class="desc">analytics &amp; team tools for a real wellness business</span><span class="dots"></span><span class="stat">internship '26</span></div>
           <div class="dish"><span class="name">Life OS</span><span class="desc">personal kanban — Vite, React, Supabase</span><span class="dots"></span><span class="stat">daily driver</span></div>
         </div>
       </div>
@@ -209,7 +211,7 @@ import Base from '../layouts/Base.astro';
           <div class="nf-row"><span class="k">TypeScript / React <small>327-file app, live</small></span><span class="v"><b>CLEAN</b> · 4/5</span></div>
           <div class="nf-row"><span class="k">SQL <small>Postgres in prod, quality checks</small></span><span class="v">DECENT · 3/5</span></div>
           <div class="nf-row sub"><span class="k">R <small>coursework — tidyverse next</small></span><span class="v">TRYING · 2/5</span></div>
-          <div class="nf-row sub"><span class="k">ML / Modeling <small>recommender shipped; classical ML next</small></span><span class="v">TRYING · 2/5</span></div>
+          <div class="nf-row sub"><span class="k">Machine Learning <small>recommender shipped; classical ML next</small></span><span class="v">TRYING · 2/5</span></div>
           <div class="nf-foot">* Scale from my own app, PickMyPath: LOST → TRYING → DECENT → <b>CLEAN</b> → PERFECT. Nothing here is PERFECT yet. That's the roadmap, not a weakness.</div>
         </div>
       </div>
@@ -229,217 +231,45 @@ import Base from '../layouts/Base.astro';
   </footer>
 
   <script>
-    import * as THREE from 'three';
-
-    const canvas = document.getElementById('burgerCanvas') as HTMLCanvasElement;
-    const pane = canvas.parentElement as HTMLElement;
+    // Three.js burger — lazy-loaded only when the scrolly approaches the viewport.
+    // The scene lives in src/scripts/burger.ts (static `three` import there keeps
+    // Rollup tree-shaking working; a dynamic import('three') here defeats it).
+    const stack = document.getElementById('stack')!;
     const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let started = false;
 
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 100);
-    camera.position.set(0, 1.4, 11.5);
-
-    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-    renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-
-    scene.add(new THREE.AmbientLight(0xfff2dd, 1.0));
-    const sun = new THREE.DirectionalLight(0xffffff, 1.5);
-    sun.position.set(4, 8, 5);
-    sun.castShadow = true;
-    sun.shadow.mapSize.set(1024, 1024);
-    sun.shadow.camera.left = -6; sun.shadow.camera.right = 6;
-    sun.shadow.camera.top = 8; sun.shadow.camera.bottom = -4;
-    scene.add(sun);
-
-    const toon = (c: number) => new THREE.MeshToonMaterial({ color: c });
-    const group = new THREE.Group();
-    scene.add(group);
-    group.rotation.y = 0.5;
-
-    const plate = new THREE.Mesh(new THREE.CylinderGeometry(2.7, 2.9, 0.14, 48), toon(0xdccba6));
-    plate.position.y = -2.6;
-    plate.receiveShadow = true;
-    group.add(plate);
-
-    function ruffledDisc(rOut: number, h: number, c: number, waves = 9, amp = 0.09) {
-      const g = new THREE.CylinderGeometry(rOut, rOut * 0.96, h, 64, 1);
-      const pos = g.attributes.position;
-      for (let i = 0; i < pos.count; i++) {
-        const x = pos.getX(i), z = pos.getZ(i);
-        if (Math.hypot(x, z) > rOut * 0.7) {
-          const a = Math.atan2(z, x);
-          pos.setY(i, pos.getY(i) + Math.sin(a * waves) * amp);
-          const s = 1 + Math.sin(a * waves * 2) * 0.04;
-          pos.setX(i, x * s);
-          pos.setZ(i, z * s);
-        }
+    async function start() {
+      if (started) return;
+      started = true;
+      const canvas = document.getElementById('burgerCanvas') as HTMLCanvasElement;
+      const pane = canvas.parentElement as HTMLElement;
+      try {
+        const { initBurger } = await import('../scripts/burger');
+        initBurger(stack, reduced);
+      } catch {
+        // WebGL unavailable — show all chapters at full strength, drop the canvas pane
+        pane.style.display = 'none';
+        document.querySelectorAll('.chapter').forEach((c) => c.classList.add('active'));
       }
-      g.computeVertexNormals();
-      return new THREE.Mesh(g, toon(c));
     }
 
-    type Layer = { holder: THREE.Group; rest: number; open: number; y: number; target: number; burst: boolean };
-    const layers: Layer[] = [];
-    function addLayer(obj: THREE.Object3D, restY: number, openY: number) {
-      obj.traverse((o) => {
-        if ((o as THREE.Mesh).isMesh) { o.castShadow = true; o.receiveShadow = true; }
-      });
-      const holder = new THREE.Group();
-      holder.add(obj);
-      group.add(holder);
-      holder.position.y = restY;
-      layers.push({ holder, rest: restY, open: openY, y: restY, target: restY, burst: false });
-    }
-
-    const bunGroup = new THREE.Group();
-    const topBun = new THREE.Mesh(
-      new THREE.SphereGeometry(1.5, 40, 24, 0, Math.PI * 2, 0, Math.PI / 2),
-      toon(0xdd9a4e)
+    const lazyIO = new IntersectionObserver(
+      (es) => {
+        if (es.some((e) => e.isIntersecting)) {
+          lazyIO.disconnect();
+          start();
+        }
+      },
+      { rootMargin: '600px 0px' }
     );
-    topBun.scale.y = 0.8;
-    bunGroup.add(topBun);
-    for (let i = 0; i < 11; i++) {
-      const seed = new THREE.Mesh(new THREE.SphereGeometry(0.075, 8, 6), toon(0xfbf5e8));
-      const a = (i / 11) * Math.PI * 2 + i * 0.7;
-      const t = 0.2 + (((i * 37) % 53) / 53) * 0.6;
-      seed.position.set(Math.cos(a) * 1.5 * Math.sin(t), 1.16 * Math.cos(t), Math.sin(a) * 1.5 * Math.sin(t));
-      seed.scale.set(1, 0.6, 0.75);
-      bunGroup.add(seed);
-    }
-    addLayer(bunGroup, -0.18, 2.95);
-    addLayer(ruffledDisc(1.62, 0.12, 0x55833a, 9, 0.1), -0.58, 1.85);
-    const cheese = new THREE.Mesh(new THREE.BoxGeometry(2.45, 0.09, 2.45), toon(0xf2c14e));
-    cheese.rotation.y = Math.PI / 4.6;
-    addLayer(cheese, -0.72, 0.95);
-    addLayer(new THREE.Mesh(new THREE.CylinderGeometry(1.38, 1.42, 0.46, 48), toon(0x7c4a22)), -1.0, 0.0);
-    addLayer(ruffledDisc(1.45, 0.1, 0xc0331b, 12, 0.07), -1.28, -0.95);
-    addLayer(new THREE.Mesh(new THREE.CylinderGeometry(1.46, 1.34, 0.5, 48), toon(0xdd9a4e)), -1.62, -1.95);
-
-    // crumb particle pool (v6 moment)
-    type Crumb = { m: THREE.Mesh<THREE.SphereGeometry, THREE.MeshToonMaterial>; v: THREE.Vector3; life: number };
-    const crumbs: Crumb[] = [];
-    const crumbGeo = new THREE.SphereGeometry(0.06, 6, 5);
-    for (let i = 0; i < 36; i++) {
-      const m = new THREE.Mesh(crumbGeo, new THREE.MeshToonMaterial({ color: 0xdd9a4e, transparent: true, opacity: 0 }));
-      m.visible = false;
-      scene.add(m);
-      crumbs.push({ m, v: new THREE.Vector3(), life: 0 });
-    }
-    let crumbIdx = 0;
-    function burst(worldPos: THREE.Vector3, color: number) {
-      for (let k = 0; k < 12; k++) {
-        const c = crumbs[crumbIdx++ % crumbs.length];
-        c.m.material.color.set(color);
-        c.m.position.copy(worldPos);
-        c.v.set((Math.random() - 0.5) * 0.16, Math.random() * 0.14 + 0.04, (Math.random() - 0.5) * 0.16);
-        c.life = 1;
-        c.m.visible = true;
-        c.m.material.opacity = 1;
-        c.m.scale.setScalar(0.7 + Math.random() * 0.8);
-      }
-    }
-    const layerColors = [0xdd9a4e, 0x55833a, 0xf2c14e, 0x7c4a22, 0xc0331b, 0xdd9a4e];
-
-    // ---- scroll drives everything ----
-    const scrolly = document.getElementById('stack')!;
-    const chapters = [...document.querySelectorAll('.chapter')];
-    const tagEl = document.getElementById('layerTag')!;
-    const segs = [...document.querySelectorAll('.rail .seg')];
-    const tagText = [
-      '<b>01 / 06</b> &nbsp;TOP BUN — FRONTEND',
-      '<b>02 / 06</b> &nbsp;LETTUCE — DESIGN & CLIENTS',
-      '<b>03 / 06</b> &nbsp;CHEESE — APIs & AUTOMATION',
-      '<b>04 / 06</b> &nbsp;PATTY — DATA',
-      '<b>05 / 06</b> &nbsp;SPECIAL SAUCE — AI',
-      '<b>06 / 06</b> &nbsp;BOTTOM BUN — FOUNDATION',
-    ];
-    const smooth = (t: number) => t * t * (3 - 2 * t);
-    const v3 = new THREE.Vector3();
-    let activeIdx = -1;
-
-    function onScroll() {
-      const r = scrolly.getBoundingClientRect();
-      const vh = innerHeight;
-      const total = r.height - vh;
-      const p = Math.min(Math.max(-r.top / total, 0), 1);
-      const n = layers.length;
-      layers.forEach((L, i) => {
-        const raw = Math.min(Math.max(p * n - i, 0), 1);
-        const s = smooth(raw);
-        L.target = L.rest + (L.open - L.rest) * s;
-        // crumb burst as the layer pulls free
-        if (raw > 0.5 && !L.burst && !reduced) {
-          L.burst = true;
-          L.holder.getWorldPosition(v3);
-          burst(v3, layerColors[i]);
-        }
-        if (raw <= 0) L.burst = false;
-        // progress rail
-        segs[i]?.classList.toggle('done', raw >= 0.95);
-        segs[i]?.classList.toggle('now', raw > 0 && raw < 0.95);
-      });
-      const idx = Math.min(Math.floor(p * n), n - 1);
-      if (idx !== activeIdx) {
-        activeIdx = idx;
-        tagEl.innerHTML = tagText[idx];
-        chapters.forEach((c, ci) => c.classList.toggle('active', ci === idx));
-      }
-      // gentle scroll-linked turn (no idle spin)
-      group.rotation.y = 0.5 + p * 1.1;
-    }
-    addEventListener('scroll', onScroll, { passive: true });
-
-    // drag to spin (user-initiated only)
-    let dragging = false, px = 0, spinV = 0;
-    pane.addEventListener('pointerdown', (e) => { dragging = true; px = e.clientX; });
-    addEventListener('pointerup', () => (dragging = false));
-    addEventListener('pointermove', (e) => {
-      if (dragging) { spinV += (e.clientX - px) * 0.004; px = e.clientX; }
-    });
-
-    function resize() {
-      const r = pane.getBoundingClientRect();
-      renderer.setSize(r.width, r.height, false);
-      renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
-      camera.aspect = r.width / r.height;
-      camera.updateProjectionMatrix();
-      camera.lookAt(0, 0.2, 0);
-    }
-    addEventListener('resize', resize);
-    resize();
-
-    function tick() {
-      layers.forEach((L) => {
-        L.y += (L.target - L.y) * (reduced ? 1 : 0.1); // smooth scrub, no bounce, no wobble
-        L.holder.position.y = L.y;
-      });
-      group.rotation.y += spinV;
-      spinV *= 0.9;
-      crumbs.forEach((c) => {
-        if (!c.m.visible) return;
-        c.life -= 0.018;
-        if (c.life <= 0) { c.m.visible = false; return; }
-        c.v.y -= 0.006;
-        c.m.position.add(c.v);
-        c.m.material.opacity = Math.min(1, c.life * 1.6);
-      });
-      renderer.render(scene, camera);
-      requestAnimationFrame(tick);
-    }
-    onScroll();
-    chapters[0]?.classList.add('active');
-    tick();
+    lazyIO.observe(stack);
   </script>
 
   <script>
-    // count-ups + ketchup fill
-    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduced) {
-      document.querySelectorAll<HTMLElement>('[data-count]').forEach((el) => (el.textContent = el.dataset.count!));
-      document.querySelectorAll<HTMLElement>('.fill').forEach((f) => (f.style.width = f.dataset.width!));
-    } else {
-      document.querySelectorAll<HTMLElement>('[data-count]').forEach((el) => (el.textContent = '0'));
+    // count-ups + ketchup fill — values stay at their real numbers until the
+    // moment they animate, so crawlers and no-JS readers never see zeros
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reducedMotion) {
       const ease = (t: number) => 1 - Math.pow(1 - t, 3);
       const io = new IntersectionObserver(
         (es) =>
@@ -448,6 +278,7 @@ import Base from '../layouts/Base.astro';
             e.target.querySelectorAll<HTMLElement>('[data-count]').forEach((el, i) => {
               const target = +el.dataset.count!;
               const dur = 1100;
+              el.textContent = '0';
               setTimeout(() => {
                 const t0 = performance.now();
                 (function tk(now: number) {
@@ -464,6 +295,8 @@ import Base from '../layouts/Base.astro';
         { threshold: 0.3 }
       );
       document.querySelectorAll('.receipt,.mission').forEach((el) => io.observe(el));
+    } else {
+      document.querySelectorAll<HTMLElement>('.fill').forEach((f) => (f.style.width = f.dataset.width!));
     }
   </script>
 </Base>

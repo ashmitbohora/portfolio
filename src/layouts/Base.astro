@@ -8,38 +8,104 @@ interface Props {
 
 const { title, description } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL('/og.png', Astro.site);
 
-const personSchema = {
+const schema = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Ashmit Bohora',
-  url: 'https://ashmitbohora.com',
-  email: 'mailto:ashmitbohora@utexas.edu',
-  jobTitle: 'Statistics & Data Science Student',
-  affiliation: {
-    '@type': 'CollegeOrUniversity',
-    name: 'The University of Texas at Austin',
-  },
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Austin',
-    addressRegion: 'TX',
-    addressCountry: 'US',
-  },
-  sameAs: [
-    'https://github.com/ashmitbohora',
-    'https://www.linkedin.com/in/ashmitbohora',
-  ],
-  knowsAbout: [
-    'Data Science',
-    'Software Engineering',
-    'Python',
-    'TypeScript',
-    'React',
-    'Next.js',
-    'SQL',
-    'Data Analytics',
-    'AI-assisted Development',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': 'https://ashmitbohora.com/#person',
+      name: 'Ashmit Bohora',
+      url: 'https://ashmitbohora.com/',
+      image: ogImage.href,
+      email: 'mailto:ashmitbohora@utexas.edu',
+      jobTitle: 'Statistics & Data Science Student',
+      description:
+        'UT Austin Statistics & Data Science student (Class of 2029) seeking Summer 2027 internships in data science, software engineering, machine learning, or AI. Founder of Webspansion (28 client sites), builder of PickMyPath (live guitar-learning app), and Summer 2026 intern at WLF Club.',
+      award: [
+        'QuestBridge Finalist (2024)',
+        'UT Austin Impact Scholar ($48,000 merit award)',
+      ],
+      affiliation: {
+        '@type': 'CollegeOrUniversity',
+        name: 'The University of Texas at Austin',
+        url: 'https://www.utexas.edu/',
+        sameAs: 'https://en.wikipedia.org/wiki/University_of_Texas_at_Austin',
+      },
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Austin',
+        addressRegion: 'TX',
+        addressCountry: 'US',
+      },
+      sameAs: [
+        'https://github.com/ashmitbohora',
+        'https://www.linkedin.com/in/ashmitbohora',
+      ],
+      knowsAbout: [
+        'Data Science',
+        'Software Engineering',
+        'Machine Learning',
+        'Python',
+        'TypeScript',
+        'React',
+        'Next.js',
+        'SQL',
+        'Data Analytics',
+        'AI-assisted Development',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://ashmitbohora.com/#website',
+      url: 'https://ashmitbohora.com/',
+      name: 'Ashmit Bohora — Portfolio',
+      author: { '@id': 'https://ashmitbohora.com/#person' },
+    },
+    {
+      '@type': 'ItemList',
+      name: 'Projects by Ashmit Bohora',
+      itemListElement: [
+        {
+          '@type': 'SoftwareApplication',
+          position: 1,
+          name: 'PickMyPath',
+          url: 'https://pickmypath.app',
+          applicationCategory: 'EducationalApplication',
+          description:
+            'Live guitar-learning app with chord-aligned lyrics, practice tracking, and a recommendation engine. Next.js, React, TypeScript, Supabase/PostgreSQL.',
+          author: { '@id': 'https://ashmitbohora.com/#person' },
+        },
+        {
+          '@type': 'Organization',
+          position: 2,
+          name: 'Webspansion',
+          url: 'https://getwebspansion.org',
+          description:
+            'Web studio founded by Ashmit Bohora at 17 — 28 client websites built solo for local businesses and nonprofits.',
+          founder: { '@id': 'https://ashmitbohora.com/#person' },
+        },
+        {
+          '@type': 'SoftwareApplication',
+          position: 3,
+          name: 'BohoBites Analytics',
+          url: 'https://github.com/ashmitbohora/bohobites_dashboard',
+          applicationCategory: 'BusinessApplication',
+          description:
+            'Python/Shiny analytics dashboard processing real TikTok creator data with rolling 30–365 day KPI windows for a 6K-follower food brand.',
+          author: { '@id': 'https://ashmitbohora.com/#person' },
+        },
+        {
+          '@type': 'CreativeWork',
+          position: 4,
+          name: 'BoHub',
+          description:
+            'Architecture-complete AI personal OS — Claude API with tiered model routing, SQLite full-text search, prompt-injection defense.',
+          author: { '@id': 'https://ashmitbohora.com/#person' },
+        },
+      ],
+    },
   ],
 };
 ---
@@ -53,25 +119,29 @@ const personSchema = {
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#EFE4CD" />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content="Ashmit Bohora" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ashmit Bohora — Full-stack. Literally. UT Austin Statistics & Data Science, seeking Summer 2027 internships." />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caprasimo&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="/fonts/caprasimo-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/plex-sans-var.woff2" as="font" type="font/woff2" crossorigin />
 
-    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     <script is:inline>document.documentElement.classList.add('js');</script>
   </head>
   <body>

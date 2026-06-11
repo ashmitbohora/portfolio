@@ -5,10 +5,13 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
-User-agent: ClaudeBot
+User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: Claude-Web
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
 Allow: /
 
 User-agent: PerplexityBot

@@ -5,8 +5,8 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://ashmitbohora.com',
   compressHTML: true,
-  integrations: [sitemap()],
+  integrations: [sitemap({ lastmod: new Date() })],
   build: {
-    inlineStylesheets: 'auto',
+    inlineStylesheets: 'always',
   },
 });
