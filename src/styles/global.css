@@ -52,7 +52,7 @@ body>*{position:relative;z-index:2}
 
 /* masthead */
 header.site{border-bottom:3px solid var(--ink);background:var(--kraft);position:sticky;top:0;z-index:40}
-.masthead{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:16px;flex-wrap:wrap}
+.masthead{display:flex;justify-content:space-between;align-items:center;padding-block:14px;gap:16px;flex-wrap:wrap}
 .masthead .title{font-family:var(--disp);font-size:19px}
 .masthead .title span{color:var(--ketchup)}
 .masthead nav{display:flex;gap:22px;flex-wrap:wrap}
@@ -60,7 +60,7 @@ header.site{border-bottom:3px solid var(--ink);background:var(--kraft);position:
 .masthead nav a:hover{border-color:var(--ketchup);color:var(--ketchup)}
 
 /* hero */
-.hero{padding:72px 0 40px;text-align:center}
+.hero{padding-block:72px 40px;text-align:center}
 .hero .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:14px}
 .hero .kicker b{color:var(--ketchup)}
 h1{font-family:var(--disp);font-weight:400;font-size:clamp(46px,7vw,86px);line-height:1.02}
