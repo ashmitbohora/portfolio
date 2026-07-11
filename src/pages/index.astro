@@ -189,14 +189,6 @@ import Base from '../layouts/Base.astro';
     <!-- TODO(ashmit): decided not to link a GitHub repo for Guruji/BohoQuest above since it's
          undecided whether those repos go public. Add one later if you make either public. -->
 
-    <!-- TODO(ashmit): Ashmit named the handle "bohos_bts" (with underscore, IG-style),
-         but the only verified-live account found is TikTok @bohosbts (no underscore).
-         Confirm which platform + exact handle this should point to before deploy;
-         IG /bohos_bts could not be verified as real (Instagram returns 200 for any path).
-         TODO(ashmit): only Instagram is verified for BohoBites (TikTok @.bohobites / @bohobites
-         and YouTube @bohobites were checked in an earlier pass and 404'd, so left off). Webspansion
-         and Prospansion have no verified social accounts beyond their websites, only their site
-         links are shown. Give me confirmed handles/URLs for any of these and I'll add them. -->
     <section class="flat" id="brands">
       <div class="wrap">
         <div class="sec-head"><span class="idx">Also Building</span><h2>Brands &amp; socials</h2></div>
@@ -205,9 +197,17 @@ import Base from '../layouts/Base.astro';
             <span class="b-name">Webspansion</span>
             <span class="b-tag">free-tier studio</span>
             <div class="b-links">
-              <a href="https://getwebspansion.org" target="_blank" rel="noopener noreferrer">
+              <a href="https://getwebspansion.org" target="_blank" rel="noopener noreferrer" aria-label="Webspansion website">
                 <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/><path d="M1.5 8h13M8 1.5c2 2 2 11 0 13M8 1.5c-2 2-2 11 0 13" stroke="currentColor" stroke-width="1.4"/></svg>
-                Website
+              </a>
+              <a href="https://www.instagram.com/webspansion" target="_blank" rel="noopener noreferrer" aria-label="Webspansion on Instagram">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="13" height="13" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3.2" stroke="currentColor" stroke-width="1.4"/><circle cx="11.6" cy="4.4" r="0.9" fill="currentColor"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/@webspansion" target="_blank" rel="noopener noreferrer" aria-label="Webspansion on TikTok">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M9.5 1.5v8.3a2.7 2.7 0 1 1-2.2-2.66" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M9.5 3.2c.5 1.6 1.8 2.7 3.4 2.9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+              </a>
+              <a href="https://www.youtube.com/@webspansion" target="_blank" rel="noopener noreferrer" aria-label="Webspansion on YouTube">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="3.5" width="14" height="9" rx="3" stroke="currentColor" stroke-width="1.4"/><path d="M6.7 6.2l3.6 1.8-3.6 1.8V6.2z" fill="currentColor"/></svg>
               </a>
             </div>
           </div>
@@ -215,9 +215,8 @@ import Base from '../layouts/Base.astro';
             <span class="b-name">Prospansion</span>
             <span class="b-tag">paid tier, launching soon</span>
             <div class="b-links">
-              <a href="https://prospansion.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://prospansion.com" target="_blank" rel="noopener noreferrer" aria-label="Prospansion website">
                 <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/><path d="M1.5 8h13M8 1.5c2 2 2 11 0 13M8 1.5c-2 2-2 11 0 13" stroke="currentColor" stroke-width="1.4"/></svg>
-                Website
               </a>
             </div>
           </div>
@@ -225,9 +224,14 @@ import Base from '../layouts/Base.astro';
             <span class="b-name">BohoBites</span>
             <span class="b-tag">6K+ followers</span>
             <div class="b-links">
-              <a href="https://www.instagram.com/_bohobites" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/_bohobites" target="_blank" rel="noopener noreferrer" aria-label="BohoBites on Instagram">
                 <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="13" height="13" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3.2" stroke="currentColor" stroke-width="1.4"/><circle cx="11.6" cy="4.4" r="0.9" fill="currentColor"/></svg>
-                Instagram
+              </a>
+              <a href="https://www.tiktok.com/@.bohobites" target="_blank" rel="noopener noreferrer" aria-label="BohoBites on TikTok">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M9.5 1.5v8.3a2.7 2.7 0 1 1-2.2-2.66" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M9.5 3.2c.5 1.6 1.8 2.7 3.4 2.9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+              </a>
+              <a href="https://www.youtube.com/@boho_bites" target="_blank" rel="noopener noreferrer" aria-label="BohoBites on YouTube">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="3.5" width="14" height="9" rx="3" stroke="currentColor" stroke-width="1.4"/><path d="M6.7 6.2l3.6 1.8-3.6 1.8V6.2z" fill="currentColor"/></svg>
               </a>
             </div>
           </div>
@@ -235,9 +239,14 @@ import Base from '../layouts/Base.astro';
             <span class="b-name">Bohos BTS</span>
             <span class="b-tag">behind the scenes</span>
             <div class="b-links">
-              <a href="https://www.tiktok.com/@bohosbts" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/bohosbts" target="_blank" rel="noopener noreferrer" aria-label="Bohos BTS on Instagram">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="13" height="13" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3.2" stroke="currentColor" stroke-width="1.4"/><circle cx="11.6" cy="4.4" r="0.9" fill="currentColor"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/@bohosbts" target="_blank" rel="noopener noreferrer" aria-label="Bohos BTS on TikTok">
                 <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M9.5 1.5v8.3a2.7 2.7 0 1 1-2.2-2.66" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M9.5 3.2c.5 1.6 1.8 2.7 3.4 2.9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-                TikTok
+              </a>
+              <a href="https://www.youtube.com/@BohosBTS" target="_blank" rel="noopener noreferrer" aria-label="Bohos BTS on YouTube">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="3.5" width="14" height="9" rx="3" stroke="currentColor" stroke-width="1.4"/><path d="M6.7 6.2l3.6 1.8-3.6 1.8V6.2z" fill="currentColor"/></svg>
               </a>
             </div>
           </div>
