@@ -65,15 +65,15 @@ import Base from '../layouts/Base.astro';
 
           <section class="chapter" data-layer="0">
             <span class="tag"><span class="swatch" style="background:#DD9A4E"></span><span class="t"><b>Layer 01</b> · Top bun · Frontend</span></span>
-            <h2>PickMyPath</h2>
-            <p class="lead">A live guitar-learning app where <span>songs are data.</span></p>
-            <p class="body">Chord-aligned lyrics, 5-level practice tracking, and a recommendation engine that picks your next song by chord, mood, and difficulty. Shipped in Next.js 16 + React 19 on Supabase/PostgreSQL. Still live at pickmypath.app, paused for now while I build elsewhere.</p>
+            <h2>WLF Club</h2>
+            <p class="lead">Growth &amp; AI Automation Intern. <span>Redirected the whole strategy.</span></p>
+            <p class="body">Analyzed 780+ CRM opportunities in GoHighLevel and found 95% never reached a decision despite a 92% win rate when worked, so I moved WLF's growth strategy from ad spend to backlog conversion. Also trained an internal RAG AI (Warvis), built a staff training site, and stood up the full analytics stack across three lead funnels.</p>
             <div class="stats">
-              <div class="stat"><div class="n">73</div><div class="l">song dataset</div></div>
-              <div class="stat"><div class="n">327</div><div class="l">TypeScript files</div></div>
-              <div class="stat"><div class="n">Live</div><div class="l">paused for now</div></div>
+              <div class="stat"><div class="n">780+</div><div class="l">CRM opportunities analyzed</div></div>
+              <div class="stat"><div class="n">92%</div><div class="l">win rate when worked</div></div>
+              <div class="stat"><div class="n">588</div><div class="l">users captured, 28 days</div></div>
             </div>
-            <div class="links"><a href="https://pickmypath.app" target="_blank" rel="noopener noreferrer">pickmypath.app →</a></div>
+            <div class="links"><a href="https://wlfclub.com" target="_blank" rel="noopener noreferrer">wlfclub.com →</a></div>
           </section>
 
           <section class="chapter" data-layer="1">
@@ -90,41 +90,46 @@ import Base from '../layouts/Base.astro';
           </section>
 
           <section class="chapter" data-layer="2">
-            <span class="tag"><span class="swatch" style="background:#F2C14E"></span><span class="t"><b>Layer 03</b> · Cheese · The glue</span></span>
-            <h2>APIs &amp; Automation</h2>
-            <p class="lead">Systems that talk to each other: <span>automation everywhere.</span></p>
-            <p class="body">PickMyPath's FastAPI analytics endpoints, Google Apps Script CRM automation, manifest-driven image generation, a Remotion video pipeline rendering for 4 brands from one codebase. I like making pieces connect.</p>
+            <span class="tag"><span class="swatch" style="background:#F2C14E"></span><span class="t"><b>Layer 03</b> · Cheese · APIs &amp; automation</span></span>
+            <h2>Prospansion</h2>
+            <p class="lead">The paid arm of Webspansion. <span>Analytics, SEO, automation.</span></p>
+            <p class="body">Built Prospansion Studio, a multi-tenant Cloudflare Workers + D1 CMS giving paying clients self-serve site editing: invite-only signup, hashed tokens, single-use resets, and a fixed sanitizer-bypass XSS vulnerability, verified via exploit proof-of-fix. Deployed for nonprofit client Ocura.</p>
             <div class="stats">
-              <div class="stat"><div class="n">4</div><div class="l">brands, one pipeline</div></div>
-              <div class="stat"><div class="n">100%</div><div class="l">automated OG images</div></div>
+              <div class="stat"><div class="n">Multi-tenant</div><div class="l">Workers + D1 CMS</div></div>
+              <div class="stat"><div class="n">Fixed</div><div class="l">sanitizer-bypass XSS</div></div>
+              <div class="stat"><div class="n">Ocura</div><div class="l">live nonprofit client</div></div>
             </div>
-            <div class="links"><a href="https://github.com/ashmitbohora" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile: automation and pipeline work">GitHub profile →</a></div>
+            <div class="links"><a href="https://prospansion.com" target="_blank" rel="noopener noreferrer">prospansion.com →</a></div>
           </section>
 
           <section class="chapter" data-layer="3">
-            <span class="tag"><span class="swatch" style="background:#C79A5B"></span><span class="t"><b>Layer 04</b> · Patty · The substance (Data)</span></span>
-            <h2>BohoBites Analytics</h2>
-            <p class="lead">The pipeline that decides <span>when 6,000 people see a post.</span></p>
-            <p class="body">End-to-end Python analytics on real TikTok data: schema repair, rolling 30–365 day KPI windows, and posting-time models in an interactive Shiny dashboard. It runs my actual food brand.</p>
-            <p class="joke">Which is also why this site is a burger, and why the patty's grilled chicken, not beef. <b>I'm Hindu, so I swapped it.</b></p>
+            <span class="tag"><span class="swatch" style="background:#C79A5B"></span><span class="t"><b>Layer 04</b> · Patty · The data</span></span>
+            <h2>Local-First AI &amp; Knowledge Systems</h2>
+            <p class="lead">Warvis and Kiln: <span>RAG and training, all local.</span></p>
+            <p class="body">Built Warvis, a RAG knowledge system ingesting 700+ documents into a cited, hybrid-search graph (SQLite FTS5 + local embeddings), with a HIPAA-aware PHI-scanning gate on every query (152 passing tests). Also built Kiln, a training loop that raised a local model's eval score from 0.84 to 0.99, gated against a held-out baseline.</p>
+            <p class="joke">Unrelated, but worth saying: the patty's grilled chicken, not beef. <b>I'm Hindu, so I swapped it.</b></p>
             <div class="stats">
-              <div class="stat"><div class="n">6K+</div><div class="l">followers analyzed</div></div>
-              <div class="stat"><div class="n">876</div><div class="l">line analytics app</div></div>
-              <div class="stat"><div class="n">30–365d</div><div class="l">rolling windows</div></div>
+              <div class="stat"><div class="n">700+</div><div class="l">docs ingested (Warvis)</div></div>
+              <div class="stat"><div class="n">152</div><div class="l">passing tests (Warvis)</div></div>
+              <div class="stat"><div class="n">0.84&rarr;0.99</div><div class="l">Kiln eval score</div></div>
             </div>
-            <div class="links"><a href="https://github.com/ashmitbohora/bohobites_dashboard" target="_blank" rel="noopener noreferrer">BohoBites repo on GitHub →</a></div>
+            <div class="links"><a href="https://github.com/ashmitbohora" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile: Warvis and Kiln">GitHub profile →</a></div>
           </section>
 
-          <section class="chapter" data-layer="4">
-            <span class="tag"><span class="swatch" style="background:#B93018"></span><span class="t"><b>Layer 05</b> · Special sauce · AI</span></span>
-            <h2>I build AI-native</h2>
-            <p class="lead">Spec-driven development with <span>AI as the hands, me as the architect.</span></p>
-            <p class="body">Designed BoHub, an AI personal OS: Claude API with tiered model routing, SQLite full-text search, prompt-injection defense. I write the constraints and architecture docs first; that's why my AI-built code holds up under questioning.</p>
+          <section class="chapter" data-layer="4" id="shipped">
+            <span class="tag"><span class="swatch" style="background:#B93018"></span><span class="t"><b>Layer 05</b> · Special sauce · Shipped</span></span>
+            <h2>Shipped Production Apps</h2>
+            <p class="lead">Guruji and BohoQuest: <span>real users, real database, real tests.</span></p>
+            <p class="body">Guruji (getguruji.com): a gamified learning PWA (React, TypeScript, Supabase) with RLS-scoped auth and a self-run security audit against the live database, zero exploitable vulnerabilities. BohoQuest (app.bohoquest.app): a gamified check-in app (Expo/React Native) with server-side anti-cheat, Apple Sign-In, and a 121-test suite, live in TestFlight.</p>
             <div class="stats">
-              <div class="stat"><div class="n">950+</div><div class="l">lines of architecture docs</div></div>
-              <div class="stat"><div class="n">3-tier</div><div class="l">LLM routing design</div></div>
+              <div class="stat"><div class="n">0</div><div class="l">exploitable vulns found</div></div>
+              <div class="stat"><div class="n">121</div><div class="l">BohoQuest test suite</div></div>
+              <div class="stat"><div class="n">TestFlight</div><div class="l">live status</div></div>
             </div>
-            <div class="links"><a href="https://github.com/ashmitbohora" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile: AI-native builds">GitHub profile →</a></div>
+            <div class="links">
+              <a href="https://getguruji.com" target="_blank" rel="noopener noreferrer">getguruji.com →</a>
+              <a href="https://app.bohoquest.app" target="_blank" rel="noopener noreferrer">app.bohoquest.app →</a>
+            </div>
           </section>
 
           <section class="chapter" data-layer="5">
@@ -181,29 +186,8 @@ import Base from '../layouts/Base.astro';
       </div>
     </section>
 
-    <!-- TODO(ashmit): decided not to link a GitHub repo here since it's undecided whether
-         guruji/bohoquest go public. If you want that later, add a repo link once it's public. -->
-    <section class="flat" id="shipped">
-      <div class="wrap">
-        <div class="sec-head"><span class="idx">Also Shipped</span><h2>Shipped production apps</h2></div>
-        <div class="repo-grid">
-          <div class="repo-card">
-            <span class="name">Guruji</span>
-            <p class="desc">Gamified Duolingo-style learning PWA (React, TypeScript, Supabase): RLS-scoped auth, AA-verified UI, and a self-run security audit against the live database, zero exploitable vulnerabilities.</p>
-            <div class="links">
-              <a href="https://getguruji.com" target="_blank" rel="noopener noreferrer">getguruji.com →</a>
-            </div>
-          </div>
-          <div class="repo-card">
-            <span class="name">BohoQuest</span>
-            <p class="desc">Gamified check-in app (Expo/React Native): server-side anti-cheat via Supabase RPC, Apple Sign-In, and a 121-test suite. Live in TestFlight.</p>
-            <div class="links">
-              <a href="https://app.bohoquest.app" target="_blank" rel="noopener noreferrer">app.bohoquest.app →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- TODO(ashmit): decided not to link a GitHub repo for Guruji/BohoQuest above since it's
+         undecided whether those repos go public. Add one later if you make either public. -->
 
     <!-- TODO(ashmit): Ashmit named the handle "bohos_bts" (with underscore, IG-style),
          but the only verified-live account found is TikTok @bohosbts (no underscore).
@@ -220,22 +204,42 @@ import Base from '../layouts/Base.astro';
           <div class="brand-chip">
             <span class="b-name">Webspansion</span>
             <span class="b-tag">free-tier studio</span>
-            <div class="b-links"><a href="https://getwebspansion.org" target="_blank" rel="noopener noreferrer">Website →</a></div>
+            <div class="b-links">
+              <a href="https://getwebspansion.org" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/><path d="M1.5 8h13M8 1.5c2 2 2 11 0 13M8 1.5c-2 2-2 11 0 13" stroke="currentColor" stroke-width="1.4"/></svg>
+                Website
+              </a>
+            </div>
           </div>
           <div class="brand-chip">
             <span class="b-name">Prospansion</span>
             <span class="b-tag">paid tier, launching soon</span>
-            <div class="b-links"><a href="https://prospansion.com" target="_blank" rel="noopener noreferrer">Website →</a></div>
+            <div class="b-links">
+              <a href="https://prospansion.com" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/><path d="M1.5 8h13M8 1.5c2 2 2 11 0 13M8 1.5c-2 2-2 11 0 13" stroke="currentColor" stroke-width="1.4"/></svg>
+                Website
+              </a>
+            </div>
           </div>
           <div class="brand-chip">
             <span class="b-name">BohoBites</span>
             <span class="b-tag">6K+ followers</span>
-            <div class="b-links"><a href="https://www.instagram.com/_bohobites" target="_blank" rel="noopener noreferrer">Instagram →</a></div>
+            <div class="b-links">
+              <a href="https://www.instagram.com/_bohobites" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="13" height="13" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3.2" stroke="currentColor" stroke-width="1.4"/><circle cx="11.6" cy="4.4" r="0.9" fill="currentColor"/></svg>
+                Instagram
+              </a>
+            </div>
           </div>
           <div class="brand-chip">
             <span class="b-name">Bohos BTS</span>
             <span class="b-tag">behind the scenes</span>
-            <div class="b-links"><a href="https://www.tiktok.com/@bohosbts" target="_blank" rel="noopener noreferrer">TikTok →</a></div>
+            <div class="b-links">
+              <a href="https://www.tiktok.com/@bohosbts" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M9.5 1.5v8.3a2.7 2.7 0 1 1-2.2-2.66" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M9.5 3.2c.5 1.6 1.8 2.7 3.4 2.9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+                TikTok
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -245,7 +249,7 @@ import Base from '../layouts/Base.astro';
       <div class="wrap">
         <div class="sec-head"><span class="idx">Sides</span><h2>Also on the menu</h2></div>
         <div class="menu-list">
-          <div class="dish"><div class="dish-head"><span class="name">WLF Club</span><span class="stat">internship '26</span></div><span class="desc">Redirected growth strategy from ad spend to backlog conversion (780+ CRM opportunities analyzed); built the analytics stack and Warvis, an internal RAG tool: 700+ docs, HIPAA-aware access control</span></div>
+          <div class="dish"><div class="dish-head"><span class="name">PickMyPath</span><span class="stat">live, paused</span></div><span class="desc">guitar-learning app: chord-aligned lyrics, 73-song dataset, recommendation engine (Next.js, Supabase)</span></div>
           <div class="dish"><div class="dish-head"><span class="name">BoHub</span><span class="stat">built · local</span></div><span class="desc">AI personal OS: Claude API tiered routing, SQLite, security model</span></div>
           <div class="dish"><div class="dish-head"><span class="name">Remotion Studio</span><span class="stat">in production</span></div><span class="desc">React video rendering for 4 brands</span></div>
         </div>
@@ -271,13 +275,10 @@ import Base from '../layouts/Base.astro';
       <p class="sig">Chef &amp; engineer: <span>Ashmit Bohora</span>, Austin TX</p>
       <div class="links">
         <a href="https://github.com/ashmitbohora" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/ashmitbohora" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="/ashmit-bohora-resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a href="https://www.linkedin.com/in/ashmitbohora" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="mailto:ashmitbohora@utexas.edu">Email</a>
-        <a href="https://www.instagram.com/_bohobites" target="_blank" rel="noopener noreferrer">BohoBites</a>
-        <a href="https://www.tiktok.com/@bohosbts" target="_blank" rel="noopener noreferrer">Bohos BTS</a>
-        <a href="https://getwebspansion.org" target="_blank" rel="noopener noreferrer">Webspansion</a>
-        <a href="https://prospansion.com" target="_blank" rel="noopener noreferrer">Prospansion</a>
+        <a href="#brands">Social Media</a>
       </div>
       <p class="fineprint">No tutorial clones. Every project here is a real, running repository.</p>
     </div>

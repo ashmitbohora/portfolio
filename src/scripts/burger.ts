@@ -99,7 +99,7 @@ export function initBurger(stack: HTMLElement, reduced: boolean) {
     '<b>02 / 06</b> &nbsp;LETTUCE · DESIGN & CLIENTS',
     '<b>03 / 06</b> &nbsp;CHEESE · APIs & AUTOMATION',
     '<b>04 / 06</b> &nbsp;PATTY · DATA',
-    '<b>05 / 06</b> &nbsp;SPECIAL SAUCE · AI',
+    '<b>05 / 06</b> &nbsp;SPECIAL SAUCE · SHIPPED',
     '<b>06 / 06</b> &nbsp;BOTTOM BUN · FOUNDATION',
   ];
   const smooth = (t: number) => t * t * (3 - 2 * t);
