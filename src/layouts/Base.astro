@@ -22,7 +22,7 @@ const schema = {
       email: 'mailto:ashmitbohora@utexas.edu',
       jobTitle: 'Statistics & Data Science Student',
       description:
-        'UT Austin Statistics & Data Science student (Class of 2029) seeking Summer 2027 internships in data science, software engineering, machine learning, or AI. Founder of Webspansion (28 client sites), builder of PickMyPath (live guitar-learning app), and Summer 2026 intern at WLF Club.',
+        'UT Austin Statistics & Data Science student (Class of 2029) seeking Summer 2027 internships in data science, software engineering, machine learning, or AI. Founder of Webspansion (19+ live client sites), builder of Guruji and BohoQuest, and Growth & AI Automation Intern at WLF Club.',
       award: [
         'QuestBridge Finalist (2024)',
         'UT Austin Impact Scholar ($48,000 merit award)',
@@ -91,12 +91,32 @@ const schema = {
           name: 'Webspansion',
           url: 'https://getwebspansion.org',
           description:
-            'Web studio founded by Ashmit Bohora at 17: 28 client websites built solo for local businesses and nonprofits.',
+            'Web studio founded by Ashmit Bohora at 17: 19+ live client websites built solo for local businesses and nonprofits.',
           founder: { '@id': 'https://ashmitbohora.com/#person' },
         },
         {
           '@type': 'SoftwareApplication',
           position: 3,
+          name: 'Guruji',
+          url: 'https://getguruji.com',
+          applicationCategory: 'EducationalApplication',
+          description:
+            'Gamified Duolingo-style learning PWA (React, TypeScript, Supabase) with RLS-scoped auth, AA-verified UI, and a self-run security audit.',
+          author: { '@id': 'https://ashmitbohora.com/#person' },
+        },
+        {
+          '@type': 'SoftwareApplication',
+          position: 4,
+          name: 'BohoQuest',
+          url: 'https://app.bohoquest.app',
+          applicationCategory: 'LifestyleApplication',
+          description:
+            'Gamified check-in app (Expo/React Native) with server-side anti-cheat verification, Apple Sign-In, and a 121-test suite. Live in TestFlight.',
+          author: { '@id': 'https://ashmitbohora.com/#person' },
+        },
+        {
+          '@type': 'SoftwareApplication',
+          position: 5,
           name: 'BohoBites Analytics',
           url: 'https://github.com/ashmitbohora/bohobites_dashboard',
           applicationCategory: 'BusinessApplication',
@@ -106,7 +126,7 @@ const schema = {
         },
         {
           '@type': 'CreativeWork',
-          position: 4,
+          position: 6,
           name: 'BoHub',
           description:
             'Architecture-complete AI personal OS: Claude API with tiered model routing, SQLite full-text search, prompt-injection defense.',
