@@ -157,15 +157,11 @@ section.flat{padding:80px 0}
 .dish .desc{color:var(--ink-soft);font-size:15px;display:block}
 .dish .stat{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--ink-soft);white-space:nowrap}
 
-.skills{max-width:560px;margin:0 auto}
-.sk-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1.5px solid #E2D6BC}
-.sk-row:first-child{padding-top:0}
-.sk-row .k{font-weight:600;font-size:16px}
-.sk-row .k small{font-weight:400;color:var(--ink-soft);display:block;font-size:13px;margin-top:2px}
-.sk-row .v{font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-align:right;white-space:nowrap;color:var(--ink-soft)}
-.sk-row .v b{color:var(--ketchup);font-weight:600}
-.sk-foot{font-size:13px;color:var(--ink-soft);padding-top:18px;line-height:1.6;max-width:52ch}
-.sk-foot b{color:var(--ketchup)}
+.build{max-width:600px;margin:0 auto}
+.build .b-row{padding:15px 0;border-bottom:1.5px solid #E2D6BC;font-size:16px;line-height:1.55;color:var(--ink-soft)}
+.build .b-row:first-child{padding-top:0}
+.build .b-row .k{font-weight:700;color:var(--ink)}
+.build .b-foot{font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:var(--ink-soft);padding-top:18px;line-height:1.85;max-width:60ch}
 
 footer.site{padding:64px 0 90px;text-align:center;border-top:3px solid var(--ink);margin-top:40px}
 footer.site .sig{font-family:var(--disp);font-size:24px;margin-bottom:20px}

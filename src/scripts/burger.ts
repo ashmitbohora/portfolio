@@ -87,7 +87,8 @@ export function initBurger(stack: HTMLElement, reduced: boolean) {
   const cheese = new THREE.Mesh(new THREE.BoxGeometry(2.45, 0.09, 2.45), toon(0xf2c14e));
   cheese.rotation.y = Math.PI / 4.6;
   addLayer(cheese, -0.72, 0.95);
-  addLayer(new THREE.Mesh(new THREE.CylinderGeometry(1.38, 1.42, 0.46, 48), toon(0x7c4a22)), -1.0, 0.0);
+  // grilled-chicken tan, not beef brown (chicken, not beef: Ashmit is Hindu)
+  addLayer(new THREE.Mesh(new THREE.CylinderGeometry(1.38, 1.42, 0.46, 48), toon(0xc79a5b)), -1.0, 0.0);
   addLayer(ruffledDisc(1.45, 0.1, 0xb93018, 12, 0.07), -1.28, -0.95);
   addLayer(new THREE.Mesh(new THREE.CylinderGeometry(1.46, 1.34, 0.5, 48), toon(0xdd9a4e)), -1.62, -1.95);
 
