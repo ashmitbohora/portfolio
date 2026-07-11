@@ -56,10 +56,6 @@ import Base from '../layouts/Base.astro';
       <div class="wrap scrolly-grid">
         <div class="sticky-pane">
           <canvas id="burgerCanvas" aria-hidden="true"></canvas>
-          <div class="rail" id="rail" aria-hidden="true">
-            <div class="seg"></div><div class="seg"></div><div class="seg"></div>
-            <div class="seg"></div><div class="seg"></div><div class="seg"></div>
-          </div>
           <div class="layer-tag" id="layerTag" aria-hidden="true"><b>01 / 06</b> &nbsp;TOP BUN · FRONTEND</div>
         </div>
         <div class="chapters" id="chapters">
@@ -166,24 +162,16 @@ import Base from '../layouts/Base.astro';
             <p class="rh">ASHMIT'S</p>
             <p class="sub">ORDER #2029 · UT AUSTIN, STATS &amp; DATA SCIENCE<br>SERVER: HIMSELF · TABLE: RISING SOPHOMORE</p>
             <div class="rule"></div>
-            <div class="r-row"><span>CLIENT SITES SHIPPED (SOLO)</span><span class="v hot" data-count="28">28</span></div>
-            <div class="r-row"><span>SONGS IN PICKMYPATH DATASET</span><span class="v" data-count="73">73</span></div>
-            <div class="r-row"><span>FOLLOWERS ON MY FOOD BRAND</span><span class="v">6K+</span></div>
-            <div class="r-row"><span>BRANDS ON ONE VIDEO PIPELINE</span><span class="v" data-count="4">4</span></div>
-            <div class="r-row"><span>GPA (NO SUBSTITUTIONS)</span><span class="v">3.7</span></div>
+            <div class="r-row"><span>CLIENT SITES SHIPPED (SOLO)</span><span class="v hot">28</span></div>
+            <div class="r-row"><span>SONGS IN PICKMYPATH DATASET</span><span class="v">73</span></div>
+            <div class="r-row"><span>FOLLOWERS ON BOHOBITES (MY FOOD BRAND)</span><span class="v">6K+</span></div>
+            <div class="r-row"><span>BRANDS ON ONE VIDEO PIPELINE</span><span class="v">4</span></div>
+            <div class="r-row"><span>GPA</span><span class="v">3.7</span></div>
             <div class="rule"></div>
             <div class="r-total"><span>TOTAL</span><span class="hot">HIREABLE</span></div>
             <div class="rule"></div>
             <p class="r-thanks">*** EVERY NUMBER MEASURED, NOT GARNISHED ***</p>
           </div>
-        </div>
-        <div class="mission">
-          <div class="row">
-            <span class="label">The 100-Dish Challenge</span>
-            <span class="count"><b data-count="28">28</b> / 100 served</span>
-          </div>
-          <div class="bar"><div class="fill" data-width="28%"></div></div>
-          <p class="note">100 REAL THINGS SHIPPED BEFORE GRADUATION: SITES, APPS, PIPELINES.<br>LAST DISH OUT THE KITCHEN → pickmypath.app · Jun 2026</p>
         </div>
       </div>
     </section>
@@ -192,27 +180,24 @@ import Base from '../layouts/Base.astro';
       <div class="wrap">
         <div class="sec-head"><span class="idx">Sides</span><h2>Also on the menu</h2></div>
         <div class="menu-list">
-          <div class="dish"><span class="name">WLF Club</span><span class="desc">Summer 2026 internship: built analytics &amp; team tools for a real wellness business</span><span class="dots"></span><span class="stat">internship '26</span></div>
-          <div class="dish"><span class="name">BoHub</span><span class="desc">AI personal OS: Claude API, SQLite, security model</span><span class="dots"></span><span class="stat">architecture</span></div>
-          <div class="dish"><span class="name">Remotion Studio</span><span class="desc">React video rendering for 4 brands</span><span class="dots"></span><span class="stat">in production</span></div>
-          <div class="dish"><span class="name">Life OS</span><span class="desc">personal kanban: Vite, React, Supabase</span><span class="dots"></span><span class="stat">daily driver</span></div>
+          <div class="dish"><div class="dish-head"><span class="name">WLF Club</span><span class="stat">internship '26</span></div><span class="desc">Summer 2026 internship: built analytics and team tools for a real wellness business</span></div>
+          <div class="dish"><div class="dish-head"><span class="name">BoHub</span><span class="stat">architecture</span></div><span class="desc">AI personal OS: Claude API, SQLite, security model</span></div>
+          <div class="dish"><div class="dish-head"><span class="name">Remotion Studio</span><span class="stat">in production</span></div><span class="desc">React video rendering for 4 brands</span></div>
+          <div class="dish"><div class="dish-head"><span class="name">Life OS</span><span class="stat">daily driver</span></div><span class="desc">personal kanban: Vite, React, Supabase</span></div>
         </div>
       </div>
     </section>
 
     <section class="flat" id="nutrition">
       <div class="wrap">
-        <div class="sec-head"><span class="idx">Per Serving</span><h2>Skills, honestly rated</h2></div>
-        <div class="nutrition">
-          <div class="nf-title">Nutrition Facts</div>
-          <div class="nf-serving">Serving size: 1 rising sophomore (Austin, TX)</div>
-          <div class="nf-amount"><span>Amount per build</span><span>% Honest Value*</span></div>
-          <div class="nf-row"><span class="k">Python / Pandas <small>two production pipelines</small></span><span class="v"><b>CLEAN</b> · 4/5</span></div>
-          <div class="nf-row"><span class="k">TypeScript / React <small>327-file app, live</small></span><span class="v"><b>CLEAN</b> · 4/5</span></div>
-          <div class="nf-row"><span class="k">SQL <small>Postgres in prod, quality checks</small></span><span class="v">DECENT · 3/5</span></div>
-          <div class="nf-row sub"><span class="k">R <small>coursework, tidyverse next</small></span><span class="v">TRYING · 2/5</span></div>
-          <div class="nf-row sub"><span class="k">Machine Learning <small>recommender shipped; classical ML next</small></span><span class="v">TRYING · 2/5</span></div>
-          <div class="nf-foot">* Scale from my own app, PickMyPath: LOST → TRYING → DECENT → <b>CLEAN</b> → PERFECT. Nothing here is PERFECT yet. That's the roadmap, not a weakness.</div>
+        <div class="sec-head"><span class="idx">Skills</span><h2>Skills, honestly rated</h2></div>
+        <div class="skills">
+          <div class="sk-row"><span class="k">Python / Pandas <small>two production pipelines</small></span><span class="v"><b>Clean</b> · 4/5</span></div>
+          <div class="sk-row"><span class="k">TypeScript / React <small>327-file app, live</small></span><span class="v"><b>Clean</b> · 4/5</span></div>
+          <div class="sk-row"><span class="k">SQL <small>Postgres in prod, quality checks</small></span><span class="v">Decent · 3/5</span></div>
+          <div class="sk-row"><span class="k">R <small>coursework, tidyverse next</small></span><span class="v">Trying · 2/5</span></div>
+          <div class="sk-row"><span class="k">Machine Learning <small>recommender shipped; classical ML next</small></span><span class="v">Trying · 2/5</span></div>
+          <div class="sk-foot">Rated on my own scale: Lost, Trying, Decent, <b>Clean</b>, Perfect. Nothing here is Perfect yet — that's the roadmap, not a weakness.</div>
         </div>
       </div>
     </section>
@@ -226,7 +211,7 @@ import Base from '../layouts/Base.astro';
         <a href="https://www.linkedin.com/in/ashmitbohora">LinkedIn</a>
         <a href="mailto:ashmitbohora@utexas.edu">Email</a>
       </div>
-      <p class="fineprint">No artificial metrics · No tutorial clones · Locally sourced from real repositories</p>
+      <p class="fineprint">No tutorial clones. Every project here is a real, running repository.</p>
     </div>
   </footer>
 
@@ -263,38 +248,4 @@ import Base from '../layouts/Base.astro';
     lazyIO.observe(stack);
   </script>
 
-  <script>
-    // count-ups + ketchup fill: values stay at their real numbers until the
-    // moment they animate, so crawlers and no-JS readers never see zeros
-    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!reducedMotion) {
-      const ease = (t: number) => 1 - Math.pow(1 - t, 3);
-      const io = new IntersectionObserver(
-        (es) =>
-          es.forEach((e) => {
-            if (!e.isIntersecting) return;
-            e.target.querySelectorAll<HTMLElement>('[data-count]').forEach((el, i) => {
-              const target = +el.dataset.count!;
-              const dur = 1100;
-              el.textContent = '0';
-              setTimeout(() => {
-                const t0 = performance.now();
-                (function tk(now: number) {
-                  const p = Math.min((now - t0) / dur, 1);
-                  el.textContent = String(Math.round(ease(p) * target));
-                  if (p < 1) requestAnimationFrame(tk);
-                })(t0);
-              }, i * 120);
-            });
-            const f = e.target.querySelector<HTMLElement>('.fill');
-            if (f) f.style.width = f.dataset.width!;
-            io.unobserve(e.target);
-          }),
-        { threshold: 0.3 }
-      );
-      document.querySelectorAll('.receipt,.mission').forEach((el) => io.observe(el));
-    } else {
-      document.querySelectorAll<HTMLElement>('.fill').forEach((f) => (f.style.width = f.dataset.width!));
-    }
-  </script>
 </Base>

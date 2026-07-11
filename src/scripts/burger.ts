@@ -54,7 +54,7 @@ export function initBurger(stack: HTMLElement, reduced: boolean) {
     return new THREE.Mesh(g, toon(c));
   }
 
-  type Layer = { holder: THREE.Group; rest: number; open: number; y: number; target: number; burst: boolean };
+  type Layer = { holder: THREE.Group; rest: number; open: number; y: number; target: number };
   const layers: Layer[] = [];
   function addLayer(obj: THREE.Object3D, restY: number, openY: number) {
     obj.traverse((o) => {
@@ -64,7 +64,7 @@ export function initBurger(stack: HTMLElement, reduced: boolean) {
     holder.add(obj);
     group.add(holder);
     holder.position.y = restY;
-    layers.push({ holder, rest: restY, open: openY, y: restY, target: restY, burst: false });
+    layers.push({ holder, rest: restY, open: openY, y: restY, target: restY });
   }
 
   const bunGroup = new THREE.Group();
@@ -91,34 +91,8 @@ export function initBurger(stack: HTMLElement, reduced: boolean) {
   addLayer(ruffledDisc(1.45, 0.1, 0xb93018, 12, 0.07), -1.28, -0.95);
   addLayer(new THREE.Mesh(new THREE.CylinderGeometry(1.46, 1.34, 0.5, 48), toon(0xdd9a4e)), -1.62, -1.95);
 
-  // crumb particle pool
-  type Crumb = { m: THREE.Mesh<THREE.SphereGeometry, THREE.MeshToonMaterial>; v: THREE.Vector3; life: number };
-  const crumbs: Crumb[] = [];
-  const crumbGeo = new THREE.SphereGeometry(0.06, 6, 5);
-  for (let i = 0; i < 36; i++) {
-    const m = new THREE.Mesh(crumbGeo, new THREE.MeshToonMaterial({ color: 0xdd9a4e, transparent: true, opacity: 0 }));
-    m.visible = false;
-    scene.add(m);
-    crumbs.push({ m, v: new THREE.Vector3(), life: 0 });
-  }
-  let crumbIdx = 0;
-  function burst(worldPos: THREE.Vector3, color: number) {
-    for (let k = 0; k < 12; k++) {
-      const c = crumbs[crumbIdx++ % crumbs.length];
-      c.m.material.color.set(color);
-      c.m.position.copy(worldPos);
-      c.v.set((Math.random() - 0.5) * 0.16, Math.random() * 0.14 + 0.04, (Math.random() - 0.5) * 0.16);
-      c.life = 1;
-      c.m.visible = true;
-      c.m.material.opacity = 1;
-      c.m.scale.setScalar(0.7 + Math.random() * 0.8);
-    }
-  }
-  const layerColors = [0xdd9a4e, 0x55833a, 0xf2c14e, 0x7c4a22, 0xb93018, 0xdd9a4e];
-
   // ---- scroll drives everything ----
   const tagEl = document.getElementById('layerTag')!;
-  const segs = [...document.querySelectorAll('.rail .seg')];
   const tagText = [
     '<b>01 / 06</b> &nbsp;TOP BUN · FRONTEND',
     '<b>02 / 06</b> &nbsp;LETTUCE · DESIGN & CLIENTS',
@@ -128,7 +102,6 @@ export function initBurger(stack: HTMLElement, reduced: boolean) {
     '<b>06 / 06</b> &nbsp;BOTTOM BUN · FOUNDATION',
   ];
   const smooth = (t: number) => t * t * (3 - 2 * t);
-  const v3 = new THREE.Vector3();
   let activeIdx = -1;
 
   function onScroll() {
@@ -141,14 +114,6 @@ export function initBurger(stack: HTMLElement, reduced: boolean) {
       const raw = Math.min(Math.max(p * n - i, 0), 1);
       const s = smooth(raw);
       L.target = L.rest + (L.open - L.rest) * s;
-      if (raw > 0.5 && !L.burst && !reduced) {
-        L.burst = true;
-        L.holder.getWorldPosition(v3);
-        burst(v3, layerColors[i]);
-      }
-      if (raw <= 0) L.burst = false;
-      segs[i]?.classList.toggle('done', raw >= 0.95);
-      segs[i]?.classList.toggle('now', raw > 0 && raw < 0.95);
     });
     const idx = Math.min(Math.floor(p * n), n - 1);
     if (idx !== activeIdx) {
@@ -190,14 +155,6 @@ export function initBurger(stack: HTMLElement, reduced: boolean) {
     });
     group.rotation.y += spinV;
     spinV *= 0.9;
-    crumbs.forEach((c) => {
-      if (!c.m.visible) return;
-      c.life -= 0.018;
-      if (c.life <= 0) { c.m.visible = false; return; }
-      c.v.y -= 0.006;
-      c.m.position.add(c.v);
-      c.m.material.opacity = Math.min(1, c.life * 1.6);
-    });
     renderer.render(scene, camera);
     requestAnimationFrame(tick);
   }
