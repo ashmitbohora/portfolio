@@ -6,8 +6,13 @@
   correct diagnosis was over-quirky overcorrection (mode D), not AI slop, so the fix was to
   SUBTRACT gimmicks, not add. Kept the two signatures (3D burger + receipt); de-skeuomorphed the
   rest. NOT yet deployed; work sits on branch `polish/restraint-pass` (2 commits) on top of main.
-  Ashmit merges/pushes/deploys himself (target Sun Jul 12), then starts the first batch of
-  internship applications. Full audit: ~/SecondBrain/_terminals/2026-07-11-portfolio-giant-audit-FINDINGS.md
+  Ashmit merges/pushes/deploys himself (target Sun Jul 12), then starts MASS internship
+  applications. Full audit: ~/SecondBrain/_terminals/2026-07-11-portfolio-giant-audit-FINDINGS.md
+- AI-VISIBILITY (deep pass, 2026-07-11): crawlers/LLMs render without scrolling and don't wait for
+  animations. Verified raw HTML (curl+strip) has ALL content (Astro SSG, 4473 chars). Found + fixed:
+  the 6 project chapters were scroll-gated to opacity 0.45 (commit 1bc8227) so a rendering crawler
+  saw them dimmed; now always full-opacity. RULE: no content on this site may depend on a scroll
+  event or animation firing. If you add motion, gate only decoration, never text.
 - Run: `npm run dev` (dev) or `npm run build && npx serve dist -l 4322` (prod preview).
 - Stack: Astro 5, plain CSS (src/styles/global.css), one lazy-loaded Three.js island (src/scripts/burger.ts). Two pages: index + 404.
 - Restraint pass changes (2026-07-11): froze the receipt at real numbers and removed the count-up
@@ -26,4 +31,4 @@
   virtual-time suspends IntersectionObserver (check a VISIBLE tab).
 - Open items: post-deploy only: validate og:image with a social-preview debugger once the domain
   resolves. Ashmit's go decides deploy; never push/deploy from a session.
-- updated: 2026-07-11
+- updated: 2026-07-11 (deep AI-visibility pass)
