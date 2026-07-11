@@ -4,15 +4,16 @@
 - Status: DEPLOYED to Cloudflare Pages (2026-07-11, commit b498d30, project name `ashmitbohora`,
   direct-upload via `wrangler pages deploy dist --project-name=ashmitbohora`, NOT git-connected).
   Live and verified at https://ashmitbohora.pages.dev (homepage 200, resume PDF 200 at correct size).
-  The custom domain ashmitbohora.com is NOT wired to it yet: the domain's nameservers are still
-  Namecheap's own, no Cloudflare zone exists for it, and it has ACTIVE Namecheap email forwarding
-  (MX + SPF records) that must be recreated inside Cloudflare DNS before nameservers move, or email
-  breaks. Zone creation and nameserver changes need Ashmit's own Cloudflare + Namecheap registrar
-  logins; the wrangler OAuth token in this environment is zone-read-only (known gotcha, see
-  ~/SecondBrain/Knowledge/cloudflare-workers-gotchas.md), so an agent cannot do this step. Correction:
-  the prior note below claiming a "GitHub-connected host auto-builds" was WRONG, there was never a
-  git-connected host or CI for this repo; this was a first deploy, not a redeploy. Full log:
-  ~/SecondBrain/_terminals/2026-07-11-internship-launch-LOG.md
+  Custom domain ashmitbohora.com FULLY MIGRATED same day: Cloudflare zone created (free plan), email
+  forwarding preserved (5 MX + 1 TXT records recreated), Namecheap nameservers switched to
+  athena.ns.cloudflare.com + pranab.ns.cloudflare.com, custom domain attached to the Pages project
+  (status Initializing as of 17:52, propagation typically minutes to a few hours, Cloudflare quotes up
+  to 48h). Verify with `curl -sI https://ashmitbohora.com` once it should be live. Driven via
+  claude-in-chrome browser automation at Ashmit's explicit request; the wrangler OAuth token is
+  zone-read-only (known gotcha, see ~/SecondBrain/Knowledge/cloudflare-workers-gotchas.md) so DNS/zone
+  work needs either the dashboard UI or a token with zone-write. Correction: an earlier note here
+  claiming a "GitHub-connected host auto-builds" was WRONG, there was never a git-connected host or CI
+  for this repo. Full log: ~/SecondBrain/_terminals/2026-07-11-internship-launch-LOG.md
 - Resume is Ashmit-approved (pass-2 terminal, then two more wording rounds same day: audit-line clarity
   + Guruji/BohoQuest grouping, then recast the audit/121-test lines as engineering competence not impact
   since neither app has real users yet). Full content history + resume log:
