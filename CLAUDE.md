@@ -92,10 +92,29 @@
   Community line now ties Guruji (free education) + Webspansion (free websites) into the
   community/impact story. Verified 1 page via a rendered PDF screenshot (not just page-count),
   zero overflow, zero em dashes. Full log: ~/SecondBrain/_terminals/2026-07-11-resume-pass-2-LOG.md
-- Open items: (1) Add the Merner Scholarship to the Layer-06 UT chapter on the SITE itself (resume
-  Honors line is done, the on-site chapter copy is not); (2) Ashmit's push/merge/deploy decision
-  (target Sun Jul 12), then he starts MASS internship applications. Post-deploy only: validate
-  og:image with a social-preview debugger once the domain resolves. Ashmit's go decides deploy;
-  never push/deploy from a session.
-- updated: 2026-07-11 (resume pass 2: real UT academic data, honors/also-line formatting, Boho/Guruji
-  connections, Ashmit-approved, committed 10c1871)
+- RESUME-SITE RECONCILE PASS (2026-07-11, commits b510802 + 281cd07, local-only, NOT deployed):
+  walked every site section against the Ashmit-approved `docs/resume.html` and fixed drift. Numbers:
+  28 -> 19+ live client sites everywhere (hero, receipt, layer 02, JSON-LD schema, meta description;
+  Ashmit's explicit call when asked, since resume says "19+ live" and the two numbers read as
+  contradictory side by side), GPA 3.7 -> 3.75. Content: pulled the Hindu chicken-patty joke out of a
+  buried parenthetical in Layer 04 into its own legible styled line; added the missing Merner
+  Scholarship to the Layer-06 UT chapter (closes the item below). New sections: "Shipped production
+  apps" (Guruji + BohoQuest, which the site never mentioned despite being the resume's headline
+  projects; links go to the live apps only, not GitHub, since both repos are private and Ashmit hasn't
+  decided whether to make them public); "Brands & socials" (Webspansion + Prospansion websites,
+  BohoBites Instagram, Bohos BTS TikTok, real verified links only, plus a matching nav entry each so
+  they're actually discoverable, not just in the footer). Folded the standalone Warvis Sides entry
+  into WLF Club (Warvis was built for/inside the WLF internship, not a separate venture) and updated
+  WLF's line to match the resume's backlog-conversion framing. Added Codex + Vercel to the tools line.
+  Build clean, zero console errors, zero mobile overflow (verified via Playwright, screenshots in
+  session log). TODOs left for Ashmit, not invented: (1) Bohos BTS handle ambiguity, he named it
+  "bohos_bts" (underscore) but the only verified-live account is TikTok @bohosbts (no underscore) --
+  confirm platform + exact handle; (2) BohoBites TikTok/YouTube were checked in an earlier pass and
+  404'd, only Instagram is linked; (3) Guruji/BohoQuest GitHub repos are private, no link shown pending
+  his public/private call. Full log: ~/SecondBrain/_terminals/2026-07-11-resume-site-update-LOG.md
+- Open items: (1) Ashmit's push/merge/deploy decision (target Sun Jul 12) on the reconcile pass above,
+  then he starts MASS internship applications. Post-deploy only: validate og:image with a
+  social-preview debugger once the domain resolves. Ashmit's go decides deploy; never push/deploy from
+  a session.
+- updated: 2026-07-11 (resume-site reconcile pass: numbers matched to resume, new Shipped + Brands
+  sections, Warvis folded into WLF, Merner Scholarship added to site, local-only, awaiting deploy go)
