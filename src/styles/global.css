@@ -97,9 +97,9 @@ html:not(.js) .scrolly-grid{grid-template-columns:1fr}
   min-height:60vh;display:flex;flex-direction:column;justify-content:center;
   padding:40px 48px 40px 8px;
 }
-html.js .chapter{min-height:88vh;opacity:.45;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease}
-html.js .chapter.active,
-html.js .chapter:focus-within{opacity:1;transform:none}
+/* chapters stay full-opacity and in place: content must never depend on a scroll
+   event firing, so crawlers / AI that render without scrolling see everything */
+html.js .chapter{min-height:88vh}
 .chapter .tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px}
 .chapter .tag .swatch{width:18px;height:18px;border-radius:5px;border:2.5px solid var(--ink)}
 .chapter .tag .t{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
@@ -188,5 +188,4 @@ footer.site .links a:hover{border-color:var(--ketchup);color:var(--ketchup)}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .scroll-cue .arrow{animation:none}
-  html.js .chapter{opacity:1;transform:none;transition:none}
 }
