@@ -241,15 +241,13 @@ import Base from '../layouts/Base.astro';
     async function start() {
       if (started) return;
       started = true;
-      const canvas = document.getElementById('burgerCanvas') as HTMLCanvasElement;
-      const pane = canvas.parentElement as HTMLElement;
       try {
         const { initBurger } = await import('../scripts/burger');
         initBurger(stack, reduced);
       } catch {
-        // WebGL unavailable — show all chapters at full strength, drop the canvas pane
-        pane.style.display = 'none';
-        document.querySelectorAll('.chapter').forEach((c) => c.classList.add('active'));
+        // WebGL unavailable: drop the js class so the page collapses to the exact
+        // no-JS layout (pane hidden, single column, chapters full-strength)
+        document.documentElement.classList.remove('js');
       }
     }
 
