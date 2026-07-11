@@ -1,26 +1,29 @@
 # ashmitbohora.com portfolio
 
 ## Current State
-- Status: SHIP VERDICT GIVEN, READY TO DEPLOY (Fable judgment pass 2026-07-10 night, after the
-  pre-ship fixes pass same evening). Burger concept re-questioned by Ashmit and KEPT deliberately:
-  first viewport is the fast plain resume, crawlers see the semantic no-JS layer + schema + llms.txt.
-  The old "Sunday 11:59pm" deadline was declared arbitrary; ship stands as: Ashmit runs `git push` +
-  deploys whenever ready (this weekend), site is DONE, no open build work. Purpose: internship /
-  winternship / fellowship applications. NOT yet deployed; 5 local commits on main.
+- Status: SHIP-CLEAN after the RESTRAINT PASS (Fable giant-audit pass 2026-07-11). Ashmit
+  gut-checked mid-run that it "still feels very live-coded / receipts are #1 for AI-slop"; the
+  correct diagnosis was over-quirky overcorrection (mode D), not AI slop, so the fix was to
+  SUBTRACT gimmicks, not add. Kept the two signatures (3D burger + receipt); de-skeuomorphed the
+  rest. NOT yet deployed; work sits on branch `polish/restraint-pass` (2 commits) on top of main.
+  Ashmit merges/pushes/deploys himself (target Sun Jul 12), then starts the first batch of
+  internship applications. Full audit: ~/SecondBrain/_terminals/2026-07-11-portfolio-giant-audit-FINDINGS.md
 - Run: `npm run dev` (dev) or `npm run build && npx serve dist -l 4322` (prod preview).
 - Stack: Astro 5, plain CSS (src/styles/global.css), one lazy-loaded Three.js island (src/scripts/burger.ts). Two pages: index + 404.
-- Fable pass verified/fixed: REAL BUG fixed in 5190a7e: `.masthead`/`.hero` padding shorthands
-  zeroed `.wrap`'s 32px side padding, so phones showed nav/h1/dek flush against the screen edge
-  (desktop hid it via max-width centering); both now `padding-block`. Full scroll-through eyeballed
-  at 1440x900 + 390x844 with WebGL on: burger, rail, layer tags, receipt, mission, nutrition all
-  correct. "Empty 100-dish progress bar" in headless shots is a synthetic artifact: hidden tabs /
-  virtual-time suspend IntersectionObserver, bar fills to 28% on any visible tab.
-- Prior pass (same night) verified: no mobile overflow at 320/360/390 (headless clamps to 500px min
-  width, use the iframe harness); WebGL-off degrades to the exact no-JS layout; zero em dashes;
-  og.png 1200x630; all numbers docs-verified or softened; reduced-motion correct.
+- Restraint pass changes (2026-07-11): froze the receipt at real numbers and removed the count-up
+  script (a fast scroll / link-preview could flash "CLIENT SITES SHIPPED: 1"); cut the 100-dish
+  striped bar (repeated the receipt's 28); de-skeuomorphed the Sides menu (dropped dot-leaders) and
+  the Skills section (dropped Nutrition Facts label chrome, kept the honest Lost..Perfect scale);
+  removed burger crumb particles + progress rail; dropped unused Plex Mono 500 weight (5 fonts -> 4).
+  NOTE: `.rail` and `.mission`/`.bar`/`.fill` no longer exist; do not reference them.
+- Verified 2026-07-11 in Chrome (not headless): burger animates clean with ZERO console errors;
+  no-JS collapses to the semantic single-column layout (no void); zero horizontal overflow at
+  320/390px (iframe harness); WCAG AA contrast on all text (body 4.72:1, buttons 5.62:1);
+  reduced-motion correct; all numbers cross-check RESUME.md + PROFILE.md.
 - Harness gotchas (for future verification): use extensionless `/__harness` (npx serve 301s
-  `.html` and DROPS the query string) and `scrollTo({behavior:'instant'})` (site smooth-scroll
-  otherwise animates and shots catch frame one).
+  `.html` and DROPS the query string) and `scrollTo({behavior:'instant'})`. Headless Chrome here
+  clamps windows to 500px min, so use the iframe harness for sub-500px checks; hidden-tab
+  virtual-time suspends IntersectionObserver (check a VISIBLE tab).
 - Open items: post-deploy only: validate og:image with a social-preview debugger once the domain
   resolves. Ashmit's go decides deploy; never push/deploy from a session.
-- updated: 2026-07-10
+- updated: 2026-07-11
