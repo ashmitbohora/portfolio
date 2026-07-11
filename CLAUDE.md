@@ -1,12 +1,24 @@
 # ashmitbohora.com portfolio
 
 ## Current State
-- Status: SHIP-CLEAN after the RESTRAINT PASS + CONTENT PASS + RESUME REPOSITIONING + RESUME PASS 2
-  (all 2026-07-11). Resume is Ashmit-approved as of the pass-2 terminal. NOT yet deployed; work sits
-  on branch `polish/restraint-pass` on top of main. Ashmit merges/pushes/deploys himself (target Sun
-  Jul 12), then starts MASS internship applications. Full audit + content log:
-  ~/SecondBrain/_terminals/2026-07-11-portfolio-giant-audit-FINDINGS.md and
-  ~/SecondBrain/_terminals/2026-07-11-portfolio-content-LOG.md
+- Status: DEPLOYED to Cloudflare Pages (2026-07-11, commit b498d30, project name `ashmitbohora`,
+  direct-upload via `wrangler pages deploy dist --project-name=ashmitbohora`, NOT git-connected).
+  Live and verified at https://ashmitbohora.pages.dev (homepage 200, resume PDF 200 at correct size).
+  The custom domain ashmitbohora.com is NOT wired to it yet: the domain's nameservers are still
+  Namecheap's own, no Cloudflare zone exists for it, and it has ACTIVE Namecheap email forwarding
+  (MX + SPF records) that must be recreated inside Cloudflare DNS before nameservers move, or email
+  breaks. Zone creation and nameserver changes need Ashmit's own Cloudflare + Namecheap registrar
+  logins; the wrangler OAuth token in this environment is zone-read-only (known gotcha, see
+  ~/SecondBrain/Knowledge/cloudflare-workers-gotchas.md), so an agent cannot do this step. Correction:
+  the prior note below claiming a "GitHub-connected host auto-builds" was WRONG, there was never a
+  git-connected host or CI for this repo; this was a first deploy, not a redeploy. Full log:
+  ~/SecondBrain/_terminals/2026-07-11-internship-launch-LOG.md
+- Resume is Ashmit-approved (pass-2 terminal, then two more wording rounds same day: audit-line clarity
+  + Guruji/BohoQuest grouping, then recast the audit/121-test lines as engineering competence not impact
+  since neither app has real users yet). Full content history + resume log:
+  ~/SecondBrain/_terminals/2026-07-11-portfolio-giant-audit-FINDINGS.md,
+  ~/SecondBrain/_terminals/2026-07-11-portfolio-content-LOG.md,
+  ~/SecondBrain/_terminals/2026-07-11-resume-pass-2-LOG.md
 - CONTENT PASS (2026-07-11, verified in Chrome): crafted a real recruiter-ready 1-page resume and
   wired a Download-resume button (hero + finale + footer) -> `/ashmit-bohora-resume.pdf` (committed
   in public/). RESUME SOURCE is `docs/resume.html` (gitignored, local-only per the docs/ convention);
