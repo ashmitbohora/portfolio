@@ -46,6 +46,11 @@
   `.html` and DROPS the query string) and `scrollTo({behavior:'instant'})`. Headless Chrome here
   clamps windows to 500px min, so use the iframe harness for sub-500px checks; hidden-tab
   virtual-time suspends IntersectionObserver (check a VISIBLE tab).
-- Open items: post-deploy only: validate og:image with a social-preview debugger once the domain
-  resolves. Ashmit's go decides deploy; never push/deploy from a session.
+- Open items (paused 2026-07-11, "do tomorrow"): (1) OPTIMIZE the resume (docs/resume.html ->
+  public/ashmit-bohora-resume.pdf) - tighten bullets / sharpen impact / maybe role-target variants;
+  (2) ADD new scholarship Ashmit won 2026-07-11: Thomas & Elizabeth Merner Scholarship in Natural
+  Sciences (UT CNS, 2026-2027, $2,000: $1K fall + $1K spring) to resume Honors AND the Layer-06 UT
+  chapter; (3) then Ashmit's push/merge/deploy decision. Post-deploy only: validate og:image with a
+  social-preview debugger once the domain resolves. Ashmit's go decides deploy; never push/deploy
+  from a session.
 - updated: 2026-07-11 (content pass: resume + download button + honest reframes, verified in Chrome)
