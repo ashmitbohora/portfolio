@@ -112,7 +112,20 @@
   confirm platform + exact handle; (2) BohoBites TikTok/YouTube were checked in an earlier pass and
   404'd, only Instagram is linked; (3) Guruji/BohoQuest GitHub repos are private, no link shown pending
   his public/private call. Full log: ~/SecondBrain/_terminals/2026-07-11-resume-site-update-LOG.md
-- Open items: (1) Ashmit's push/merge/deploy decision (target Sun Jul 12) on the reconcile pass above,
+- BURGER LAYER REWRITE (2026-07-11, commit 2350af7, local-only, NOT deployed): Ashmit's direct
+  feedback was that the burger layers ARE his resume, so the old layer text (PickMyPath, APIs &
+  Automation, BohoBites Analytics, "I build AI-native") was stale. Rewrote all 4 to real resume
+  content: Layer 01 = WLF Club, Layer 03 = Prospansion, Layer 04 = Local-First AI & Knowledge Systems
+  (Warvis/Kiln, Hindu joke now lives here as a standalone aside since it's about the patty position not
+  BohoBites specifically), Layer 05 = Shipped Production Apps (Guruji/BohoQuest, replaces the separate
+  flat section from the prior pass). PickMyPath and WLF swapped places in Sides vs full-layer status.
+  Also fixed: receipt "***" line orphan-wrap (text-wrap:balance), brand cards got platform icons
+  (globe/Instagram/TikTok) and support multiple links per brand, footer consolidated from 8 links to 5
+  (GitHub/Resume/LinkedIn/Email/Social Media anchor). Build clean, Playwright-verified, zero console
+  errors, zero mobile overflow. STILL WAITING on Ashmit for: Webspansion Instagram/TikTok/YouTube,
+  BohoBites TikTok/YouTube, Bohos BTS Instagram/YouTube handles (he said he has them, asked for the
+  exact URLs, not yet given). Once supplied, add matching icon links to the Brands & socials cards.
+- Open items: (1) Ashmit's push/merge/deploy decision (target Sun Jul 12) on the pass above,
   then he starts MASS internship applications. Post-deploy only: validate og:image with a
   social-preview debugger once the domain resolves. Ashmit's go decides deploy; never push/deploy from
   a session.
