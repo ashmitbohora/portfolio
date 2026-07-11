@@ -120,12 +120,12 @@ export function initBurger(stack: HTMLElement, reduced: boolean) {
   const tagEl = document.getElementById('layerTag')!;
   const segs = [...document.querySelectorAll('.rail .seg')];
   const tagText = [
-    '<b>01 / 06</b> &nbsp;TOP BUN — FRONTEND',
-    '<b>02 / 06</b> &nbsp;LETTUCE — DESIGN & CLIENTS',
-    '<b>03 / 06</b> &nbsp;CHEESE — APIs & AUTOMATION',
-    '<b>04 / 06</b> &nbsp;PATTY — DATA',
-    '<b>05 / 06</b> &nbsp;SPECIAL SAUCE — AI',
-    '<b>06 / 06</b> &nbsp;BOTTOM BUN — FOUNDATION',
+    '<b>01 / 06</b> &nbsp;TOP BUN · FRONTEND',
+    '<b>02 / 06</b> &nbsp;LETTUCE · DESIGN & CLIENTS',
+    '<b>03 / 06</b> &nbsp;CHEESE · APIs & AUTOMATION',
+    '<b>04 / 06</b> &nbsp;PATTY · DATA',
+    '<b>05 / 06</b> &nbsp;SPECIAL SAUCE · AI',
+    '<b>06 / 06</b> &nbsp;BOTTOM BUN · FOUNDATION',
   ];
   const smooth = (t: number) => t * t * (3 - 2 * t);
   const v3 = new THREE.Vector3();
@@ -156,7 +156,7 @@ export function initBurger(stack: HTMLElement, reduced: boolean) {
       tagEl.innerHTML = tagText[idx];
       chapters.forEach((c, ci) => c.classList.toggle('active', ci === idx));
     }
-    // scroll-linked turn only — skipped under reduced motion (vestibular trigger)
+    // scroll-linked turn only, skipped under reduced motion (vestibular trigger)
     if (!reduced) group.rotation.y = 0.5 + p * 1.1;
   }
   addEventListener('scroll', onScroll, { passive: true });

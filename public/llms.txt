@@ -17,10 +17,10 @@
 
 ## Projects
 
-- [PickMyPath](https://pickmypath.app): Live guitar-learning app — chord-aligned lyrics, 5-level practice tracking, recommendation engine. Next.js 16, React 19, TypeScript (327 files), Supabase/PostgreSQL, Python data pipeline. 73-song structured dataset.
-- [Webspansion](https://getwebspansion.org): Web studio founded at 17 — 28 client websites built solo for local businesses and nonprofits, with Python automation pipelines and an Apps Script CRM.
-- [BohoBites Analytics](https://github.com/ashmitbohora/bohobites_dashboard): Python/Shiny dashboard processing real TikTok creator data — rolling 30–365 day KPI windows, posting-time models — for a 6K-follower food brand.
-- BoHub: Architecture-complete AI personal OS — Claude API with tiered model routing, SQLite full-text search, prompt-injection defense, 950+ lines of architecture docs.
+- [PickMyPath](https://pickmypath.app): Live guitar-learning app: chord-aligned lyrics, 5-level practice tracking, recommendation engine. Next.js 16, React 19, TypeScript (327 files), Supabase/PostgreSQL, Python data pipeline. 73-song structured dataset.
+- [Webspansion](https://getwebspansion.org): Web studio founded at 17: 28 client websites built solo for local businesses and nonprofits, with Python automation pipelines and an Apps Script CRM.
+- [BohoBites Analytics](https://github.com/ashmitbohora/bohobites_dashboard): Python/Shiny dashboard processing real TikTok creator data (rolling 30–365 day KPI windows, posting-time models) for a 6K-follower food brand.
+- BoHub: Architecture-complete AI personal OS: Claude API with tiered model routing, SQLite full-text search, prompt-injection defense, 950+ lines of architecture docs.
 
 ## Skills
 
