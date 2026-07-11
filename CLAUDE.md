@@ -122,9 +122,13 @@
   Also fixed: receipt "***" line orphan-wrap (text-wrap:balance), brand cards got platform icons
   (globe/Instagram/TikTok) and support multiple links per brand, footer consolidated from 8 links to 5
   (GitHub/Resume/LinkedIn/Email/Social Media anchor). Build clean, Playwright-verified, zero console
-  errors, zero mobile overflow. STILL WAITING on Ashmit for: Webspansion Instagram/TikTok/YouTube,
-  BohoBites TikTok/YouTube, Bohos BTS Instagram/YouTube handles (he said he has them, asked for the
-  exact URLs, not yet given). Once supplied, add matching icon links to the Brands & socials cards.
+  errors, zero mobile overflow.
+- SOCIAL HANDLES WIRED (2026-07-11, commit e59b90c, local-only, NOT deployed): Ashmit supplied real
+  Instagram/TikTok/YouTube URLs for Webspansion, BohoBites, Bohos BTS (Prospansion has none yet).
+  Brand cards redesigned as icon-only pill buttons (one per platform) since most brands now have 3-4
+  links. Resolved the earlier bohos_bts/bohosbts ambiguity: Instagram is bohosbts, no underscore,
+  matches TikTok. Handles saved to `~/SecondBrain/Knowledge/brand-social-handles.md` (+ research-index
+  line) so future sessions/projects don't re-derive them.
 - Open items: (1) Ashmit's push/merge/deploy decision (target Sun Jul 12) on the pass above,
   then he starts MASS internship applications. Post-deploy only: validate og:image with a
   social-preview debugger once the domain resolves. Ashmit's go decides deploy; never push/deploy from
