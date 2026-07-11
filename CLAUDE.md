@@ -1,9 +1,10 @@
 # ashmitbohora.com portfolio
 
 ## Current State
-- Status: SHIP-CLEAN after the RESTRAINT PASS + CONTENT PASS (both 2026-07-11). NOT yet deployed;
-  work sits on branch `polish/restraint-pass` on top of main. Ashmit merges/pushes/deploys himself
-  (target Sun Jul 12), then starts MASS internship applications. Full audit + content log:
+- Status: SHIP-CLEAN after the RESTRAINT PASS + CONTENT PASS + RESUME REPOSITIONING + RESUME PASS 2
+  (all 2026-07-11). Resume is Ashmit-approved as of the pass-2 terminal. NOT yet deployed; work sits
+  on branch `polish/restraint-pass` on top of main. Ashmit merges/pushes/deploys himself (target Sun
+  Jul 12), then starts MASS internship applications. Full audit + content log:
   ~/SecondBrain/_terminals/2026-07-11-portfolio-giant-audit-FINDINGS.md and
   ~/SecondBrain/_terminals/2026-07-11-portfolio-content-LOG.md
 - CONTENT PASS (2026-07-11, verified in Chrome): crafted a real recruiter-ready 1-page resume and
@@ -46,11 +47,42 @@
   `.html` and DROPS the query string) and `scrollTo({behavior:'instant'})`. Headless Chrome here
   clamps windows to 500px min, so use the iframe harness for sub-500px checks; hidden-tab
   virtual-time suspends IntersectionObserver (check a VISIBLE tab).
-- Open items (paused 2026-07-11, "do tomorrow"): (1) OPTIMIZE the resume (docs/resume.html ->
-  public/ashmit-bohora-resume.pdf) - tighten bullets / sharpen impact / maybe role-target variants;
-  (2) ADD new scholarship Ashmit won 2026-07-11: Thomas & Elizabeth Merner Scholarship in Natural
-  Sciences (UT CNS, 2026-2027, $2,000: $1K fall + $1K spring) to resume Honors AND the Layer-06 UT
-  chapter; (3) then Ashmit's push/merge/deploy decision. Post-deploy only: validate og:image with a
-  social-preview debugger once the domain resolves. Ashmit's go decides deploy; never push/deploy
-  from a session.
-- updated: 2026-07-11 (content pass: resume + download button + honest reframes, verified in Chrome)
+- RESUME REPOSITIONING (2026-07-11, resume-fix terminal, commits 271d88e + 0019daf): rebuilt
+  `docs/resume.html` per GM5's repositioning SPEC plus Ashmit's direct overrides, verified 1 page in
+  real Chrome each round. Key moves: WLF title changed to "Growth & AI Automation Intern" (no
+  invented official-title parenthetical, he confirmed there is none); added an AI-engineer tagline
+  under his name; merged Webspansion + Prospansion into one founder Experience entry with labeled
+  tiers (Webspansion = free/community tier, 19+ verified live sites; Prospansion = paid technical/
+  data arm offering analytics/SEO/automation, with Prospansion Studio CMS as its built flagship, no
+  delivered-client-analytics-results claim since Prospansion has 0 paid clients); collapsed Projects
+  into 2 clusters (Local-First AI: Warvis + Kiln + "also built" clause for BoHub and the family
+  household tool; Shipped Production Apps: Guruji promoted in with a verified multi-track curriculum
+  bullet (coding/data-science/digital-literacy/english content files confirmed real, not the frozen
+  QuickClaude/Data Decoded brands) + BohoQuest + a PickMyPath/BohoBites "also" clause); added Codex
+  to the AI & tooling line; added the Merner Scholarship ($2,000, UT CNS, 2026-2027) to Honors.
+  Several inflated claims from the upstream SPEC were caught and corrected against verified source
+  facts before writing (Guruji file count, DD/QC deploy status, TikTok Shop revenue, Ocura launch
+  status). Zero em dashes, zero invented metrics. Full log:
+  ~/SecondBrain/_terminals/2026-07-11-portfolio-resume-fix-LOG.md
+- RESUME PASS 2 (2026-07-11, resume-pass-2 terminal, commit 10c1871, Ashmit-approved): applied his
+  7 review edits to `docs/resume.html`. Honors line de-bolded to equal weight (was QuestBridge-only
+  bold). GPA and coursework replaced with REAL data read directly from his 3 UT grade-report PDFs
+  (not guessed): cumulative GPA 3.7505 -> resume now shows 3.75/4.0 (was 3.7); coursework line now
+  leads with real Fall 2026 registered courses (Elements of Software Design, Linear Algebra,
+  Probability & Statistical Inference) then real completed ones (Intro to Data Science, Statistical
+  Thinking, Multivariable Calculus) - the old line named a course ("Introductory Statistics with R")
+  that does not exist on his transcript. Both "Also"/"Also built:" continuation lines de-bolded for
+  consistency. BohoQuest now connected to BohoBites + Bohos BTS as one Boho family. Guruji curriculum
+  bullet now names Data Decoded (data science) and QuickClaude (coding) as tracks INSIDE Guruji, not
+  separate shipped projects. PickMyPath kept as "live, paused" (flagged + confirmed with Ashmit
+  against a conflicting "under production" instruction in the pass brief; verified truth won).
+  Community line now ties Guruji (free education) + Webspansion (free websites) into the
+  community/impact story. Verified 1 page via a rendered PDF screenshot (not just page-count),
+  zero overflow, zero em dashes. Full log: ~/SecondBrain/_terminals/2026-07-11-resume-pass-2-LOG.md
+- Open items: (1) Add the Merner Scholarship to the Layer-06 UT chapter on the SITE itself (resume
+  Honors line is done, the on-site chapter copy is not); (2) Ashmit's push/merge/deploy decision
+  (target Sun Jul 12), then he starts MASS internship applications. Post-deploy only: validate
+  og:image with a social-preview debugger once the domain resolves. Ashmit's go decides deploy;
+  never push/deploy from a session.
+- updated: 2026-07-11 (resume pass 2: real UT academic data, honors/also-line formatting, Boho/Guruji
+  connections, Ashmit-approved, committed 10c1871)
