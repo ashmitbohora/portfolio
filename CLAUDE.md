@@ -1,6 +1,14 @@
 # ashmitbohora.com portfolio
 
 ## Current State
+- 2026-07-12: NEW `/resume` page (commit d75a469, LOCAL, not deployed): the approved
+  `docs/resume.html` copy as indexable HTML in the site design system, canonical
+  https://ashmitbohora.com/resume/, auto-in-sitemap, PDF download CTAs. Build green, Chrome-verified,
+  zero em dashes. Same day off-repo: GSC domain property verified under ashmitbohora1@gmail.com
+  (sitemap submitted, homepage indexing requested), Cloudflare Managed-robots.txt/AI-block toggle
+  OFF for this zone (live robots.txt = clean AEO allowlist), www CNAME + 301-to-apex rule added and
+  verified. Repo main is 12 commits ahead of origin; Ashmit's deploy go ships it
+  (`wrangler pages deploy dist --project-name=ashmitbohora`).
 - Status: DEPLOYED to Cloudflare Pages (2026-07-11; latest live commit 8ea365a = resume-site reconcile
   pass [19+ live sites, GPA 3.75, Merner scholarship, Shipped/Brands sections, Hindu joke surfaced] +
   LinkedIn hero CTA + "in a hurry? view plain resume" link, all deployed + verified live same day;
