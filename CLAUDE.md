@@ -1,7 +1,10 @@
 # ashmitbohora.com portfolio
 
 ## Current State
-- Status: DEPLOYED to Cloudflare Pages (2026-07-11, commit b498d30, project name `ashmitbohora`,
+- Status: DEPLOYED to Cloudflare Pages (2026-07-11; latest live commit 8ea365a = resume-site reconcile
+  pass [19+ live sites, GPA 3.75, Merner scholarship, Shipped/Brands sections, Hindu joke surfaced] +
+  LinkedIn hero CTA + "in a hurry? view plain resume" link, all deployed + verified live same day;
+  initial deploy was commit b498d30, project name `ashmitbohora`,
   direct-upload via `wrangler pages deploy dist --project-name=ashmitbohora`, NOT git-connected).
   Live and verified at https://ashmitbohora.pages.dev (homepage 200, resume PDF 200 at correct size).
   Custom domain ashmitbohora.com FULLY MIGRATED same day: Cloudflare zone created (free plan), email
