@@ -148,6 +148,21 @@ html.js .chapter{min-height:88vh}
 .chapter .links a{font-family:var(--mono);font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--ketchup);text-decoration:none;border-bottom:2.5px solid var(--mustard);margin-right:20px;padding-bottom:1px}
 .chapter .links a:hover{border-color:var(--ketchup)}
 
+/* proof photos: real screenshots of shipped work, framed in the same
+   border+offset-shadow language as the buttons/cards */
+.proof{margin:0 0 22px;max-width:470px}
+.proof .shot{display:block;border:2.5px solid var(--ink);border-radius:8px;box-shadow:4px 4px 0 var(--ink);overflow:hidden;background:var(--card)}
+.proof img{display:block;width:100%;height:auto}
+.proof figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px}
+.proof figcaption a{color:var(--ketchup);text-decoration:none;border-bottom:2px solid var(--mustard);padding-bottom:1px;white-space:nowrap}
+.proof figcaption a:hover{border-color:var(--ketchup)}
+.proof.pair{max-width:none}
+.pair-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pair-grid .pf{position:relative}
+.pf .pf-label{position:absolute;top:10px;left:10px;z-index:2;font-family:var(--mono);font-size:10px;letter-spacing:.14em;background:var(--ink);color:var(--card);padding:4px 9px;border-radius:5px}
+.pf .pf-label.after{background:var(--ketchup)}
+@media(max-width:640px){.pair-grid{grid-template-columns:1fr}}
+
 /* finale (v6 moment, flat + robust) */
 .finale-flat{text-align:center;padding:90px 0}
 .finale-flat h2{font-family:var(--disp);font-weight:400;font-size:clamp(34px,4.5vw,56px)}
@@ -161,7 +176,11 @@ section.flat{padding:80px 0}
 .sec-head .idx{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--card);background:var(--ketchup);padding:5px 14px;border-radius:5px}
 .sec-head h2{font-family:var(--disp);font-weight:400;font-size:40px;margin-top:16px}
 
-.receipt-zone{display:flex;justify-content:center}
+.receipt-zone{display:flex;justify-content:center;align-items:center;gap:48px;flex-wrap:wrap}
+.receipt-live{width:440px;max-width:100%}
+.receipt-live .proof{max-width:none;margin:0}
+.receipt-live .live-note{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--ink-soft);line-height:1.8;margin-top:14px;max-width:44ch}
+.receipt-live .live-note b{color:var(--ink)}
 .receipt{
   width:400px;max-width:100%;background:var(--card);padding:28px 28px 20px;
   font-family:var(--mono);font-size:14px;
