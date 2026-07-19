@@ -1,16 +1,16 @@
 # ashmitbohora.com portfolio
 
 ## Current State
-- 2026-07-18 NIGHT: two things, both LOCAL, not deployed. (1) On main, commit `72679a3`:
-  community-service resume reframe (tagline + Webspansion pro-bono bullet + Guruji free-education
-  bullet, in docs/resume.html + /resume page + regenerated 1-page PDF) plus a "First video" pill on
-  the Webspansion brand card linking his first posted IG reel
-  (https://www.instagram.com/reel/Da86bNfP_Pn/); carries the prior session's pickmypath URL fix in
-  resume.astro. Base.astro + llms.txt still have unrelated unstaged edits from that prior session,
-  left alone. (2) BRANCH `sandwich-more-3d`, commit `7692240`: burger realism experiment (PBR
-  materials + RoomEnvironment IBL + procedural canvas textures, toon look replaced; scroll-explode
-  mechanic intact, verified stacked + exploded in Chrome). Fun build, merge is Ashmit's call:
-  `git merge sandwich-more-3d` on main if he likes it. Deploy (his go only):
+- 2026-07-18 NIGHT (final call): Ashmit KEEPS the ORIGINAL toon burger; both burger experiments
+  (PBR pass 7692240, photoreal photo-layer 09737ca) are REJECTED and parked on branch
+  `sandwich-more-3d`. DO NOT merge that branch; it exists only as reference (photo cutout assets +
+  scripts/gen-burger-layers.py live there). What SHIPS from tonight, all on main, all LOCAL,
+  awaiting his deploy go: commit `72679a3` community-service resume reframe (tagline + Webspansion
+  pro-bono bullet + Guruji free-education bullet in docs/resume.html + /resume page + regenerated
+  1-page PDF) plus the "First video" pill on the Webspansion brand card linking his first posted
+  IG reel (https://www.instagram.com/reel/Da86bNfP_Pn/); commit `98b566e` homepage community copy
+  matching the resume (hero "19+ free community sites", Webspansion chapter pro-bono framing,
+  Guruji "free community-education PWA"). Deploy (his go only):
   `npm run build && npx wrangler pages deploy dist --project-name=ashmitbohora`.
 - 2026-07-18 ~07:10 (overnight terminal): PROOF PASS committed LOCALLY (`0d4ef4c`), NOT deployed;
   live site untouched, awaiting Ashmit's review. Real screenshots now anchor every claim: framed
