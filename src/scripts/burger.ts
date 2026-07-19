@@ -82,7 +82,7 @@ export function initBurger(stack: HTMLElement, reduced: boolean) {
     seed.scale.set(1, 0.6, 0.75);
     bunGroup.add(seed);
   }
-  addLayer(bunGroup, -0.18, 2.95);
+  addLayer(bunGroup, -0.18, 2.6);
   addLayer(ruffledDisc(1.62, 0.12, 0x55833a, 9, 0.1), -0.58, 1.85);
   const cheese = new THREE.Mesh(new THREE.BoxGeometry(2.45, 0.09, 2.45), toon(0xf2c14e));
   cheese.rotation.y = Math.PI / 4.6;
@@ -122,6 +122,12 @@ export function initBurger(stack: HTMLElement, reduced: boolean) {
       tagEl.innerHTML = tagText[idx];
       chapters.forEach((c, ci) => c.classList.toggle('active', ci === idx));
     }
+    // dolly the camera back as the stack opens so the top bun never leaves
+    // the frame (it exploded out of view before, scroll-linked so it also
+    // works under reduced motion)
+    const dolly = smooth(Math.min(Math.max(p * n, 0), 1));
+    camera.position.z = 11.5 + dolly * 3.2;
+    camera.lookAt(0, 0.2, 0);
     // scroll-linked turn only, skipped under reduced motion (vestibular trigger)
     if (!reduced) group.rotation.y = 0.5 + p * 1.1;
   }
