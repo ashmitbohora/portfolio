@@ -1,27 +1,30 @@
 # Ashmit Bohora
 
-> Statistics & Data Science student at UT Austin (Class of 2029, GPA 3.7) who ships real products: a live guitar-learning app, 28 client websites built solo, and the analytics pipeline behind a 6K-follower food brand. Seeking Summer 2027 internships in data science, software engineering, or AI.
+> Statistics & Data Science student at UT Austin (Class of 2029, GPA 3.75) seeking Summer 2027 internships in data science, software engineering, or AI. Shipped 19+ live client websites solo through Webspansion, built production apps with real users (Guruji, BohoQuest), and redirected WLF Club's growth strategy as their Growth & AI Automation Intern.
 
 ## About
 
 - Location: Austin, TX
 - Email: ashmitbohora@utexas.edu
+- Website: https://ashmitbohora.com (plain one-page resume: https://ashmitbohora.com/resume/)
 - GitHub: https://github.com/ashmitbohora
 - LinkedIn: https://www.linkedin.com/in/ashmitbohora
-- Honors: QuestBridge Finalist (2024), UT Austin Impact Scholar ($48,000 merit award)
+- Honors: QuestBridge Finalist (2024), UT Austin Impact Scholar ($48,000 merit award), Thomas & Elizabeth Merner Scholarship in Natural Sciences ($2,000, 2026-2027)
 
 ## Experience
 
-- WLF Club (Summer 2026 internship): built analytics and team tools for a real wellness business. Started May 15, 2026.
-- Webspansion (founder, 2024–present): runs a solo web studio serving 28 real clients.
+- WLF Club (Growth & AI Automation Intern, May 2026-present, Fort Worth TX): analyzed 780+ CRM opportunities in GoHighLevel, found 95% never reached a decision despite a 92% win rate when worked, and moved WLF's growth strategy from ad spend to backlog conversion. Trained an internal RAG AI (Warvis) on the business's own data, built a 25-module staff training site and internal ops dashboard, and stood up the full analytics stack (GA4, Search Console, Clarity, Meta Pixel) across the site and three lead-generation funnels, capturing 588 users and 1,109 pageviews in a 28-day window.
+- Webspansion & Prospansion (founder, Apr 2024-present): Webspansion (free tier) is a pro bono studio: 19+ free live websites shipped as community service for nonprofits, immigrant-owned local businesses, and community groups, solo, accessibility-first, intake through deploy. Prospansion (paid tier) is the technical/data arm offering analytics, SEO, and automation; its flagship is Prospansion Studio, a multi-tenant Cloudflare Workers + D1 CMS with hardened auth (invite-only signup, hashed tokens, single-use resets) and a fixed sanitizer-bypass XSS vulnerability verified via exploit proof-of-fix, deployed for nonprofit client Ocura.
 
 ## Projects
 
-- [PickMyPath](https://pickmypath.app): Live guitar-learning app: chord-aligned lyrics, 5-level practice tracking, recommendation engine. Next.js 16, React 19, TypeScript (327 files), Supabase/PostgreSQL, Python data pipeline. 73-song structured dataset.
-- [Webspansion](https://getwebspansion.org): Web studio founded at 17: 28 client websites built solo for local businesses and nonprofits, with Python automation pipelines and an Apps Script CRM.
-- [BohoBites Analytics](https://github.com/ashmitbohora/bohobites_dashboard): Python/Shiny dashboard processing real TikTok creator data (rolling 30–365 day KPI windows, posting-time models) for a 6K-follower food brand.
-- BoHub: Architecture-complete AI personal OS: Claude API with tiered model routing, SQLite full-text search, prompt-injection defense, 950+ lines of architecture docs.
+- Local-First AI & Knowledge Systems (Warvis, Kiln): Warvis is a RAG knowledge system ingesting 700+ documents into a cited hybrid-search graph (SQLite FTS5 + local embeddings) with a HIPAA-aware PHI-scanning gate on every query (152 passing tests). Kiln is a self-improving training loop that raised a local model's eval score from 0.84 to 0.99, gated against a held-out baseline.
+- [Guruji](https://getguruji.com): gamified Duolingo-style learning PWA (React, TypeScript, Supabase) with RLS-scoped auth and a self-run security audit against the live database (zero exploitable vulnerabilities). Multi-track curriculum: Data Decoded (data science) and QuickClaude (coding) alongside English and digital-literacy content.
+- [BohoQuest](https://app.bohoquest.app): gamified check-in app (Expo/React Native) with server-side anti-cheat verification, Apple Sign-In, and a 121-test suite. Live in TestFlight.
+- [PickMyPath](https://app.pickmypath.app): guitar-learning app, live but paused: chord-aligned lyrics, 73-song structured dataset, recommendation engine (Next.js, Supabase/PostgreSQL).
+- [BohoBites Analytics](https://github.com/ashmitbohora/bohobites_dashboard): Python/Shiny dashboard processing real TikTok creator data (rolling KPI windows, posting-time models) for BohoBites, a 6K+ follower food brand.
+- BoHub: local-first AI personal OS: Claude API tiered model routing, SQLite full-text search, security model.
 
 ## Skills
 
-Python, Pandas, machine learning (recommender system in production), TypeScript, React, Next.js, SQL (PostgreSQL, SQLite), R (coursework), Plotly, Shiny, FastAPI, Remotion, Claude API / prompt engineering, Playwright, Git, Vercel.
+Python, Pandas, SQL (PostgreSQL, SQLite/libSQL), TypeScript, React, Next.js, Supabase, R (coursework), Shiny, Plotly, FastAPI, Remotion, Claude Code, Codex, Claude & Gemini APIs, RAG, LoRA fine-tuning, Git, Playwright, Vercel, Cloudflare.
