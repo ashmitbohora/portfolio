@@ -204,11 +204,13 @@ section.flat{padding:80px 0}
 .brand-chip{display:flex;flex-direction:column;gap:4px;background:var(--card);border:2.5px solid var(--ink);border-radius:8px;padding:14px 22px;box-shadow:4px 4px 0 var(--ink)}
 .brand-chip .b-name{font-family:var(--disp);font-size:19px;color:var(--ink)}
 .brand-chip .b-tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
-.brand-chip .b-links{margin-top:8px;display:flex;gap:8px}
+.brand-chip .b-links{margin-top:8px;display:flex;flex-wrap:wrap;gap:8px}
 .brand-chip .b-links a{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border:2px solid var(--ink);border-radius:6px;color:var(--ink);background:var(--kraft);text-decoration:none;transition:transform .15s,background .15s,color .15s,border-color .15s}
 .brand-chip .b-links a:hover{background:var(--ketchup);border-color:var(--ketchup);color:var(--card);transform:translateY(-1px)}
 .brand-chip .b-links svg{width:15px;height:15px;flex:none}
 .brand-chip .b-links a .b-label{display:none;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;margin-left:2px}
+.brand-chip .b-links a.b-wide{width:auto;padding:0 10px;gap:6px;white-space:nowrap;flex:none}
+.brand-chip .b-links a.b-wide .b-label{display:inline}
 .brand-chip .b-links a:only-child{width:100%;gap:8px}
 .brand-chip .b-links a:only-child .b-label{display:inline}
 
