@@ -1,6 +1,29 @@
 # ashmitbohora.com portfolio
 
 ## Current State
+- 2026-07-18 NIGHT: two things, both LOCAL, not deployed. (1) On main, commit `72679a3`:
+  community-service resume reframe (tagline + Webspansion pro-bono bullet + Guruji free-education
+  bullet, in docs/resume.html + /resume page + regenerated 1-page PDF) plus a "First video" pill on
+  the Webspansion brand card linking his first posted IG reel
+  (https://www.instagram.com/reel/Da86bNfP_Pn/); carries the prior session's pickmypath URL fix in
+  resume.astro. Base.astro + llms.txt still have unrelated unstaged edits from that prior session,
+  left alone. (2) BRANCH `sandwich-more-3d`, commit `7692240`: burger realism experiment (PBR
+  materials + RoomEnvironment IBL + procedural canvas textures, toon look replaced; scroll-explode
+  mechanic intact, verified stacked + exploded in Chrome). Fun build, merge is Ashmit's call:
+  `git merge sandwich-more-3d` on main if he likes it. Deploy (his go only):
+  `npm run build && npx wrangler pages deploy dist --project-name=ashmitbohora`.
+- 2026-07-18 ~07:10 (overnight terminal): PROOF PASS committed LOCALLY (`0d4ef4c`), NOT deployed;
+  live site untouched, awaiting Ashmit's review. Real screenshots now anchor every claim: framed
+  proof figures (same border+offset-shadow language) in the WLF, Webspansion, Prospansion, and
+  Shipped chapters; Prospansion gets a genuine Ocura BEFORE/AFTER pair (sourced from
+  `~/Developer/businesses/prospansion/prospansion-case-studies/ocura/screenshots/`); the receipt
+  section pairs the receipt with the live getwebspansion.org/stats page shot ("the receipt runs
+  live"). Copy: hero 6K+ label fixed, receipt's weak 73-song line swapped for Warvis 700+ docs.
+  WLF stays HIPAA aggregates-only (public site shot + counts). Assets in `public/proof/` (jpeg,
+  1280w). Build green, desktop+mobile re-screenshot verified. NOTE: working tree had OTHER
+  pre-existing uncommitted edits (Base.astro, resume.astro, llms.txt, resume PDF) from a prior
+  session; left unstaged, not mine. Deploy when Ashmit approves:
+  `npm run build && npx wrangler pages deploy dist --project-name=ashmitbohora`.
 - 2026-07-12 EVENING: `/resume` page DEPLOYED and LIVE. Ashmit's own earlier deploy shipped a build
   predating the /resume commit (live /resume/ 404'd); on his explicit go ("fix that issue") the fix
   was `npm run build && npx wrangler pages deploy dist --project-name=ashmitbohora`, then
