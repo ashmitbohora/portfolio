@@ -1,6 +1,14 @@
 # ashmitbohora.com portfolio
 
 ## Current State
+- 2026-07-18 LATE NIGHT: EVERYTHING DEPLOYED LIVE on Ashmit's explicit "push merge deploy" go.
+  Live at https://ashmitbohora.com (curl-verified: community copy, First-video pill, /resume,
+  PDF, proof images all 200/present). Live commit = `61c62b3`. Shipped tonight: proof pass
+  0d4ef4c, community-service reframe 72679a3 + 98b566e (site/resume/PDF all matching), First
+  video pill (IG reel Da86bNfP_Pn), toon burger framing fix abbf739 (fixed zoomed-out camera,
+  z=14.2, whole exploded stack always in frame; replaced a scroll dolly he disliked), llms.txt
+  refresh 61c62b3. main + sandwich-more-3d both PUSHED to origin. Burger experiments stay
+  REJECTED/parked on the branch, not merged.
 - 2026-07-18 NIGHT (final call): Ashmit KEEPS the ORIGINAL toon burger; both burger experiments
   (PBR pass 7692240, photoreal photo-layer 09737ca) are REJECTED and parked on branch
   `sandwich-more-3d`. DO NOT merge that branch; it exists only as reference (photo cutout assets +
