@@ -7,10 +7,12 @@
   the Webspansion brand card linking his first posted IG reel
   (https://www.instagram.com/reel/Da86bNfP_Pn/); carries the prior session's pickmypath URL fix in
   resume.astro. Base.astro + llms.txt still have unrelated unstaged edits from that prior session,
-  left alone. (2) BRANCH `sandwich-more-3d`, commit `7692240`: burger realism experiment (PBR
-  materials + RoomEnvironment IBL + procedural canvas textures, toon look replaced; scroll-explode
-  mechanic intact, verified stacked + exploded in Chrome). Fun build, merge is Ashmit's call:
-  `git merge sandwich-more-3d` on main if he likes it. Deploy (his go only):
+  left alone. (2) BRANCH `sandwich-more-3d`, now at `09737ca` (supersedes the PBR attempt `7692240`):
+  PHOTOREAL photo-layer burger. Six fal.ai flux/birefnet cutouts (public/burger-layers/, 269KB
+  webp total) on unlit planes; scroll-explode + tags + reduced-motion intact, drag = gentle
+  z-tilt (flat layers cannot spin). Regen script: scripts/gen-burger-layers.py. Branch also
+  contains ALL main content (merge a2e95c2). Merge to main is Ashmit's call:
+  `git checkout main && git merge sandwich-more-3d`. Deploy (his go only):
   `npm run build && npx wrangler pages deploy dist --project-name=ashmitbohora`.
 - 2026-07-18 ~07:10 (overnight terminal): PROOF PASS committed LOCALLY (`0d4ef4c`), NOT deployed;
   live site untouched, awaiting Ashmit's review. Real screenshots now anchor every claim: framed
