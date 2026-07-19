@@ -10,7 +10,7 @@ export function initBurger(stack: HTMLElement, reduced: boolean) {
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 100);
-  camera.position.set(0, 1.4, 11.5);
+  camera.position.set(0, 1.4, 14.2);
 
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: !small });
   renderer.shadowMap.enabled = true;
@@ -122,12 +122,6 @@ export function initBurger(stack: HTMLElement, reduced: boolean) {
       tagEl.innerHTML = tagText[idx];
       chapters.forEach((c, ci) => c.classList.toggle('active', ci === idx));
     }
-    // dolly the camera back as the stack opens so the top bun never leaves
-    // the frame (it exploded out of view before, scroll-linked so it also
-    // works under reduced motion)
-    const dolly = smooth(Math.min(Math.max(p * n, 0), 1));
-    camera.position.z = 11.5 + dolly * 3.2;
-    camera.lookAt(0, 0.2, 0);
     // scroll-linked turn only, skipped under reduced motion (vestibular trigger)
     if (!reduced) group.rotation.y = 0.5 + p * 1.1;
   }
