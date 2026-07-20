@@ -1,6 +1,20 @@
 # ashmitbohora.com portfolio
 
 ## Current State
+- 2026-07-20: ONLINE-VISIBILITY AUDIT PASS (local-only, commit `e89a87a`, NOT deployed, live site
+  still on `61c62b3`, awaiting Ashmit's go). Checked live site health, og:image/twitter-card
+  (VERIFIED WORKING, no fix needed), GPA/resume/llms.txt consistency (clean), broken links across
+  homepage + /resume/ (zero real breaks), and Google visibility for his name (site not yet
+  surfacing in search, most likely normal index lag 8 days after GSC/sitemap submission plus a
+  recent domain migration; no site-side cause found; Ashmit should check GSC Coverage report
+  himself, cannot log in per guardrail). FOUND + FIXED: the schema.org JSON-LD ItemList in
+  `src/layouts/Base.astro` (shared by homepage + /resume/) listed PickMyPath first with no
+  "paused" note, contradicting the site's own copy (PickMyPath demoted to "Sides, live, paused")
+  and burying Webspansion/omitting Prospansion entirely. Reordered to Webspansion, Prospansion
+  (added, was missing), Guruji, BohoQuest, PickMyPath (now notes paused), BoHub. Build verified
+  green, JSON-LD re-parsed valid. Full findings log:
+  /Users/ashmitbohora/SecondBrain/_terminals/2026-07-20-online-visibility-pass-LOG.md. Deploy
+  command when he gives the go: `npm run build && npx wrangler pages deploy dist --project-name=ashmitbohora`.
 - 2026-07-18 LATE NIGHT: EVERYTHING DEPLOYED LIVE on Ashmit's explicit "push merge deploy" go.
   Live at https://ashmitbohora.com (curl-verified: community copy, First-video pill, /resume,
   PDF, proof images all 200/present). Live commit = `61c62b3`. Shipped tonight: proof pass
