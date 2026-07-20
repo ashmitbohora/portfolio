@@ -76,22 +76,21 @@ const schema = {
       name: 'Projects by Ashmit Bohora',
       itemListElement: [
         {
-          '@type': 'SoftwareApplication',
+          '@type': 'Organization',
           position: 1,
-          name: 'PickMyPath',
-          url: 'https://app.pickmypath.app',
-          applicationCategory: 'EducationalApplication',
+          name: 'Webspansion',
+          url: 'https://getwebspansion.org',
           description:
-            'Live guitar-learning app with chord-aligned lyrics, practice tracking, and a recommendation engine. Next.js, React, TypeScript, Supabase/PostgreSQL.',
-          author: { '@id': 'https://ashmitbohora.com/#person' },
+            'Free-tier web studio founded by Ashmit Bohora at 17: 19+ live client websites built solo, pro bono, for local businesses and nonprofits.',
+          founder: { '@id': 'https://ashmitbohora.com/#person' },
         },
         {
           '@type': 'Organization',
           position: 2,
-          name: 'Webspansion',
-          url: 'https://getwebspansion.org',
+          name: 'Prospansion',
+          url: 'https://prospansion.com',
           description:
-            'Web studio founded by Ashmit Bohora at 17: 19+ live client websites built solo for local businesses and nonprofits.',
+            'Paid technical/data arm offering analytics, SEO, and automation. Flagship product Prospansion Studio is a multi-tenant Cloudflare Workers + D1 CMS deployed for nonprofit client Ocura.',
           founder: { '@id': 'https://ashmitbohora.com/#person' },
         },
         {
@@ -115,8 +114,18 @@ const schema = {
           author: { '@id': 'https://ashmitbohora.com/#person' },
         },
         {
-          '@type': 'CreativeWork',
+          '@type': 'SoftwareApplication',
           position: 5,
+          name: 'PickMyPath',
+          url: 'https://app.pickmypath.app',
+          applicationCategory: 'EducationalApplication',
+          description:
+            'Guitar-learning app with chord-aligned lyrics, practice tracking, and a recommendation engine. Live but paused. Next.js, React, TypeScript, Supabase/PostgreSQL.',
+          author: { '@id': 'https://ashmitbohora.com/#person' },
+        },
+        {
+          '@type': 'CreativeWork',
+          position: 6,
           name: 'BoHub',
           description:
             'Architecture-complete AI personal OS: Claude API with tiered model routing, SQLite full-text search, prompt-injection defense.',
