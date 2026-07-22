@@ -1,6 +1,6 @@
 # Ashmit Bohora
 
-> Statistics & Data Science student at UT Austin (Class of 2029, GPA 3.75) seeking Summer 2027 internships in data science, software engineering, or AI. Shipped 19+ live client websites solo through Webspansion, built production apps with real users (Guruji, BohoQuest), and redirected WLF Club's growth strategy as their Growth & AI Automation Intern.
+> Statistics & Data Science student at UT Austin (Class of 2029, GPA 3.75) seeking Summer 2027 internships in data science, software engineering, or AI. Shipped 19+ live client websites solo through Webspansion, built production apps with real users (Guruji, BohoQuest), and redirected WLF Club's growth strategy as their Growth & AI Automation lead.
 
 ## About
 
@@ -13,7 +13,7 @@
 
 ## Experience
 
-- WLF Club (Growth & AI Automation Intern, May 2026-present, Fort Worth TX): analyzed 780+ CRM opportunities in GoHighLevel, found 95% never reached a decision despite a 92% win rate when worked, and moved WLF's growth strategy from ad spend to backlog conversion. Trained an internal RAG AI (Warvis) on the business's own data, built a 25-module staff training site and internal ops dashboard, and stood up the full analytics stack (GA4, Search Console, Clarity, Meta Pixel) across the site and three lead-generation funnels, capturing 588 users and 1,109 pageviews in a 28-day window.
+- WLF Club (Growth & AI Automation, May 2026-present, Fort Worth TX): analyzed 780+ CRM opportunities in GoHighLevel, found 95% never reached a decision despite a 92% win rate when worked, and moved WLF's growth strategy from ad spend to backlog conversion. Trained an internal RAG AI (Warvis) on the business's own data, built a 25-module staff training site and internal ops dashboard, and stood up the full analytics stack (GA4, Search Console, Clarity, Meta Pixel) across the site and three lead-generation funnels, capturing 588 users and 1,109 pageviews in a 28-day window.
 - Webspansion & Prospansion (founder, Apr 2024-present): Webspansion (free tier) is a pro bono studio: 19+ free live websites shipped as community service for nonprofits, immigrant-owned local businesses, and community groups, solo, accessibility-first, intake through deploy. Prospansion (paid tier) is the technical/data arm offering analytics, SEO, and automation; its flagship is Prospansion Studio, a multi-tenant Cloudflare Workers + D1 CMS with hardened auth (invite-only signup, hashed tokens, single-use resets) and a fixed sanitizer-bypass XSS vulnerability verified via exploit proof-of-fix, deployed for nonprofit client Ocura.
 
 ## Projects
