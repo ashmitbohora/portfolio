@@ -1,6 +1,28 @@
 # ashmitbohora.com portfolio
 
 ## Current State
+- 2026-07-22: RESUME REBUILT IN JAKE'S-STYLE + DEPLOYED LIVE (commit `4f1238c`, pushed to origin,
+  deployed to Cloudflare Pages on Ashmit's explicit "push my site" go). The canonical PDF
+  `public/ashmit-bohora-resume.pdf` is now a Jake's-Resume-style single-column ATS-safe layout
+  (centered name/contact, small-caps section rules, serif, 1 page, 131576 bytes). Ashmit picked this
+  over the prior food-brand-adjacent sheet styling after seeing both rendered. PDF source is still
+  `docs/resume.html` (gitignored, local-only); the PREVIOUS version is saved at
+  `docs/resume-PREVIOUS-20260722.html.bak` if he ever wants it back.
+  CONTENT FIXES (truth pass): the WLF job title no longer says "Intern" anywhere. Ashmit became a
+  regular 1099 team member on 2026-07-20, so "Growth & AI Automation Intern" was removed from the
+  resume, the /resume page, the homepage lead (`src/pages/index.astro`), the JSON-LD schema in
+  `src/layouts/Base.astro`, AND `public/llms.txt`. It was in all five, so grep `AI Automation Intern`
+  before assuming it is clean. Warvis test count 152 to 229 (verified against the warvis repo's own
+  Current State, 229/229 green 2026-07-21). Added a Guruji real-impact bullet: a cousin canceled a
+  $100+/month agency after using Guruji, saving $1,200+/year.
+  VERIFIED LIVE via curl (Cloudflare 403s WebFetch): /resume/ 200 with "229 passing tests" and
+  "$1,200+ a year" and zero "Intern"; PDF 200 at 131576 bytes; homepage + llms.txt clean.
+  Regenerate the PDF with: `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+  --headless=new --no-pdf-header-footer --user-data-dir=$(mktemp -d)
+  --print-to-pdf="public/ashmit-bohora-resume.pdf" "file://$(pwd)/docs/resume.html"`.
+  GOTCHA: headless Chrome writes the PDF but then HANGS instead of exiting, so a plain `timeout 30`
+  run looks like it failed. Background it, poll for the file to exceed ~100KB, then kill the PID.
+  OPEN: Ashmit said he wants to "add more WLF things" to the resume; bullets not yet supplied.
 - 2026-07-20: ONLINE-VISIBILITY AUDIT PASS (local-only, commit `e89a87a`, NOT deployed, live site
   still on `61c62b3`, awaiting Ashmit's go). Checked live site health, og:image/twitter-card
   (VERIFIED WORKING, no fix needed), GPA/resume/llms.txt consistency (clean), broken links across
