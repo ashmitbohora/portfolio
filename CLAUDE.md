@@ -1,6 +1,19 @@
 # ashmitbohora.com portfolio
 
 ## Current State
+- 2026-08-08: TRUTH PASS committed LOCALLY (`7b6446e`), NOT deployed; live site still serves the
+  stale build until Ashmit's go. Fixed: (1) the hero dek STILL said "as their AI automation intern"
+  on the live site, because the 07-22 purge grepped only the capitalized "AI Automation Intern" and
+  missed this lowercase instance; now "Growth & AI Automation lead". RULE: after any title/fact
+  change, grep the BUILT dist with `grep -ri intern | grep -vi "internship\|internal"`. (2) Warvis
+  152 -> 229 passing tests in index.astro (body + stat) and llms.txt (resume page already said 229,
+  homepage contradicted it). (3) Ocura proof figcaption now links ocuraeyehealth.org (client's own
+  domain, verified identical site to ocura.prospansion.com, both 200). Build green, dist grepped
+  clean, hero re-screenshot verified. Full link check all-200 (LinkedIn 999 = bot block, apex
+  pickmypath.app has no DNS but the site only links app.pickmypath.app). Slop audit verdict: 3/10,
+  authored-premium, keep the diner signature, do not add more skeuomorphic props. Report:
+  /Users/ashmitbohora/SecondBrain/Knowledge/burns/2026-08-08-portfolio-upgrade-pass.md
+  Deploy on his go: `npm run build && npx wrangler pages deploy dist --project-name=ashmitbohora`.
 - 2026-07-22: RESUME REBUILT IN JAKE'S-STYLE + DEPLOYED LIVE (commit `4f1238c`, pushed to origin,
   deployed to Cloudflare Pages on Ashmit's explicit "push my site" go). The canonical PDF
   `public/ashmit-bohora-resume.pdf` is now a Jake's-Resume-style single-column ATS-safe layout
