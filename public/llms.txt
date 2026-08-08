@@ -18,7 +18,7 @@
 
 ## Projects
 
-- Local-First AI & Knowledge Systems (Warvis, Kiln): Warvis is a RAG knowledge system ingesting 700+ documents into a cited hybrid-search graph (SQLite FTS5 + local embeddings) with a HIPAA-aware PHI-scanning gate on every query (152 passing tests). Kiln is a self-improving training loop that raised a local model's eval score from 0.84 to 0.99, gated against a held-out baseline.
+- Local-First AI & Knowledge Systems (Warvis, Kiln): Warvis is a RAG knowledge system ingesting 700+ documents into a cited hybrid-search graph (SQLite FTS5 + local embeddings) with a HIPAA-aware PHI-scanning gate on every query (229 passing tests). Kiln is a self-improving training loop that raised a local model's eval score from 0.84 to 0.99, gated against a held-out baseline.
 - [Guruji](https://getguruji.com): gamified Duolingo-style learning PWA (React, TypeScript, Supabase) with RLS-scoped auth and a self-run security audit against the live database (zero exploitable vulnerabilities). Multi-track curriculum: Data Decoded (data science) and QuickClaude (coding) alongside English and digital-literacy content.
 - [BohoQuest](https://app.bohoquest.app): gamified check-in app (Expo/React Native) with server-side anti-cheat verification, Apple Sign-In, and a 121-test suite. Live in TestFlight.
 - [PickMyPath](https://app.pickmypath.app): guitar-learning app, live but paused: chord-aligned lyrics, 73-song structured dataset, recommendation engine (Next.js, Supabase/PostgreSQL).
