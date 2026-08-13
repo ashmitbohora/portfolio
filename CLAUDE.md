@@ -1,6 +1,33 @@
 # ashmitbohora.com portfolio
 
 ## Current State
+- 2026-08-13: RESUME + SITE CONTENT PASS committed LOCALLY (`8c75244`), NOT deployed, stacked on
+  top of the still-undeployed 08-08 truth pass below (`7b6446e`). WLF Club title finally applied
+  everywhere as **GTM Engineer** (resume/site-facing; internal title is Growth Engineer, per
+  `~/SecondBrain/_terminals/2026-08-13-resume-impact-update-CONTEXT.md`). The 07-22 title
+  finalization had never actually been applied to `docs/resume.html`/the site: it still said
+  "Growth & AI Automation" everywhere until this pass. WLF bullets rewritten across
+  `docs/resume.html`, `src/pages/resume.astro`, `src/pages/index.astro`, `src/layouts/Base.astro`
+  (JSON-LD), and `public/llms.txt` with verified 2026-08-13 work: the in-house wlfclub.com rebuild
+  (replacing a $15k agency build that had 12 Lorem Ipsum pages live), the zero-downtime Cloudflare
+  DNS migration (29 records + SPF/DKIM/DMARC verified under p=reject), Warvis now hosted for the
+  whole WLF team, and a member health portal (Cloudflare Workers + D1) replacing paid HeadsUp
+  Health software (WHOOP/Apple Health sync, 17-marker labs engine, companion app on TestFlight).
+  Location line now reads "Fort Worth, TX -> Remote (Austin)," reflecting his transition off-site.
+  Ashmit's calls: cut the CRM-backlog bullet ("this is weak") and cut Kiln everywhere on the resume
+  and site (no longer uses it, called it "straight AI"); Warvis's standalone "Local-First AI &
+  Knowledge Systems" project entry was removed from `docs/resume.html`/`resume.astro` since Warvis
+  is now covered under the WLF experience entry with better numbers (index.astro's version of that
+  chapter kept, Warvis-only, Kiln stat/sentence removed). Skills line dropped "LoRA fine-tuning"
+  (only ever backed by Kiln). PDF regenerated (`public/ashmit-bohora-resume.pdf`, 137213 bytes),
+  verified 1 page via `mdls -name kMDItemNumberOfPages`. Build green, dist grepped clean for
+  `intern` case-insensitively. Visually verified in Chrome (WLF + Warvis chapters render correctly
+  with the reduced stat counts, no CSS breakage, zero console errors). `wlf-impact-log.md` backfilled
+  same session with 10 dated entries covering 2026-08-13 WLF cutover-fleet work (DNS zone build +
+  flip, image optimization, credentials/accessibility sweep, OG cards redesign, SEO schema fixes,
+  Core Web Vitals, pre-launch audit, truth-fixes, drives backup). Full session log:
+  `~/SecondBrain/_terminals/2026-08-13-resume-impact-update-LOG.md`. Deploy on his go:
+  `npm run build && npx wrangler pages deploy dist --project-name=ashmitbohora`.
 - 2026-08-08: TRUTH PASS committed LOCALLY (`7b6446e`), NOT deployed; live site still serves the
   stale build until Ashmit's go. Fixed: (1) the hero dek STILL said "as their AI automation intern"
   on the live site, because the 07-22 purge grepped only the capitalized "AI Automation Intern" and
