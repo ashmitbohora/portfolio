@@ -1,6 +1,6 @@
 # Ashmit Bohora
 
-> Statistics & Data Science student at UT Austin (Class of 2029, GPA 3.75) seeking Summer 2027 internships in data science, software engineering, or AI. Shipped 19+ live client websites solo through Webspansion, built production apps with real users (Guruji, BohoQuest), and redirected WLF Club's growth strategy as their Growth & AI Automation lead.
+> Statistics & Data Science student at UT Austin (Class of 2029, GPA 3.75) seeking Summer 2027 internships in data science, software engineering, or AI. Shipped 19+ live client websites solo through Webspansion, built production apps with real users (Guruji, BohoQuest), and rebuilt WLF Club's website and infrastructure as their GTM Engineer.
 
 ## About
 
@@ -13,12 +13,12 @@
 
 ## Experience
 
-- WLF Club (Growth & AI Automation, May 2026-present, Fort Worth TX): analyzed 780+ CRM opportunities in GoHighLevel, found 95% never reached a decision despite a 92% win rate when worked, and moved WLF's growth strategy from ad spend to backlog conversion. Trained an internal RAG AI (Warvis) on the business's own data, built a 25-module staff training site and internal ops dashboard, and stood up the full analytics stack (GA4, Search Console, Clarity, Meta Pixel) across the site and three lead-generation funnels, capturing 588 users and 1,109 pageviews in a 28-day window.
+- WLF Club (GTM Engineer, May 2026-present, Fort Worth TX, remote from Austin since Aug 2026): rebuilt wlfclub.com in-house, replacing a $15,000 agency build that still had 12 Lorem Ipsum pages live in production (30+ pages, new hosting, verify-gated deploy pipeline, ending agency billing entirely). Migrated the clinic's DNS to Cloudflare with zero downtime and zero mail interruption, verifying 29 records and SPF/DKIM/DMARC under a p=reject policy before cutover. Built Warvis, an internal RAG assistant hosted for the whole team, and a member health portal (Cloudflare Workers + D1) replacing paid HeadsUp Health software: WHOOP/Apple Health wearable sync, a 17-marker labs engine, and a companion native app live on TestFlight.
 - Webspansion & Prospansion (founder, Apr 2024-present): Webspansion (free tier) is a pro bono studio: 19+ free live websites shipped as community service for nonprofits, immigrant-owned local businesses, and community groups, solo, accessibility-first, intake through deploy. Prospansion (paid tier) is the technical/data arm offering analytics, SEO, and automation; its flagship is Prospansion Studio, a multi-tenant Cloudflare Workers + D1 CMS with hardened auth (invite-only signup, hashed tokens, single-use resets) and a fixed sanitizer-bypass XSS vulnerability verified via exploit proof-of-fix, deployed for nonprofit client Ocura.
 
 ## Projects
 
-- Local-First AI & Knowledge Systems (Warvis, Kiln): Warvis is a RAG knowledge system ingesting 700+ documents into a cited hybrid-search graph (SQLite FTS5 + local embeddings) with a HIPAA-aware PHI-scanning gate on every query (229 passing tests). Kiln is a self-improving training loop that raised a local model's eval score from 0.84 to 0.99, gated against a held-out baseline.
+- Warvis: RAG knowledge system ingesting 700+ documents into a cited hybrid-search graph (SQLite FTS5 + local embeddings) with a HIPAA-aware PHI-scanning gate and fail-closed access control on every query (229 passing tests). Built at WLF Club, hosted for the whole team.
 - [Guruji](https://getguruji.com): gamified Duolingo-style learning PWA (React, TypeScript, Supabase) with RLS-scoped auth and a self-run security audit against the live database (zero exploitable vulnerabilities). Multi-track curriculum: Data Decoded (data science) and QuickClaude (coding) alongside English and digital-literacy content.
 - [BohoQuest](https://app.bohoquest.app): gamified check-in app (Expo/React Native) with server-side anti-cheat verification, Apple Sign-In, and a 121-test suite. Live in TestFlight.
 - [PickMyPath](https://app.pickmypath.app): guitar-learning app, live but paused: chord-aligned lyrics, 73-song structured dataset, recommendation engine (Next.js, Supabase/PostgreSQL).
@@ -27,4 +27,4 @@
 
 ## Skills
 
-Python, Pandas, SQL (PostgreSQL, SQLite/libSQL), TypeScript, React, Next.js, Supabase, R (coursework), Shiny, Plotly, FastAPI, Remotion, Claude Code, Codex, Claude & Gemini APIs, RAG, LoRA fine-tuning, Git, Playwright, Vercel, Cloudflare.
+Python, Pandas, SQL (PostgreSQL, SQLite/libSQL), TypeScript, React, Next.js, Supabase, R (coursework), Shiny, Plotly, FastAPI, Remotion, Claude Code, Codex, Claude & Gemini APIs, RAG, Git, Playwright, Vercel, Cloudflare.

@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 
 <Base
   title="Ashmit Bohora Resume | UT Austin Data Science, Software & AI"
-  description="Resume of Ashmit Bohora, a UT Austin Statistics & Data Science student (Class of 2029): growth & AI automation at WLF Club, founder of Webspansion and Prospansion, builder of Warvis, Kiln, Guruji, and BohoQuest."
+  description="Resume of Ashmit Bohora, a UT Austin Statistics & Data Science student (Class of 2029): GTM engineering at WLF Club, founder of Webspansion and Prospansion, builder of Warvis, Guruji, and BohoQuest."
 >
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -72,14 +72,14 @@ import Base from '../layouts/Base.astro';
         <h2>Experience</h2>
         <section class="block">
           <div class="row">
-            <span class="role">Growth &amp; AI Automation <span class="sub">&middot; WLF Club</span></span>
-            <span class="meta">Fort Worth, TX &middot; May 2026 &ndash; Present</span>
+            <span class="role">GTM Engineer <span class="sub">&middot; WLF Club</span></span>
+            <span class="meta">Fort Worth, TX &rarr; Remote (Austin) &middot; May 2026 &ndash; Present</span>
           </div>
           <ul>
-            <li>Redirected WLF's growth strategy from ad spend to backlog conversion by analyzing 780+ CRM opportunities in GoHighLevel, finding 95% never reached a decision despite a 92% win rate when worked</li>
-            <li>Automated WLF's institutional knowledge access by training an internal RAG AI (Warvis) on the business's own data and building it into daily workflows, alongside a 25-module staff training site and an internal ops dashboard (React, Vite, Supabase)</li>
-            <li>Captured 588 users and 1,109 pageviews in a 28-day window by standing up WLF's full analytics stack (GA4, Search Console, Clarity, Meta Pixel) across the site and three lead-generation funnels, verifying 12 of 12 attribution fields end to end</li>
-            <li>Replaced $150/hour agency billing by auditing and fixing a $15,000 agency-built website in-house: publishing 12 unfinished pages, repairing broken routes, and adding schema/SEO markup</li>
+            <li>Rebuilt wlfclub.com in-house, replacing a $15,000 agency build that still had 12 Lorem Ipsum placeholder pages live in production: 30+ pages, new hosting, and a verify-gated deploy pipeline, ending agency billing entirely</li>
+            <li>Migrated a live medical clinic's DNS to Cloudflare with zero downtime and zero mail interruption, verifying 29 records and SPF/DKIM/DMARC under a p=reject policy before cutover</li>
+            <li>Built Warvis, an internal RAG assistant hosted for the whole team with a HIPAA-aware PHI-scanning gate and fail-closed access control (229 passing tests); the owner now talks to it by voice to check on the business</li>
+            <li>Built a member health portal (Cloudflare Workers + D1) replacing paid HeadsUp Health software: WHOOP/Apple Health wearable sync, a 17-marker labs engine, and an AI assistant over members' own data, plus a companion native app live on TestFlight</li>
           </ul>
         </section>
         <section class="block">
@@ -95,18 +95,6 @@ import Base from '../layouts/Base.astro';
         </section>
 
         <h2>Projects</h2>
-        <section class="block">
-          <div class="row">
-            <span class="role">Local-First AI &amp; Knowledge Systems <span class="sub">&middot; Warvis, Kiln</span></span>
-            <span class="meta">TypeScript &middot; RAG / Local Training</span>
-          </div>
-          <p class="tech">Next.js, TypeScript, libSQL/SQLite, Transformers.js, Ollama/MLX, LoRA</p>
-          <ul>
-            <li>Built Warvis, a RAG knowledge system ingesting 700+ documents into a cited, hybrid-search graph (SQLite FTS5 + local embeddings), enforcing a HIPAA-aware PHI-scanning gate and fail-closed, tiered access control on every query (229 passing tests)</li>
-            <li>Raised a local model's eval score from 0.84 to 0.99 by building Kiln, a self-improving training loop where a frontier model teaches a small local model (Qwen2.5, Ollama/MLX) gated against a held-out baseline, which also correctly rejected and rolled back a regressed candidate after a crash</li>
-          </ul>
-          <p class="also">Also built: BoHub (personal local-AI OS) and a simplified household version for my family (bills, insurance, remittances) on the same local-first architecture</p>
-        </section>
         <section class="block">
           <div class="row">
             <span class="role">Shipped Production Apps <span class="sub">&middot; Guruji, BohoQuest</span></span>
@@ -126,7 +114,7 @@ import Base from '../layouts/Base.astro';
           <p><span class="k">Community, DFW &amp; NST Mandir (2021&ndash;Present):</span> co-led youth programs raising $10,000+; ran logistics for health camps, blood drives, and community events; extended free education (Guruji) and free websites (Webspansion) to nonprofits, immigrant-owned businesses, and community groups</p>
           <p><span class="k">Languages:</span> Python, R, SQL, TypeScript, JavaScript &nbsp;|&nbsp; Pandas, NumPy, Plotly, Shiny, FastAPI</p>
           <p><span class="k">Frameworks &amp; data:</span> React 19, Next.js 16, Astro, Tailwind &middot; Supabase/PostgreSQL, SQLite/libSQL &middot; GoHighLevel, GA4</p>
-          <p><span class="k">AI &amp; tooling:</span> Claude Code, Codex, Claude &amp; Gemini APIs, RAG, LoRA fine-tuning &middot; Git, Playwright, Vercel, Cloudflare</p>
+          <p><span class="k">AI &amp; tooling:</span> Claude Code, Codex, Claude &amp; Gemini APIs, RAG &middot; Git, Playwright, Vercel, Cloudflare</p>
           <p><span class="k">Spoken:</span> English, Nepali (fluent); Hindi, Spanish (intermediate)</p>
         </section>
       </article>
