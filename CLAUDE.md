@@ -10,6 +10,8 @@
   Reuses existing kraft/diner tokens only, no new skeuomorphic props (per the 08-08 slop audit).
   Also: BohoBites Brand + ProfilePage JSON-LD with sameAs to TikTok/IG/YouTube, a `/bohobites/`
   llms.txt entry, and links in from the homepage brand chip + footer.
+  YouTube handle is **@bohobites** (renamed from @boho_bites 2026-08-23; both resolve to channel
+  UCQ4jiUq_u_K4O6e6xBGhHVQ, the old one redirects, but the site links the new one).
   ALL AUDIENCE NUMBERS WERE PULLED LIVE 2026-08-23 from the public profiles, not estimated:
   TikTok 7,212 followers / 120.9K likes / 60 videos, Instagram 277, YouTube 218, best post 560.7K.
   The earlier hand-written figures were badly stale (page said 21.9K best post; the real number is
