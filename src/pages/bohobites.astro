@@ -6,6 +6,24 @@ const INSTAGRAM = 'https://www.instagram.com/_bohobites';
 const YOUTUBE = 'https://www.youtube.com/@boho_bites';
 const EMAIL = 'bohobitesofficial@gmail.com';
 
+// Pulled live from the public profiles on 2026-08-23. Re-check before editing these by hand.
+const MEASURED = 'August 23, 2026';
+const PLATFORMS = [
+  { name: 'TikTok', handle: '@.bohobites', count: '7,212', unit: 'followers', href: TIKTOK },
+  { name: 'Instagram', handle: '@_bohobites', count: '277', unit: 'followers', href: INSTAGRAM },
+  { name: 'YouTube', handle: '@boho_bites', count: '218', unit: 'subscribers', href: YOUTUBE },
+];
+const TOP_VIDEOS = [
+  { views: '560.7K', title: 'McDonald\u2019s, late night', note: 'No talking, just the food', id: '7578709570936245535' },
+  { views: '61.8K', title: 'Buldak ramen at home', note: 'No talking, just the food', id: '7582020822471036191' },
+  { views: '59.7K', title: 'Bussin\u2019 Buns, Austin', note: 'Late-night chicken run', id: '7585000307999001886' },
+  { views: '54.5K', title: 'Famous Philly Cheese Steak, Euless', note: 'POV visit', id: '7655574809987878175' },
+  { views: '53.3K', title: 'The Red Chickz', note: 'POV visit', id: '7665945296152628493' },
+  { views: '50.1K', title: 'Pizzeria Sprezza, Euless', note: 'POV visit, empty dining room', id: '7653892083291278622' },
+  { views: '49.4K', title: 'A pizza spot in Broken Bow, OK', note: 'POV visit', id: '7659622683205848350' },
+  { views: '41.6K', title: 'A caf\u00e9 in Paris, TX', note: 'POV visit', id: '7660380684355161374' },
+];
+
 const brandSchema = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -34,7 +52,7 @@ const brandSchema = {
 
 <Base
   title="BohoBites | POV food series by Ashmit Bohora, Austin TX"
-  description="BohoBites is a first-person POV food series filmed on smart glasses at small independent restaurants, 7,000+ followers on TikTok. Now filming Boho's 100 Bites of Austin. Collab and press contact inside."
+  description="BohoBites is a first-person POV food series filmed on smart glasses at small independent restaurants: 7,212 TikTok followers, 120.9K likes, a 560.7K-view best post. Now filming Boho's 100 Bites of Austin. Collab and press contact inside."
 >
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -48,6 +66,7 @@ const brandSchema = {
         <div class="nav-sections">
           <a href="/">Full site</a>
           <a href="#numbers">Numbers</a>
+          <a href="#work">Most watched</a>
           <a href="#collab">Work with me</a>
         </div>
         <div class="nav-icons">
@@ -84,23 +103,60 @@ const brandSchema = {
     <div class="wrap">
       <section class="stats" id="numbers" aria-label="BohoBites audience">
         <div class="stat">
-          <span class="v">7,000+</span>
+          <span class="v">7,212</span>
           <span class="l">TikTok followers</span>
         </div>
         <div class="stat">
-          <span class="v">100,000+</span>
+          <span class="v">120.9K</span>
           <span class="l">Total likes</span>
         </div>
         <div class="stat">
-          <span class="v">21.9K</span>
+          <span class="v">560.7K</span>
           <span class="l">Views, best post</span>
         </div>
         <div class="stat">
-          <span class="v">Austin, TX</span>
-          <span class="l">Home base</span>
+          <span class="v">60</span>
+          <span class="l">Videos posted</span>
         </div>
       </section>
-      <p class="stamp">Audience figures for <a href={TIKTOK} target="_blank" rel="noopener noreferrer">@.bohobites</a>, updated August 2026. Also on <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer">Instagram</a> and <a href={YOUTUBE} target="_blank" rel="noopener noreferrer">YouTube</a>.</p>
+
+      <ul class="platforms" aria-label="Where BohoBites posts">
+        {PLATFORMS.map((pf) => (
+          <li>
+            <a href={pf.href} target="_blank" rel="noopener noreferrer">
+              <span class="p-name">{pf.name}</span>
+              <span class="p-handle">{pf.handle}</span>
+              <span class="p-count">{pf.count} <span>{pf.unit}</span></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p class="stamp">Counted from the live profiles on {MEASURED}.</p>
+    </div>
+
+    <div class="wrap">
+      <section class="panel wide" id="work">
+        <h2>Most watched</h2>
+        <p>Every number here is the live view count on the post, not an estimate.</p>
+        <ol class="vids">
+          {TOP_VIDEOS.map((v) => (
+            <li>
+              <a href={`${TIKTOK}/video/${v.id}`} target="_blank" rel="noopener noreferrer">
+                <span class="v-views">{v.views}</span>
+                <span class="v-body">
+                  <span class="v-title">{v.title}</span>
+                  <span class="v-note">{v.note}</span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ol>
+        <p class="small">
+          The top three are from the no-talking eating format I ran through 2025. Everything I make
+          now is the POV visit below. Filmed so far across Euless, Fort Worth, Austin, Paris TX, and
+          Broken Bow OK.
+        </p>
+      </section>
     </div>
 
     <div class="wrap bb-grid">
@@ -155,7 +211,7 @@ const brandSchema = {
         <ul class="ticks">
           <li>I say what I actually thought. If the food is not good, I would rather not post than lie about it.</li>
           <li>No scripts I do not believe and no fake reviews, at any price.</li>
-          <li>Product first on a first collab, and no commission-only arrangements.</li>
+          <li>If you want a product featured, send the product. I do not buy it myself and wait to be paid back, and I do not take deals where I only get paid per sale.</li>
           <li>If you are a small local spot, there is a good chance I am just coming to eat. That one is free.</li>
         </ul>
 
@@ -287,6 +343,62 @@ const brandSchema = {
   .stamp a { color: var(--ketchup); text-decoration: none; border-bottom: 2px solid var(--mustard); }
   .stamp a:hover { border-color: var(--ketchup); }
 
+  .platforms {
+    list-style: none;
+    margin: 14px 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .platforms a {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background: var(--card);
+    border: 2.5px solid var(--ink);
+    border-radius: 8px;
+    box-shadow: 4px 4px 0 var(--ink);
+    padding: 14px 16px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .platforms a:hover { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
+  .p-name { font-family: var(--disp); font-size: 18px; }
+  .p-handle { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; color: var(--ink-soft); }
+  .p-count { font-family: var(--mono); font-size: 13px; margin-top: 4px; color: var(--ketchup); }
+  .p-count span { color: var(--ink-soft); letter-spacing: .06em; text-transform: uppercase; font-size: 10.5px; }
+
+  .vids { list-style: none; margin: 18px 0 0; padding: 0; }
+  .vids li + li { border-top: 2px dashed #D8CDB4; }
+  .vids a {
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+    padding: 13px 4px;
+    text-decoration: none;
+    border-bottom: none;
+    color: var(--ink);
+  }
+  .vids a:hover .v-title { color: var(--ketchup); }
+  .v-views {
+    font-family: var(--disp);
+    font-size: 22px;
+    color: var(--ketchup);
+    min-width: 88px;
+    flex: none;
+  }
+  .v-body { display: flex; flex-direction: column; gap: 2px; }
+  .v-title { font-size: 17px; font-weight: 600; }
+  .v-note {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
   .bb-grid {
     margin-top: 44px;
     display: grid;
@@ -378,10 +490,14 @@ const brandSchema = {
 
   @media (max-width: 860px) {
     .stats { grid-template-columns: repeat(2, 1fr); }
+    .platforms { grid-template-columns: 1fr; }
     .bb-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 520px) {
     .panel { padding: 24px 22px 26px; }
     .cta .btn { width: 100%; text-align: center; }
+    .vids a { gap: 12px; }
+    .v-views { font-size: 19px; min-width: 68px; }
+    .v-title { font-size: 16px; }
   }
 </style>
