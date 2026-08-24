@@ -1,6 +1,22 @@
 # ashmitbohora.com portfolio
 
 ## Current State
+- 2026-08-23: NEW `/bohobites` PAGE committed LOCALLY, NOT deployed; stacked on the still-undeployed
+  08-13 and 08-08 passes below, so the next deploy ships all three. `src/pages/bohobites.astro` is a
+  media-kit page for the BohoBites food brand: hero, audience stats, the format, the "Boho's 100 Bites
+  of Austin" series, and a collab/contact section for inbound brand deals. No rate card on purpose
+  (BohoBites negotiation strategy is to let the brand name a number first) and no partnership claims,
+  since there are zero completed paid deals. Reuses the existing kraft/diner tokens only, no new
+  skeuomorphic props (per the 08-08 slop audit). Also: BohoBites Brand + ProfilePage JSON-LD with
+  sameAs to TikTok/IG/YouTube (the point of the page is entity resolution for the "bohobites" query),
+  a `/bohobites/` entry in llms.txt, and links in from the homepage brand chip + footer. Follower
+  count 6K+ -> 7K+ in index.astro (hero stat, receipt row, brand chip) and llms.txt; `resume.astro`
+  and the resume PDF still say 6K+, which is a true floor, so they were left alone.
+  Verified: build green, no horizontal overflow and zero console errors at 390/768/1440 via Playwright,
+  sitemap contains /bohobites/, canonical correct, zero em dashes.
+  AUDIENCE NUMBERS ARE FLOORS stamped "updated August 2026" (7,000+ followers, 100,000+ likes, 21.9K
+  best post): confirm against live TikTok before any deploy that touches them.
+  Deploy on his go: `npm run build && npx wrangler pages deploy dist --project-name=ashmitbohora`.
 - 2026-08-13: RESUME + SITE CONTENT PASS committed LOCALLY (`8c75244`), NOT deployed, stacked on
   top of the still-undeployed 08-08 truth pass below (`7b6446e`). WLF Club title finally applied
   everywhere as **GTM Engineer** (resume/site-facing; internal title is Growth Engineer, per

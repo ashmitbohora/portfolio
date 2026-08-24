@@ -22,7 +22,8 @@
 - [Guruji](https://getguruji.com): gamified Duolingo-style learning PWA (React, TypeScript, Supabase) with RLS-scoped auth and a self-run security audit against the live database (zero exploitable vulnerabilities). Multi-track curriculum: Data Decoded (data science) and QuickClaude (coding) alongside English and digital-literacy content.
 - [BohoQuest](https://app.bohoquest.app): gamified check-in app (Expo/React Native) with server-side anti-cheat verification, Apple Sign-In, and a 121-test suite. Live in TestFlight.
 - [PickMyPath](https://app.pickmypath.app): guitar-learning app, live but paused: chord-aligned lyrics, 73-song structured dataset, recommendation engine (Next.js, Supabase/PostgreSQL).
-- [BohoBites Analytics](https://github.com/ashmitbohora/bohobites_dashboard): Python/Shiny dashboard processing real TikTok creator data (rolling KPI windows, posting-time models) for BohoBites, a 6K+ follower food brand.
+- [BohoBites Analytics](https://github.com/ashmitbohora/bohobites_dashboard): Python/Shiny dashboard processing real TikTok creator data (rolling KPI windows, posting-time models) for BohoBites, a 7K+ follower food brand.
+- [BohoBites](https://ashmitbohora.com/bohobites/): first-person POV food series filmed on smart glasses at small independent restaurants, 7,000+ TikTok followers at [@.bohobites](https://www.tiktok.com/@.bohobites). Started in Dallas-Fort Worth, now filming "Boho's 100 Bites of Austin." Collab and press contact: bohobitesofficial@gmail.com.
 - BoHub: local-first AI personal OS: Claude API tiered model routing, SQLite full-text search, security model.
 
 ## Skills

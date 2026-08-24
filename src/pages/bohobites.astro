@@ -1,0 +1,387 @@
+---
+import Base from '../layouts/Base.astro';
+
+const TIKTOK = 'https://www.tiktok.com/@.bohobites';
+const INSTAGRAM = 'https://www.instagram.com/_bohobites';
+const YOUTUBE = 'https://www.youtube.com/@boho_bites';
+const EMAIL = 'bohobitesofficial@gmail.com';
+
+const brandSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Brand',
+      '@id': 'https://ashmitbohora.com/bohobites/#brand',
+      name: 'BohoBites',
+      alternateName: ['Boho Bites', '.bohobites'],
+      url: 'https://ashmitbohora.com/bohobites/',
+      description:
+        'BohoBites is a first-person POV food series by Ashmit Bohora, filmed on smart glasses at small, independent restaurants. Started in Dallas-Fort Worth, now filming in Austin, Texas.',
+      founder: { '@id': 'https://ashmitbohora.com/#person' },
+      sameAs: [TIKTOK, INSTAGRAM, YOUTUBE],
+    },
+    {
+      '@type': 'ProfilePage',
+      '@id': 'https://ashmitbohora.com/bohobites/#page',
+      url: 'https://ashmitbohora.com/bohobites/',
+      name: 'BohoBites',
+      about: { '@id': 'https://ashmitbohora.com/bohobites/#brand' },
+      isPartOf: { '@id': 'https://ashmitbohora.com/#website' },
+    },
+  ],
+};
+---
+
+<Base
+  title="BohoBites | POV food series by Ashmit Bohora, Austin TX"
+  description="BohoBites is a first-person POV food series filmed on smart glasses at small independent restaurants, 7,000+ followers on TikTok. Now filming Boho's 100 Bites of Austin. Collab and press contact inside."
+>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site">
+    <div class="wrap masthead">
+      <a class="title" href="/" style="text-decoration:none;color:inherit">Ashmit <span>Bohora</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Main" id="mainNav">
+        <div class="nav-sections">
+          <a href="/">Full site</a>
+          <a href="#numbers">Numbers</a>
+          <a href="#collab">Work with me</a>
+        </div>
+        <div class="nav-icons">
+          <a href={TIKTOK} target="_blank" rel="noopener noreferrer" aria-label="BohoBites on TikTok">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M9.5 1.5v8.3a2.7 2.7 0 1 1-2.2-2.66" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M9.5 3.2c.5 1.6 1.8 2.7 3.4 2.9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </a>
+          <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" aria-label="BohoBites on Instagram">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="13" height="13" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3.2" stroke="currentColor" stroke-width="1.4"/><circle cx="11.6" cy="4.4" r="0.9" fill="currentColor"/></svg>
+          </a>
+          <a href={YOUTUBE} target="_blank" rel="noopener noreferrer" aria-label="BohoBites on YouTube">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="3.5" width="14" height="9" rx="3" stroke="currentColor" stroke-width="1.4"/><path d="M6.7 6.2l3.6 1.8-3.6 1.8V6.2z" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <div class="wrap bb-head">
+      <p class="eyebrow">A food series by Ashmit Bohora</p>
+      <h1>Boho<span class="lit">Bites</span></h1>
+      <p class="bb-dek">
+        First-person POV videos from small independent restaurants, filmed on smart glasses so you
+        see the meal the way I saw it. No studio, no script, no host talking at a camera. Started in
+        Dallas&ndash;Fort Worth. Now filming in Austin.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href={TIKTOK} target="_blank" rel="noopener noreferrer">Watch on TikTok</a>
+        <a class="btn" href="#collab">Work with me</a>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <section class="stats" id="numbers" aria-label="BohoBites audience">
+        <div class="stat">
+          <span class="v">7,000+</span>
+          <span class="l">TikTok followers</span>
+        </div>
+        <div class="stat">
+          <span class="v">100,000+</span>
+          <span class="l">Total likes</span>
+        </div>
+        <div class="stat">
+          <span class="v">21.9K</span>
+          <span class="l">Views, best post</span>
+        </div>
+        <div class="stat">
+          <span class="v">Austin, TX</span>
+          <span class="l">Home base</span>
+        </div>
+      </section>
+      <p class="stamp">Audience figures for <a href={TIKTOK} target="_blank" rel="noopener noreferrer">@.bohobites</a>, updated August 2026. Also on <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer">Instagram</a> and <a href={YOUTUBE} target="_blank" rel="noopener noreferrer">YouTube</a>.</p>
+    </div>
+
+    <div class="wrap bb-grid">
+      <section class="panel">
+        <h2>The format</h2>
+        <p>
+          Every video is one continuous visit. I walk in, order, talk to whoever is behind the
+          counter, and eat. The glasses record what I actually see, and the audio is the real room:
+          the order, the kitchen, my first reaction. Nothing is narrated over the top afterward.
+        </p>
+        <p>
+          The spots are small and usually independent. Family-run counters, strip-mall kitchens,
+          food trucks, the places you would drive past. Every caption ends with the full street
+          address, so anyone who watches it can actually go.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Boho&rsquo;s 100 Bites of Austin</h2>
+        <p>
+          The current series. One hundred restaurants around Austin, starting with everything I can
+          walk to from campus, counted up one video at a time.
+        </p>
+        <p class="counter" aria-label="Series progress">
+          <span class="c-num">001</span>
+          <span class="c-lab">now filming</span>
+        </p>
+        <p class="small">
+          Spot suggestions are welcome. Most of the list so far came from comments and DMs, not from
+          me.
+        </p>
+      </section>
+    </div>
+
+    <div class="wrap">
+      <section class="panel wide" id="collab">
+        <h2>Working together</h2>
+        <p>
+          If you are a brand or a restaurant and you want a BohoBites video, email me and tell me
+          what you have in mind. I answer everything.
+        </p>
+
+        <h3>What a collab looks like</h3>
+        <ul class="ticks">
+          <li>One POV video from a real visit, filmed the way every other BohoBites video is filmed.</li>
+          <li>Posted to TikTok, where the audience is. Instagram and YouTube on request.</li>
+          <li>Your full name and street address in the caption, so viewers can find you.</li>
+          <li>A filming date agreed before anything is booked, not after.</li>
+        </ul>
+
+        <h3>How I work</h3>
+        <ul class="ticks">
+          <li>I say what I actually thought. If the food is not good, I would rather not post than lie about it.</li>
+          <li>No scripts I do not believe and no fake reviews, at any price.</li>
+          <li>Product first on a first collab, and no commission-only arrangements.</li>
+          <li>If you are a small local spot, there is a good chance I am just coming to eat. That one is free.</li>
+        </ul>
+
+        <p class="also">
+          Separately, I build free websites for small local businesses through
+          <a href="https://getwebspansion.org" target="_blank" rel="noopener noreferrer">Webspansion</a>.
+          If you run one of these places and your site is holding you back, that is a different
+          conversation and it also costs nothing.
+        </p>
+
+        <div class="cta left">
+          <a class="btn primary" href={`mailto:${EMAIL}`}>{EMAIL}</a>
+          <a class="btn" href={TIKTOK} target="_blank" rel="noopener noreferrer">See the work</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="wrap who">
+      <p>
+        BohoBites is made by <a href="/">Ashmit Bohora</a>, a Statistics and Data Science student at
+        UT Austin. I film it, edit it, and run the analytics behind it myself.
+      </p>
+    </div>
+
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <p class="sig">Chef &amp; engineer: <span>Ashmit Bohora</span>, Austin TX</p>
+      <div class="links">
+        <a href="/">Portfolio</a>
+        <a href="/resume/">Resume</a>
+        <a href={TIKTOK} target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href={`mailto:${EMAIL}`}>Email</a>
+      </div>
+      <p class="fineprint">Every spot on this account is a place I actually paid to eat at.</p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json" set:html={JSON.stringify(brandSchema)} />
+
+  <script>
+    const navToggle = document.getElementById('navToggle') as HTMLButtonElement;
+    const mainNav = document.getElementById('mainNav')!;
+    navToggle.addEventListener('click', () => {
+      const open = mainNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+    mainNav.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</Base>
+
+<style>
+  .bb-head {
+    padding-block: 56px 30px;
+    text-align: center;
+  }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .bb-head h1 {
+    font-family: var(--disp);
+    font-weight: 400;
+    font-size: clamp(44px, 8vw, 82px);
+    line-height: 1.02;
+    margin-top: 10px;
+  }
+  .bb-head h1 .lit { color: var(--ketchup); }
+  .bb-dek {
+    margin: 18px auto 0;
+    color: var(--ink-soft);
+    max-width: 56ch;
+  }
+  .cta {
+    margin-top: 26px;
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .cta.left { justify-content: flex-start; margin-top: 28px; }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+  .stat {
+    background: var(--card);
+    border: 2.5px solid var(--ink);
+    border-radius: 8px;
+    box-shadow: 4px 4px 0 var(--ink);
+    padding: 20px 18px;
+    text-align: center;
+  }
+  .stat .v {
+    display: block;
+    font-family: var(--disp);
+    font-size: clamp(22px, 3vw, 32px);
+    line-height: 1.1;
+    color: var(--ink);
+  }
+  .stat .l {
+    display: block;
+    margin-top: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .stamp {
+    margin-top: 14px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+  .stamp a { color: var(--ketchup); text-decoration: none; border-bottom: 2px solid var(--mustard); }
+  .stamp a:hover { border-color: var(--ketchup); }
+
+  .bb-grid {
+    margin-top: 44px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .panel {
+    background: var(--card);
+    border: 2.5px solid var(--ink);
+    border-radius: 10px;
+    box-shadow: 5px 5px 0 var(--ink);
+    padding: 30px 32px 32px;
+  }
+  .panel.wide { margin-top: 18px; }
+  .panel h2 {
+    font-family: var(--disp);
+    font-weight: 400;
+    font-size: clamp(24px, 3vw, 31px);
+    line-height: 1.15;
+  }
+  .panel h3 {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: 26px;
+  }
+  .panel p { margin-top: 14px; font-size: 17px; }
+  .panel p.small { font-size: 15px; color: var(--ink-soft); }
+  .panel a { color: var(--ketchup); text-decoration: none; border-bottom: 2px solid var(--mustard); }
+  .panel a:hover { border-color: var(--ketchup); }
+  .panel .btn { border-bottom: 2.5px solid var(--ink); }
+  .panel .btn.primary { color: var(--card); }
+
+  .counter {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 2.5px dashed #D8CDB4;
+  }
+  .c-num {
+    font-family: var(--disp);
+    font-size: 46px;
+    line-height: 1;
+    color: var(--ketchup);
+  }
+  .c-lab {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .ticks { list-style: none; margin: 10px 0 0; padding: 0; }
+  .ticks li {
+    position: relative;
+    padding-left: 22px;
+    margin: 9px 0;
+    font-size: 17px;
+  }
+  .ticks li::before {
+    content: "\00b7";
+    position: absolute;
+    left: 6px;
+    color: var(--ketchup);
+    font-weight: 700;
+  }
+  .panel .also {
+    margin-top: 26px;
+    padding-top: 20px;
+    border-top: 2.5px dashed #D8CDB4;
+    color: var(--ink-soft);
+    font-size: 16px;
+  }
+
+  .who {
+    margin: 44px auto 0;
+    padding-bottom: 70px;
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 16px;
+  }
+  .who a { color: var(--ketchup); text-decoration: none; border-bottom: 2px solid var(--mustard); }
+  .who a:hover { border-color: var(--ketchup); }
+
+  @media (max-width: 860px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .bb-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 520px) {
+    .panel { padding: 24px 22px 26px; }
+    .cta .btn { width: 100%; text-align: center; }
+  }
+</style>
