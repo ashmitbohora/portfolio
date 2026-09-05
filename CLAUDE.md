@@ -3,7 +3,7 @@
 ## Current State
 - 2026-09-05: `/bohobites-map/` LIVE. Static copy of the 100 Bites of Austin Leaflet map at
   `public/bohobites-map/index.html`, source of truth is `~/SecondBrain/BohoBites/austin-100-bites-map.html`
-  (re-copy + re-scrub on change: the public copy has NO home pin, NO apartment address, walk times say
+  (regenerate with `python3 scripts/sync-bohobites-map.py` on change: the public copy has NO home pin, NO apartment address, walk times say
   "from West Campus"). Not in the Astro sitemap (static file). DEPLOY GOTCHA: the default wrangler login
   on this Mac is WLF's account; this project is on the personal account, so deploy with
   `XDG_CONFIG_HOME=~/.wrangler-personal npx wrangler pages deploy dist --project-name=ashmitbohora`
