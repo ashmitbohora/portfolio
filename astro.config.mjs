@@ -9,7 +9,7 @@ export default defineConfig({
     sitemap({
       lastmod: new Date(),
       // personalized pitch pages are noindex and stay out of the sitemap
-      filter: (page) => !page.includes('/bohobites/euless-bakes'),
+      filter: (page) => !/\/bohobites\/[^/]+\/?$/.test(page),
     }),
   ],
   build: {

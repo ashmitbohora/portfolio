@@ -1,0 +1,450 @@
+---
+import Base from '../../layouts/Base.astro';
+
+// Personalized pitch page for Flaming Bites, Carrollton (inbound from Rafi, flamingbites.tx@gmail.com,
+// 2026-07-16; page built 2026-09-07). noindex + out of the sitemap: one reader, one link. No pricing.
+// Every number was read off the live TikTok profile / TikTok Studio on the date in MEASURED.
+
+const TIKTOK = 'https://www.tiktok.com/@.bohobites';
+const INSTAGRAM = 'https://www.instagram.com/_bohobites';
+const YOUTUBE = 'https://www.youtube.com/@bohobites';
+const EMAIL = 'bohobitesofficial@gmail.com';
+
+const MEASURED = 'September 7, 2026';
+const ACCOUNT = { followers: '7,234', likes: '122.5K', videos: '61' };
+
+// Their spot: 1002 Webb Chapel Rd, Carrollton, TX 75006. Drive from each post to that address (OSRM).
+const NEAR = [
+  { id: '7665945296152628493', spot: 'The Red Chickz', addr: '3204 E Hebron Pkwy, Carrollton', views: '56.3K', likes: '5,614', posted: 'July 2026', miles: '6.5 mi', mins: '14 min', note: 'Halal. Filmed and posted ahead of their grand opening' },
+  { id: '7574619901168520478', spot: 'OG Chicken & Gyro', addr: '300 Terrace Dr, Richardson', views: '33.3K', likes: '926', posted: 'November 2025', miles: '11.6 mi', mins: '18 min', note: 'Halal platters next to UT Dallas, the closest thing on the account to your menu' },
+  { id: '7598411395171912990', spot: 'Gilgamesh Restaurant & Bakery', addr: '300 Terrace Dr, Richardson', views: '8.4K', likes: '241', posted: 'January 2026', miles: '11.6 mi', mins: '18 min', note: 'Halal. Hosted collab, part one' },
+  { id: '7602897830386093342', spot: 'Gilgamesh, part two', addr: '300 Terrace Dr, Richardson', views: '6.2K', likes: '280', posted: 'February 2026', miles: '11.6 mi', mins: '18 min', note: 'Same visit, second video' },
+];
+const NEAR_TOTAL = { posts: '4', views: '104.2K' };
+
+const DFW_TOTAL = { posts: '16', views: '919.9K' };
+const DFW_MORE = [
+  { id: '7578709570936245535', spot: 'McDonald\u2019s, Euless', views: '561.1K', note: 'No-talking mukbang, biggest post on the account' },
+  { id: '7655574809987878175', spot: 'Famous Philly Cheese Steak, Euless', views: '54.8K', note: 'Most-watched POV visit' },
+  { id: '7653892083291278622', spot: 'Pizzeria Sprezza, Euless', views: '51.2K', note: 'POV visit' },
+  { id: '7648761852830272798', spot: 'Manmeet\u2019s Indian Delicacies, Hurst', views: '23.3K', note: 'POV visit' },
+  { id: '7671861792171232542', spot: 'Flavor Hub, North Richland Hills', views: '22.4K', note: 'Shawarma, POV visit' },
+  { id: '7664102465196805390', spot: 'Jukson Foods, Euless', views: '22.2K', note: 'Food truck, POV visit' },
+];
+
+// Viewer geography per post, read off TikTok Studio 2026-09-07. TikTok names only the top cities
+// and buckets the rest as Other, so these are floors. Never estimate, re-read from Studio.
+const GEO_ASOF = 'September 7, 2026';
+const VIEWER_GEO = [
+  { spot: 'OG Chicken & Gyro, Richardson', viewers: '29K', nonFollowers: '96%', us: '97.5%', cities: 'Dallas 7.6%, Fort Worth 3.2%, Arlington 2.0%, Plano 2.0%' },
+  { spot: 'The Red Chickz, Carrollton', viewers: '52K', nonFollowers: '99%', us: '76.0%', cities: 'Dallas 3.6%, Fort Worth 1.6%, Houston 1.4%, Irving 1.0%' },
+  { spot: 'Famous Philly Cheese Steak, Euless', viewers: '47K', nonFollowers: '99%', us: '98.1%', cities: 'Fort Worth 7.1%, Dallas 6.5%, Arlington 5.0%, Euless 4.5%, Bedford 3.9%' },
+  { spot: 'Pizzeria Sprezza, Euless', viewers: '44K', nonFollowers: '99%', us: '99.2%', cities: 'Fort Worth 7.3%, Dallas 6.5%, Arlington 4.8%, Euless 4.2%, Bedford 4.0%' },
+];
+const FOLLOWERS_GEO = { us: '57.6%', cities: [
+  { name: 'Fort Worth', pct: '3.5%' }, { name: 'Dallas', pct: '3.1%' }, { name: 'Euless', pct: '1.7%' },
+  { name: 'Richmond', pct: '1.7%' }, { name: 'Houston', pct: '1.6%' },
+] };
+const SEARCHES = ['euless texas food', 'places to eat in euless tx', 'lunch in my city euless tx'];
+
+const LOGO_ALT = 'BohoBites';
+---
+
+<Base
+  title="BohoBites in Carrollton | for Flaming Bites"
+  description="BohoBites posts closest to Flaming Bites in Carrollton, with live view counts, drive times to 1002 Webb Chapel Rd, and where the viewers actually are."
+  noindex={true}
+>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site">
+    <div class="wrap masthead">
+      <a class="title" href="/bohobites/" style="text-decoration:none;color:inherit">Boho<span>Bites</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Main" id="mainNav">
+        <div class="nav-sections">
+          <a href="#carrollton">Carrollton</a>
+          <a href="#dfw">Rest of DFW</a>
+          <a href="#audience">Audience</a>
+          <a href="#next">Next step</a>
+          <a href="/bohobites/">Full kit</a>
+        </div>
+        <div class="nav-icons">
+          <a href={TIKTOK} target="_blank" rel="noopener noreferrer" aria-label="BohoBites on TikTok">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M9.5 1.5v8.3a2.7 2.7 0 1 1-2.2-2.66" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M9.5 3.2c.5 1.6 1.8 2.7 3.4 2.9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </a>
+          <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" aria-label="BohoBites on Instagram">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="13" height="13" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="8" r="3.2" stroke="currentColor" stroke-width="1.4"/><circle cx="11.6" cy="4.4" r="0.9" fill="currentColor"/></svg>
+          </a>
+          <a href={YOUTUBE} target="_blank" rel="noopener noreferrer" aria-label="BohoBites on YouTube">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="3.5" width="14" height="9" rx="3" stroke="currentColor" stroke-width="1.4"/><path d="M6.7 6.2l3.6 1.8-3.6 1.8V6.2z" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <div class="wrap pb-head">
+      <p class="eyebrow">For Flaming Bites, Carrollton</p>
+      <h1>Already filming <span class="lit">in Carrollton.</span></h1>
+      <p class="pb-dek">
+        The Red Chickz, fourteen minutes from you on Hebron, was filmed and posted ahead of their
+        opening. Three of the four posts closest to Webb Chapel are halal platters and hot chicken.
+        Here is the account for your side of the metroplex, with the live numbers on each post.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="#carrollton">See the nearby videos</a>
+        <a class="btn" href="#next">Next step</a>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <section class="stats" aria-label="BohoBites near Carrollton">
+        <div class="stat">
+          <span class="v">{NEAR_TOTAL.posts}</span>
+          <span class="l">Posts within 18 minutes of you</span>
+        </div>
+        <div class="stat">
+          <span class="v">{NEAR_TOTAL.views}</span>
+          <span class="l">Views on those four</span>
+        </div>
+        <div class="stat">
+          <span class="v">{DFW_TOTAL.posts}</span>
+          <span class="l">DFW posts</span>
+        </div>
+        <div class="stat">
+          <span class="v">{DFW_TOTAL.views}</span>
+          <span class="l">Views on DFW posts</span>
+        </div>
+      </section>
+      <p class="stamp">
+        Account: {ACCOUNT.followers} TikTok followers, {ACCOUNT.likes} likes, {ACCOUNT.videos} videos.
+        Counted from the live profile on {MEASURED}.
+      </p>
+    </div>
+
+    <div class="wrap">
+      <section class="panel wide" id="carrollton">
+        <p class="q">Closest to you</p>
+        <h2>Carrollton and Richardson</h2>
+        <p>
+          Four posts, three of them halal spots, all with the full street address in the caption.
+          The distance on each card is the drive from that restaurant to 1002 Webb Chapel Rd. Tap
+          any card to watch the post.
+        </p>
+        <ul class="cards" aria-label="Videos filmed near Carrollton">
+          {NEAR.map((v) => (
+            <li>
+              <a href={`${TIKTOK}/video/${v.id}`} target="_blank" rel="noopener noreferrer">
+                <span class="thumb">
+                  <img src={`/bohobites-posts/${v.id}.jpg`} alt={`Cover frame from the ${v.spot} video`} width="360" height="640" loading="lazy" decoding="async" />
+                  <span class="views">{v.views} <small>views</small></span>
+                </span>
+                <span class="body">
+                  <span class="spot">{v.spot}</span>
+                  <span class="addr">{v.addr}</span>
+                  <span class="dist"><b>{v.miles}</b> from your door, {v.mins} drive</span>
+                  <span class="meta">{v.likes} likes, posted {v.posted}</span>
+                  <span class="note">{v.note}</span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <p class="small">
+          The Red Chickz is the closest precedent to a Flaming Bites video: a new halal spot in
+          Carrollton, filmed before it opened, posted ahead of the grand opening, 56.3K views.
+        </p>
+      </section>
+    </div>
+
+    <div class="wrap">
+      <section class="panel wide" id="dfw">
+        <h2>The rest of DFW</h2>
+        <p>
+          Sixteen DFW posts and {DFW_TOTAL.views} views between them, including the McDonald&rsquo;s
+          mukbang, filmed from the Euless McDonald&rsquo;s. The biggest ones outside the four above:
+        </p>
+        <ol class="vids">
+          {DFW_MORE.map((v) => (
+            <li>
+              <a href={`${TIKTOK}/video/${v.id}`} target="_blank" rel="noopener noreferrer">
+                <span class="v-views">{v.views}</span>
+                <span class="v-body">
+                  <span class="v-title">{v.spot}</span>
+                  <span class="v-note">{v.note}</span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ol>
+        <p class="small">
+          Plus six more across Euless, Grand Prairie, Fort Worth, Watauga and North Richland Hills.
+          Worth knowing for a spot open past midnight: half this account started as 2am and 3am food
+          runs. A late-night halal platter is the exact thing that audience asks for.
+        </p>
+      </section>
+    </div>
+
+    <div class="wrap">
+      <section class="panel wide" id="audience">
+        <p class="q">Who actually watches</p>
+        <h2>Where the viewers are</h2>
+        <p>
+          Followers are spread across the country: a 561K-view McDonald&rsquo;s video did that. But
+          followers are not who watch a restaurant post. On the posts below, 96 to 99 percent of
+          viewers do not follow me. They were served by the For You feed, and TikTok&rsquo;s own city
+          data puts Dallas at the top of every one.
+        </p>
+        <div class="tablewrap">
+          <table class="geo-table">
+            <caption class="sr-only">Viewer geography per post</caption>
+            <thead>
+              <tr>
+                <th scope="col">Post</th>
+                <th scope="col">Viewers</th>
+                <th scope="col">In the US</th>
+                <th scope="col">Top cities, share of US viewers</th>
+              </tr>
+            </thead>
+            <tbody>
+              {VIEWER_GEO.map((v) => (
+                <tr>
+                  <th scope="row">{v.spot}<span class="sub">{v.nonFollowers} non-followers</span></th>
+                  <td>{v.viewers}</td>
+                  <td>{v.us}</td>
+                  <td class="cities">{v.cities}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="small">
+          The honest read: the Red Chickz post used the no-talking eating format and travelled
+          further, a quarter of its viewers were outside the US. The plain POV visits stay local.
+          On the Euless ones the top five cities are all DFW and add up to 27 to 29 percent of US
+          viewers, and TikTok names only five cities per post, so Carrollton, Plano, Irving and
+          the rest of the metroplex sit inside the remaining Other bucket. A POV visit is what I
+          would film at Flaming Bites.
+        </p>
+        <div class="geo-grid">
+          <div>
+            <h3>Followers, whole account</h3>
+            <p class="small">{FOLLOWERS_GEO.us} of followers are in the United States. Top US cities:</p>
+            <ul class="geo" aria-label="Top follower cities">
+              {FOLLOWERS_GEO.cities.map((c) => (
+                <li><span class="g-pct">{c.pct}</span><span class="g-name">{c.name}</span></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3>What people search to find these posts</h3>
+            <ul class="ticks">
+              {SEARCHES.map((q) => <li>&ldquo;{q}&rdquo;</li>)}
+            </ul>
+            <p class="small">
+              Those are the top search terms on one of the Euless posts. People search TikTok for
+              where to eat in their own city, and a post with the address in the caption is what
+              they find.
+            </p>
+          </div>
+        </div>
+        <p class="stamp-left">Read from TikTok Studio analytics on {GEO_ASOF}.</p>
+      </section>
+    </div>
+
+    <div class="wrap pb-one">
+      <section class="panel wide">
+        <h2>What a BohoBites video is</h2>
+        <p>
+          One continuous visit, filmed on smart glasses, so the viewer sees the counter, the grill
+          and the first bite exactly the way I did. The audio is the real room. Nothing is narrated
+          over the top afterward, and the caption ends with your full address so people can
+          actually come in. Posted to all three platforms: TikTok, Instagram and YouTube Shorts.
+        </p>
+        <p>
+          I say what I actually thought. That is why the numbers above exist.
+        </p>
+      </section>
+    </div>
+
+    <div class="wrap">
+      <section class="panel wide" id="next">
+        <h2>Next step</h2>
+        <p>
+          Tell me what you have in mind for Flaming Bites, one video or a few, and what week works
+          for a visit. I&rsquo;ll send the plan asap.
+        </p>
+        <div class="cta left">
+          <a class="btn primary" href={`mailto:${EMAIL}?subject=Flaming%20Bites%20x%20BohoBites`}>{EMAIL}</a>
+          <a class="btn" href={TIKTOK} target="_blank" rel="noopener noreferrer">@.bohobites on TikTok</a>
+          <a class="btn" href="/bohobites/">Full media kit</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="wrap who">
+      <p>
+        BohoBites is made by <a href="/">Ashmit Bohora</a>. I film it, edit it, and run the numbers
+        behind it myself.
+      </p>
+    </div>
+
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <p class="sig">{LOGO_ALT} by <span>Ashmit Bohora</span>, from Euless, now in Austin</p>
+      <div class="links">
+        <a href="/bohobites/">Media kit</a>
+        <a href={TIKTOK} target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href={YOUTUBE} target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href={`mailto:${EMAIL}`}>Email</a>
+      </div>
+      <p class="fineprint">View counts are the live numbers on each post as of {MEASURED}. Prepared for Flaming Bites, Carrollton.</p>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle') as HTMLButtonElement;
+    const mainNav = document.getElementById('mainNav')!;
+    navToggle.addEventListener('click', () => {
+      const open = mainNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+    mainNav.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</Base>
+
+<style>
+  .pb-head { padding-block: 56px 30px; text-align: center; }
+  .eyebrow {
+    font-family: var(--mono); font-size: 12px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--ink-soft);
+  }
+  .pb-head h1 {
+    font-family: var(--disp); font-weight: 400;
+    font-size: clamp(40px, 7.5vw, 78px); line-height: 1.02; margin-top: 10px;
+  }
+  .pb-head h1 .lit { color: var(--ketchup); }
+  .pb-dek { margin: 18px auto 0; color: var(--ink-soft); max-width: 58ch; }
+  .cta { margin-top: 26px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .cta.left { justify-content: flex-start; margin-top: 28px; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .stat {
+    background: var(--card); border: 2.5px solid var(--ink); border-radius: 8px;
+    box-shadow: 4px 4px 0 var(--ink); padding: 20px 18px; text-align: center;
+  }
+  .stat .v { display: block; font-family: var(--disp); font-size: clamp(22px, 3vw, 32px); line-height: 1.1; color: var(--ink); }
+  .stat .l { display: block; margin-top: 8px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); }
+  .stamp { margin-top: 14px; font-family: var(--mono); font-size: 12px; color: var(--ink-soft); text-align: center; }
+
+  .panel {
+    background: var(--card); border: 2.5px solid var(--ink); border-radius: 10px;
+    box-shadow: 5px 5px 0 var(--ink); padding: 30px 32px 32px;
+  }
+  .panel.wide { margin-top: 18px; }
+  .panel .q {
+    font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--ketchup); margin: 0 0 8px;
+  }
+  .panel h2 { font-family: var(--disp); font-weight: 400; font-size: clamp(24px, 3vw, 31px); line-height: 1.15; }
+  .panel p { margin-top: 14px; font-size: 17px; }
+  .panel p.small { font-size: 15px; color: var(--ink-soft); }
+  .panel a { color: var(--ketchup); text-decoration: none; border-bottom: 2px solid var(--mustard); }
+  .panel a:hover { border-color: var(--ketchup); }
+  .panel .btn { border-bottom: 2.5px solid var(--ink); }
+  .panel .btn.primary { color: var(--card); }
+
+  /* Euless cards */
+  .cards {
+    list-style: none; margin: 22px 0 0; padding: 0;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;
+  }
+  .cards a {
+    display: flex; flex-direction: column; height: 100%;
+    background: var(--kraft); border: 2.5px solid var(--ink); border-radius: 8px;
+    box-shadow: 4px 4px 0 var(--ink); overflow: hidden; color: var(--ink);
+    text-decoration: none; transition: transform .15s, box-shadow .15s;
+  }
+  .cards a:hover { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
+  .thumb { position: relative; display: block; aspect-ratio: 4 / 3; overflow: hidden; border-bottom: 2.5px solid var(--ink); background: var(--ink); }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; object-position: center 62%; display: block; }
+  .thumb .views {
+    position: absolute; left: 10px; bottom: 10px;
+    font-family: var(--disp); font-size: 22px; line-height: 1;
+    color: var(--card); background: var(--ketchup); border: 2px solid var(--ink);
+    border-radius: 6px; padding: 6px 10px; box-shadow: 3px 3px 0 var(--ink);
+  }
+  .thumb .views small { font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; margin-left: 4px; }
+  .cards .body { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px 16px; }
+  .cards .spot { font-size: 18px; font-weight: 600; line-height: 1.25; }
+  .cards .addr { font-family: var(--mono); font-size: 11.5px; letter-spacing: .04em; color: var(--ink-soft); }
+  .cards .dist { margin-top: 8px; font-size: 15px; }
+  .cards .dist b { color: var(--ketchup); font-weight: 700; }
+  .cards .meta { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+  .cards .note { margin-top: 8px; padding-top: 8px; border-top: 2px dashed #D8CDB4; font-size: 14.5px; color: var(--ink-soft); }
+
+  /* compact DFW list, same as the media kit */
+  .vids { list-style: none; margin: 18px 0 0; padding: 0; }
+  .vids li + li { border-top: 2px dashed #D8CDB4; }
+  .vids a { display: flex; align-items: baseline; gap: 18px; padding: 13px 4px; text-decoration: none; border-bottom: none; color: var(--ink); }
+  .vids a:hover .v-title { color: var(--ketchup); }
+  .v-views { font-family: var(--disp); font-size: 22px; color: var(--ketchup); min-width: 88px; flex: none; }
+  .v-body { display: flex; flex-direction: column; gap: 2px; }
+  .v-title { font-size: 17px; font-weight: 600; }
+  .v-note { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+
+  .tablewrap { overflow-x: auto; margin-top: 18px; -webkit-overflow-scrolling: touch; }
+  .geo-table { width: 100%; border-collapse: collapse; min-width: 560px; font-size: 15px; }
+  .geo-table th, .geo-table td { text-align: left; padding: 10px 10px; border-bottom: 2px dashed #D8CDB4; vertical-align: top; }
+  .geo-table thead th { font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); border-bottom: 2.5px solid var(--ink); }
+  .geo-table tbody th { font-weight: 600; }
+  .geo-table tbody th .sub { display: block; font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); font-weight: 400; margin-top: 2px; }
+  .geo-table td { font-family: var(--mono); font-size: 14px; }
+  .geo-table td.tot { font-family: var(--disp); font-size: 20px; color: var(--ketchup); }
+  .geo-table td.cities { font-family: var(--sans); font-size: 15px; }
+  .geo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 8px; }
+  .geo-grid h3 { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); margin-top: 26px; }
+  .stamp-left { margin-top: 22px; font-family: var(--mono); font-size: 12px; color: var(--ink-soft); }
+  .geo { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+  .geo li { display: flex; align-items: baseline; gap: 10px; background: var(--kraft); border: 2px solid var(--ink); border-radius: 8px; padding: 12px 14px; }
+  .g-pct { font-family: var(--disp); font-size: 24px; color: var(--ketchup); }
+  .g-name { font-size: 15px; }
+
+  .pb-one { margin-top: 0; }
+  .ticks { list-style: none; margin: 12px 0 0; padding: 0; }
+  .ticks li { position: relative; padding-left: 22px; margin: 9px 0; font-size: 17px; }
+  .ticks li::before { content: "\00b7"; position: absolute; left: 6px; color: var(--ketchup); font-weight: 700; }
+
+  .who { margin: 44px auto 0; padding-bottom: 70px; text-align: center; color: var(--ink-soft); font-size: 16px; }
+  .who a { color: var(--ketchup); text-decoration: none; border-bottom: 2px solid var(--mustard); }
+  .who a:hover { border-color: var(--ketchup); }
+
+  @media (max-width: 900px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 860px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .geo-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .panel { padding: 24px 22px 26px; }
+    .cta .btn { width: 100%; text-align: center; }
+    .cards { grid-template-columns: 1fr; }
+    .vids a { gap: 12px; }
+    .v-views { font-size: 19px; min-width: 68px; }
+    .v-title { font-size: 16px; }
+  }
+</style>
