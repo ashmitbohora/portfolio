@@ -36,9 +36,23 @@ const DFW_MORE = [
   { id: '7668323312837217550', spot: 'Watauga Kabab n Kurry', views: '13.3K', note: 'Rufe Snow Dr' },
 ];
 
-// Audience geography comes from TikTok Studio > Analytics > Followers. Filled by hand from the
-// analytics screen, never estimated. Leave null and the section does not render.
-const GEO: null | { country: string; countryPct: string; cities: { name: string; pct: string }[]; asOf: string } = null;
+// Audience geography, read off TikTok Studio on 2026-09-07. Two different things:
+// FOLLOWERS (all-time, whole account) and VIEWERS of the Euless posts (per-video analytics).
+// City percentages are TikTok's share-of-US figures; it names only the top five cities and
+// buckets everything else as Other. Never estimate these, re-read them from Studio.
+const GEO_ASOF = 'September 7, 2026';
+const FOLLOWERS_GEO = { us: '57.6%', cities: [
+  { name: 'Fort Worth', pct: '3.5%' }, { name: 'Dallas', pct: '3.1%' }, { name: 'Euless', pct: '1.7%' },
+  { name: 'Richmond', pct: '1.7%' }, { name: 'Houston', pct: '1.6%' },
+] };
+const CITY_COLS = ['Fort Worth', 'Dallas', 'Arlington', 'Euless', 'Bedford'];
+const VIEWER_GEO = [
+  { spot: 'Famous Philly Cheese Steak', viewers: '47K', nonFollowers: '99%', pcts: ['7.1%', '6.5%', '5.0%', '4.5%', '3.9%'], dfw: '27.0%' },
+  { spot: 'Pizzeria Sprezza', viewers: '44K', nonFollowers: '99%', pcts: ['7.3%', '6.5%', '4.8%', '4.2%', '4.0%'], dfw: '26.8%' },
+  { spot: 'Yaksa Restaurant and Bar', viewers: '7.1K', nonFollowers: '95%', pcts: ['9.2%', '6.9%', '5.1%', '4.4%', '3.3%'], dfw: '28.9%' },
+];
+// Search terms that brought viewers to the Yaksa post (share of its search traffic).
+const SEARCHES = ['euless texas', 'euless texas food', 'places to eat in euless tx', 'lunch in my city euless tx', 'food in euless tx'];
 
 const LOGO_ALT = 'BohoBites';
 ---
@@ -60,7 +74,7 @@ const LOGO_ALT = 'BohoBites';
         <div class="nav-sections">
           <a href="#euless">Euless</a>
           <a href="#dfw">Rest of DFW</a>
-          {GEO && <a href="#audience">Audience</a>}
+          <a href="#audience">Audience</a>
           <a href="#opening">The opening</a>
           <a href="/bohobites/">Full kit</a>
         </div>
@@ -183,27 +197,73 @@ const LOGO_ALT = 'BohoBites';
       </section>
     </div>
 
-    {GEO && (
-      <div class="wrap">
-        <section class="panel wide" id="audience">
-          <p class="q">Your second question</p>
-          <h2>What portion of the audience is in that part of the metroplex?</h2>
-          <p>
-            Straight from TikTok Studio analytics, as of {GEO.asOf}. {GEO.countryPct} of followers are in
-            the {GEO.country}. Top cities:
-          </p>
-          <ul class="geo" aria-label="Top follower cities">
-            {GEO.cities.map((c) => (
-              <li><span class="g-pct">{c.pct}</span><span class="g-name">{c.name}</span></li>
-            ))}
-          </ul>
-          <p class="small">
-            TikTok reports followers by city, not by suburb, so Euless, Bedford, Hurst, Grapevine and
-            Colleyville roll up into the Dallas and Fort Worth lines above.
-          </p>
-        </section>
-      </div>
-    )}
+    <div class="wrap">
+      <section class="panel wide" id="audience">
+        <p class="q">Your second question</p>
+        <h2>What portion of the audience is in that part of the metroplex?</h2>
+        <p>
+          Two honest numbers, because they answer different questions. Followers are spread across
+          the country: a 561K-view McDonald&rsquo;s video did that. But followers are not who watch a
+          restaurant post. On the three Euless posts below, 95 to 99 percent of viewers were people who
+          do not follow me, served by the For You feed, and TikTok&rsquo;s own city data says the top
+          five cities for every one of them are all DFW. Fort Worth, Dallas, Arlington, Euless and
+          Bedford alone account for 27 to 29 percent of each post&rsquo;s US viewers.
+        </p>
+        <div class="tablewrap">
+          <table class="geo-table">
+            <caption class="sr-only">Viewer share by city for three Euless posts, share of US viewers</caption>
+            <thead>
+              <tr>
+                <th scope="col">Post</th>
+                <th scope="col">Viewers</th>
+                {CITY_COLS.map((c) => <th scope="col">{c}</th>)}
+                <th scope="col">Top 5, all DFW</th>
+              </tr>
+            </thead>
+            <tbody>
+              {VIEWER_GEO.map((v) => (
+                <tr>
+                  <th scope="row">{v.spot}<span class="sub">{v.nonFollowers} non-followers</span></th>
+                  <td>{v.viewers}</td>
+                  {v.pcts.map((p) => <td>{p}</td>)}
+                  <td class="tot">{v.dfw}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="small">
+          TikTok names only the top five cities per post and buckets the rest as Other, so Hurst,
+          Grapevine, Colleyville, Irving and the rest of the metroplex sit inside the remaining
+          seventy-odd percent. The number above is a floor, not the whole DFW share.
+        </p>
+        <div class="geo-grid">
+          <div>
+            <h3>Followers, whole account</h3>
+            <p class="small">
+              {FOLLOWERS_GEO.us} of followers are in the United States. Top US cities:
+            </p>
+            <ul class="geo" aria-label="Top follower cities">
+              {FOLLOWERS_GEO.cities.map((c) => (
+                <li><span class="g-pct">{c.pct}</span><span class="g-name">{c.name}</span></li>
+              ))}
+            </ul>
+            <p class="small">Euless itself is the third-largest US city on the follower list, ahead of Houston.</p>
+          </div>
+          <div>
+            <h3>What people searched to find the Yaksa post</h3>
+            <ul class="ticks">
+              {SEARCHES.map((q) => <li>&ldquo;{q}&rdquo;</li>)}
+            </ul>
+            <p class="small">
+              People in Euless search TikTok for where to eat in Euless, and these posts are what
+              they find. That is the audience a new bakery on Rio Grande actually needs.
+            </p>
+          </div>
+        </div>
+        <p class="stamp-left">Read from TikTok Studio analytics on {GEO_ASOF}.</p>
+      </section>
+    </div>
 
     <div class="wrap pb-grid">
       <section class="panel">
@@ -369,7 +429,18 @@ const LOGO_ALT = 'BohoBites';
   .v-title { font-size: 17px; font-weight: 600; }
   .v-note { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
 
-  .geo { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+  .tablewrap { overflow-x: auto; margin-top: 18px; -webkit-overflow-scrolling: touch; }
+  .geo-table { width: 100%; border-collapse: collapse; min-width: 640px; font-size: 15px; }
+  .geo-table th, .geo-table td { text-align: left; padding: 10px 10px; border-bottom: 2px dashed #D8CDB4; vertical-align: top; }
+  .geo-table thead th { font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); border-bottom: 2.5px solid var(--ink); }
+  .geo-table tbody th { font-weight: 600; }
+  .geo-table tbody th .sub { display: block; font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); font-weight: 400; margin-top: 2px; }
+  .geo-table td { font-family: var(--mono); font-size: 14px; }
+  .geo-table td.tot { font-family: var(--disp); font-size: 20px; color: var(--ketchup); }
+  .geo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 8px; }
+  .geo-grid h3 { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); margin-top: 26px; }
+  .stamp-left { margin-top: 22px; font-family: var(--mono); font-size: 12px; color: var(--ink-soft); }
+  .geo { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
   .geo li { display: flex; align-items: baseline; gap: 10px; background: var(--kraft); border: 2px solid var(--ink); border-radius: 8px; padding: 12px 14px; }
   .g-pct { font-family: var(--disp); font-size: 24px; color: var(--ketchup); }
   .g-name { font-size: 15px; }
@@ -389,6 +460,7 @@ const LOGO_ALT = 'BohoBites';
   @media (max-width: 860px) {
     .stats { grid-template-columns: repeat(2, 1fr); }
     .pb-grid { grid-template-columns: 1fr; }
+    .geo-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 560px) {
     .panel { padding: 24px 22px 26px; }
