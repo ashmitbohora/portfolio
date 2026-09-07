@@ -76,7 +76,7 @@ const LOGO_ALT = 'BohoBites';
           <a href="#euless">Euless</a>
           <a href="#dfw">Rest of DFW</a>
           <a href="#audience">Audience</a>
-          <a href="#opening">The opening</a>
+          <a href="#next">Next step</a>
           <a href="/bohobites/">Full kit</a>
         </div>
         <div class="nav-icons">
@@ -106,7 +106,7 @@ const LOGO_ALT = 'BohoBites';
       </p>
       <div class="cta">
         <a class="btn primary" href="#euless">See the Euless videos</a>
-        <a class="btn" href="#opening">The opening</a>
+        <a class="btn" href="#next">Next step</a>
       </div>
     </div>
 
@@ -267,8 +267,8 @@ const LOGO_ALT = 'BohoBites';
       </section>
     </div>
 
-    <div class="wrap pb-grid">
-      <section class="panel">
+    <div class="wrap pb-one">
+      <section class="panel wide">
         <h2>What a BohoBites video is</h2>
         <p>
           One continuous visit, filmed on smart glasses, so the viewer sees the counter, the case and
@@ -282,15 +282,6 @@ const LOGO_ALT = 'BohoBites';
         </p>
       </section>
 
-      <section class="panel" id="opening">
-        <h2>For the opening</h2>
-        <ul class="ticks">
-          <li>Yes to the creator preview. Give me the date early and I will plan around it.</li>
-          <li>One POV visit video posted to all three platforms, TikTok, Instagram and YouTube Shorts, timed to your opening week.</li>
-          <li>Full name, street address and the Glade Parks landmarks in the caption, so viewers can find you.</li>
-          <li>I say what I actually thought. That is why the numbers above exist.</li>
-        </ul>
-      </section>
     </div>
 
     <div class="wrap">
@@ -443,7 +434,7 @@ const LOGO_ALT = 'BohoBites';
   .g-pct { font-family: var(--disp); font-size: 24px; color: var(--ketchup); }
   .g-name { font-size: 15px; }
 
-  .pb-grid { margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .pb-one { margin-top: 0; }
   .ticks { list-style: none; margin: 12px 0 0; padding: 0; }
   .ticks li { position: relative; padding-left: 22px; margin: 9px 0; font-size: 17px; }
   .ticks li::before { content: "\00b7"; position: absolute; left: 6px; color: var(--ketchup); font-weight: 700; }
@@ -457,7 +448,6 @@ const LOGO_ALT = 'BohoBites';
   }
   @media (max-width: 860px) {
     .stats { grid-template-columns: repeat(2, 1fr); }
-    .pb-grid { grid-template-columns: 1fr; }
     .geo-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 560px) {
