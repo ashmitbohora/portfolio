@@ -26,8 +26,9 @@ const MID_CITIES = [
 const MID_CITIES_TOTAL = { posts: '6', views: '170.8K', likes: '11.7K' };
 
 // Everything else filmed at a DFW restaurant (chains and at-home posts excluded).
-const DFW_TOTAL = { posts: '15', views: '358.8K' };
+const DFW_TOTAL = { posts: '16', views: '919.9K' };
 const DFW_MORE = [
+  { id: '7578709570936245535', spot: 'McDonald\u2019s, Euless', views: '561.1K', note: 'No-talking mukbang, biggest post on the account' },
   { id: '7665945296152628493', spot: 'The Red Chickz, Carrollton', views: '56.3K', note: 'Posted on their grand-opening day' },
   { id: '7574619901168520478', spot: 'A halal spot in Richardson', views: '33.3K', note: 'Next to UT Dallas' },
   { id: '7671861792171232542', spot: 'Flavor Hub, North Richland Hills', views: '22.4K', note: 'Rufe Snow Dr' },
@@ -125,7 +126,7 @@ const LOGO_ALT = 'BohoBites';
         </div>
         <div class="stat">
           <span class="v">{DFW_TOTAL.views}</span>
-          <span class="l">Views across DFW</span>
+          <span class="l">Views on DFW posts</span>
         </div>
       </section>
       <p class="stamp">
@@ -173,8 +174,9 @@ const LOGO_ALT = 'BohoBites';
       <section class="panel wide" id="dfw">
         <h2>The rest of DFW</h2>
         <p>
-          Same format, wider radius. Fifteen restaurant visits across the metroplex and {DFW_TOTAL.views}
-          views between them. The ones outside the Mid-Cities:
+          Wider radius, same metroplex. Sixteen DFW posts and {DFW_TOTAL.views} views between them,
+          including the McDonald&rsquo;s mukbang, which was filmed from the Euless McDonald&rsquo;s. The
+          ones outside the six above:
         </p>
         <ol class="vids">
           {DFW_MORE.map((v) => (
@@ -284,14 +286,10 @@ const LOGO_ALT = 'BohoBites';
         <h2>For the opening</h2>
         <ul class="ticks">
           <li>Yes to the creator preview. Give me the date early and I will plan around it.</li>
-          <li>One POV visit video on TikTok, timed to your opening week. Instagram and YouTube Shorts on request.</li>
+          <li>One POV visit video posted to all three platforms, TikTok, Instagram and YouTube Shorts, timed to your opening week.</li>
           <li>Full name, street address and the Glade Parks landmarks in the caption, so viewers can find you.</li>
           <li>I say what I actually thought. That is why the numbers above exist.</li>
         </ul>
-        <p class="small">
-          I am at UT Austin during the week now, so a preview date agreed in advance is the one
-          thing I need from you.
-        </p>
       </section>
     </div>
 
@@ -300,7 +298,7 @@ const LOGO_ALT = 'BohoBites';
         <h2>Next step</h2>
         <p>
           Tell me what the preview and the opening look like on your side, how many posts you want,
-          and the budget you are working with. I will send a plan back the same day.
+          and the budget you are working with. I'll send the plan asap.
         </p>
         <div class="cta left">
           <a class="btn primary" href={`mailto:${EMAIL}?subject=Paris%20Baguette%20Euless%20opening`}>{EMAIL}</a>
@@ -313,7 +311,7 @@ const LOGO_ALT = 'BohoBites';
     <div class="wrap who">
       <p>
         BohoBites is made by <a href="/">Ashmit Bohora</a>. I film it, edit it, and run the numbers
-        behind it myself. Every spot on the account is a place I paid to eat at.
+        behind it myself.
       </p>
     </div>
 
