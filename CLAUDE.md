@@ -1,7 +1,7 @@
 # ashmitbohora.com portfolio
 
 ## Current State
-- 2026-09-07: `/bohobites/euless-bakes/` BUILT + COMMITTED (dc8a7b9, 9734abf), NOT DEPLOYED. Personalized
+- 2026-09-07: `/bohobites/euless-bakes/` LIVE (deployed 2026-09-07, commits dc8a7b9..a053270). Personalized
   pitch page for the Paris Baguette Euless opening (inbound from Vivek @euless_bakes): 6 Euless/Mid-Cities
   posts with live views + OSRM drive time to 2920 Rio Grande, wider DFW list, real TikTok Studio audience
   geography (followers + per-post viewers by city), no rate card. noindex via new optional `noindex` prop on
