@@ -1,6 +1,15 @@
 # ashmitbohora.com portfolio
 
 ## Current State
+- 2026-09-07: `/bohobites/euless-bakes/` BUILT + COMMITTED (dc8a7b9, 9734abf), NOT DEPLOYED. Personalized
+  pitch page for the Paris Baguette Euless opening (inbound from Vivek @euless_bakes): 6 Euless/Mid-Cities
+  posts with live views + OSRM drive time to 2920 Rio Grande, wider DFW list, real TikTok Studio audience
+  geography (followers + per-post viewers by city), no rate card. noindex via new optional `noindex` prop on
+  Base.astro, excluded from the sitemap in astro.config.mjs. Cover frames in `public/bohobites-posts/`
+  (TikTok CDN URLs expire, so they are stored locally). Post list + views came from
+  `yt-dlp --flat-playlist -j https://www.tiktok.com/@.bohobites` (works when the browser is Akamai-blocked).
+  Verified: build green, no overflow at 390/768/1512, zero em dashes. Deploy on his go with the personal
+  wrangler config (command below). Account counts 09-07: 7,234 followers / 122.5K likes / 61 videos.
 - 2026-09-05: `/bohobites-map/` LIVE. Static copy of the 100 Bites of Austin Leaflet map at
   `public/bohobites-map/index.html`, source of truth is `~/SecondBrain/BohoBites/austin-100-bites-map.html`
   (regenerate with `python3 scripts/sync-bohobites-map.py` on change: the public copy has NO home pin, NO apartment address, walk times say
