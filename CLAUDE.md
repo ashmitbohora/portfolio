@@ -1,6 +1,7 @@
 # ashmitbohora.com portfolio
 
 ## Current State
+- 2026-09-08: `/bohobites` + `/bohobites-map/` REFRESHED, committed LOCAL, NOT deployed. Stats from TikTok Studio 09-08: 7,237 followers / 122.6K likes / 67 posts, top-8 re-ranked (Red Chickz 57K now above Famous Philly 55K, Dec 31 extra-cheese post 50K replaces Paris cafe 43K), series counter 002 bites posted. Map: Pinch added as bite 2 (filmed 2026-09-06), Roppolo's + Pinch carry post links. Deploy on his go with the personal wrangler config (command below).
 - 2026-09-07: `/bohobites/flaming-bites/` LIVE (commit 247e808), same template for Flaming Bites Carrollton
   (1002 Webb Chapel Rd), no pricing. Sitemap filter now excludes every `/bohobites/<slug>/` pitch page.
 - 2026-09-07: `/bohobites/euless-bakes/` LIVE (deployed 2026-09-07, commits dc8a7b9..a053270). Personalized
