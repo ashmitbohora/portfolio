@@ -8,6 +8,10 @@ interface Props {
 }
 
 const { title, description, noindex = false } = Astro.props;
+// Microsoft Clarity (analytics standard: Clarity only). Env-gated: no PUBLIC_CLARITY_PROJECT_ID = zero
+// scripts. Full IIFE bootstrap is required (a bare tag script throws "a[c] is not a function" and
+// collects nothing). Id is read from data-clarity-id so the inline body never changes per id.
+const clarityId = (import.meta.env.PUBLIC_CLARITY_PROJECT_ID || '').trim();
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL('/og.png', Astro.site);
 
@@ -173,6 +177,15 @@ const schema = {
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     <script is:inline>document.documentElement.classList.add('js');</script>
     <script is:inline defer data-site="portfolio" src="https://webspansion-stats.gamerashmit.workers.dev/snippet.js"></script>
+    {clarityId && (
+      <script is:inline data-clarity-id={clarityId}>
+        (function(){try{var i=document.currentScript.getAttribute("data-clarity-id");if(!i)return;
+        (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",i);
+        }catch(e){}})();
+      </script>
+    )}
 </head>
   <body>
     <slot />
