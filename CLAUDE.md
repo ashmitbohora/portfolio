@@ -1,12 +1,11 @@
 # ashmitbohora.com portfolio
 
 ## Current State
-- 2026-09-13: MICROSOFT CLARITY WIRED, committed LOCAL, NOT deployed, NO ID YET. `src/layouts/Base.astro`
+- 2026-09-13: MICROSOFT CLARITY WIRED + PROJECT CREATED (id `yhs4n8e6a1`, under ashmitbohora1@gmail.com, already in the local `.env`), built into `dist`, NOT DEPLOYED (needs his go). `src/layouts/Base.astro`
   emits the official IIFE bootstrap only when `PUBLIC_CLARITY_PROJECT_ID` is set at build time (see
   `.env.example`; put the id in `.env`, which is gitignored). No id = zero scripts (verified: 0 hits in
   dist without it, all 6 Astro pages with it; the static `/bohobites-map/` file is outside the layout and
-  carries no tag). Ashmit creates the Clarity project at clarity.microsoft.com himself, then: add the id
-  to `.env`, `npm run build`, deploy with the personal wrangler command below, verify from a phone that
+  carries no tag). To ship: deploy with the personal wrangler command below, then verify from a phone that
   tag + scripts.clarity.ms + f.clarity.ms/collect all fire (standard: `~/SecondBrain/Knowledge/clarity-analytics-standard.md`).
 - 2026-09-08: `/bohobites` + `/bohobites-map/` REFRESHED, committed LOCAL, NOT deployed. Stats from TikTok Studio 09-08: 7,237 followers / 122.6K likes / 67 posts, top-8 re-ranked (Red Chickz 57K now above Famous Philly 55K, Dec 31 extra-cheese post 50K replaces Paris cafe 43K), series counter 002 bites posted. Map: Pinch added as bite 2 (filmed 2026-09-06), Roppolo's + Pinch carry post links. Deploy on his go with the personal wrangler config (command below).
 - 2026-09-07: `/bohobites/flaming-bites/` LIVE (commit 247e808), same template for Flaming Bites Carrollton
