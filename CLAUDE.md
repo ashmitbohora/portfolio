@@ -1,13 +1,12 @@
 # ashmitbohora.com portfolio
 
 ## Current State
-- 2026-09-13: MICROSOFT CLARITY WIRED + PROJECT CREATED (id `yhs4n8e6a1`, under ashmitbohora1@gmail.com, already in the local `.env`), built into `dist`, NOT DEPLOYED (needs his go). `src/layouts/Base.astro`
+- 2026-09-13: MICROSOFT CLARITY LIVE ON THE SITE (id `yhs4n8e6a1`, under ashmitbohora1@gmail.com, in the local `.env`). Deployed 09-13 on his go (deploy 4546180d, also shipped the 09-08 bohobites refresh, so live == HEAD). Tag verified in live HTML; at deploy time clarity.ms/tag/<id> still returned 204/empty (new-project provisioning lag), re-check from a phone that tag + scripts.clarity.ms + f.clarity.ms/collect all fire before trusting the dashboard. `src/layouts/Base.astro`
   emits the official IIFE bootstrap only when `PUBLIC_CLARITY_PROJECT_ID` is set at build time (see
   `.env.example`; put the id in `.env`, which is gitignored). No id = zero scripts (verified: 0 hits in
   dist without it, all 6 Astro pages with it; the static `/bohobites-map/` file is outside the layout and
-  carries no tag). To ship: deploy with the personal wrangler command below, then verify from a phone that
-  tag + scripts.clarity.ms + f.clarity.ms/collect all fire (standard: `~/SecondBrain/Knowledge/clarity-analytics-standard.md`).
-- 2026-09-08: `/bohobites` + `/bohobites-map/` REFRESHED, committed LOCAL, NOT deployed. Stats from TikTok Studio 09-08: 7,237 followers / 122.6K likes / 67 posts, top-8 re-ranked (Red Chickz 57K now above Famous Philly 55K, Dec 31 extra-cheese post 50K replaces Paris cafe 43K), series counter 002 bites posted. Map: Pinch added as bite 2 (filmed 2026-09-06), Roppolo's + Pinch carry post links. Deploy on his go with the personal wrangler config (command below).
+  carries no tag). (standard: `~/SecondBrain/Knowledge/clarity-analytics-standard.md`).
+- 2026-09-08: `/bohobites` + `/bohobites-map/` REFRESHED (DEPLOYED 09-13 with the Clarity deploy). Stats from TikTok Studio 09-08: 7,237 followers / 122.6K likes / 67 posts, top-8 re-ranked (Red Chickz 57K now above Famous Philly 55K, Dec 31 extra-cheese post 50K replaces Paris cafe 43K), series counter 002 bites posted. Map: Pinch added as bite 2 (filmed 2026-09-06), Roppolo's + Pinch carry post links. Deploy on his go with the personal wrangler config (command below).
 - 2026-09-07: `/bohobites/flaming-bites/` LIVE (commit 247e808), same template for Flaming Bites Carrollton
   (1002 Webb Chapel Rd), no pricing. Sitemap filter now excludes every `/bohobites/<slug>/` pitch page.
 - 2026-09-07: `/bohobites/euless-bakes/` LIVE (deployed 2026-09-07, commits dc8a7b9..a053270). Personalized
