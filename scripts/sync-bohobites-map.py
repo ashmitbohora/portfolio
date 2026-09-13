@@ -35,6 +35,29 @@ assert s.count("walk_sparq") == keys_before, "walk_sparq keys changed"
 for bad in ("Sparq", "2502", "ANCHORS.home.lat", "the dorm", "home and Tower", "From home"):
     assert bad not in s, f"private string still present: {bad}"
 
+# 4. Microsoft Clarity (same env-gated bootstrap as src/layouts/Base.astro; this file is static and
+#    bypasses the layout, so the tag is injected here). Id comes from the repo .env; no id = no tag.
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+clarity_id = os.environ.get("PUBLIC_CLARITY_PROJECT_ID", "").strip()
+if not clarity_id and os.path.exists(os.path.join(ROOT, ".env")):
+    for line in open(os.path.join(ROOT, ".env")):
+        if line.startswith("PUBLIC_CLARITY_PROJECT_ID="):
+            clarity_id = line.split("=", 1)[1].strip().strip('"').strip("'")
+if clarity_id:
+    assert "clarity.ms" not in s, "source map already carries a Clarity tag"
+    snippet = (
+        f'<script data-clarity-id="{clarity_id}">'
+        '(function(){try{var i=document.currentScript.getAttribute("data-clarity-id");if(!i)return;'
+        '(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};'
+        't=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;'
+        'y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",i);'
+        '}catch(e){}})();</script>\n</head>'
+    )
+    assert s.count("</head>") == 1
+    s = s.replace("</head>", snippet, 1)
+else:
+    print("PUBLIC_CLARITY_PROJECT_ID not set: map written WITHOUT a Clarity tag", file=sys.stderr)
+
 os.makedirs(os.path.dirname(DST), exist_ok=True)
 open(DST, "w").write(s)
 print(f"wrote {DST} ({len(s)} bytes), {keys_before} spots-with-walk keys kept")
