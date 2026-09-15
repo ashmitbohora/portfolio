@@ -21,9 +21,9 @@ const AUSTIN = [
   { id: '7633292577818578206', spot: 'Halal Hunger', addr: 'S Lamar Blvd, Austin', views: '26.1K', likes: '624', posted: 'April 2026', tag: 'Food truck', note: 'The viral bring-your-own-bag walking taco. Biggest food-truck post on the account, plus 7.1K on Instagram' },
   { id: '7545360275680120094', spot: 'Gyro Delicious', addr: 'UT Austin campus', views: '15.6K', likes: '987', posted: 'September 2025', tag: 'Late night', note: 'Episode one of the late-night series' },
   { id: '7569910904716889375', spot: 'Chat Patta Tacos', addr: '2512 Rio Grande St, your lot', views: '10.2K', likes: '275', posted: 'November 2025', tag: 'Rancho Rio Eatery', note: 'Filmed in the same truck lot you are in. Half chicken, half lamb tacos' },
-  { id: '7682647126538554655', spot: 'Pinch', addr: 'Littlefield Fountain, UT campus', views: '9.4K', likes: '311', posted: 'September 2026', tag: 'Food truck, 100 Bites no. 2', note: 'Japanese bento truck, extra everything. 9.4K on TikTok plus 42.6K on Instagram, posted eight days ago' },
+  { id: '7682647126538554655', spot: 'Pinch', addr: 'Littlefield Fountain, UT campus', views: '42.6K', platform: 'on Instagram', href: 'https://www.instagram.com/_bohobites/reels/', likes: '311', posted: 'September 2026', tag: 'Food truck, 100 Bites no. 2', note: 'Japanese bento truck, extra everything. 42.6K on Instagram plus 9.4K on TikTok, posted eight days ago' },
 ];
-const AUSTIN_TOTAL = { posts: '5', views: '121.5K' };
+const AUSTIN_TOTAL = { posts: '5', views: '154.7K' };
 
 // Fried chicken and hot chicken posts anywhere on the account. This is the format that travels.
 const CHICKEN = [
@@ -106,7 +106,7 @@ const LOGO_ALT = 'BohoBites';
         </div>
         <div class="stat">
           <span class="v">{AUSTIN_TOTAL.views}</span>
-          <span class="l">Views on those five</span>
+          <span class="l">Views on those five, best platform each</span>
         </div>
         <div class="stat">
           <span class="v">60.2K</span>
@@ -134,10 +134,10 @@ const LOGO_ALT = 'BohoBites';
         <ul class="cards" aria-label="Videos filmed in Austin">
           {AUSTIN.map((v) => (
             <li>
-              <a href={`${TIKTOK}/video/${v.id}`} target="_blank" rel="noopener noreferrer">
+              <a href={v.href ?? `${TIKTOK}/video/${v.id}`} target="_blank" rel="noopener noreferrer">
                 <span class="thumb">
                   <img src={`/bohobites-posts/${v.id}.jpg`} alt={`Cover frame from the ${v.spot} video`} width="360" height="640" loading="lazy" decoding="async" />
-                  <span class="views">{v.views} <small>views</small></span>
+                  <span class="views">{v.views} <small>views {v.platform ?? ''}</small></span>
                 </span>
                 <span class="body">
                   <span class="spot">{v.spot}</span>

@@ -1,6 +1,10 @@
 # ashmitbohora.com portfolio
 
 ## Current State
+- 2026-09-14 LATE: ALL BohoBites pages REDEPLOYED with live counts (TikTok 7,235 / IG 378 / YT 230; IG + YT
+  from his screenshots since instagram.com is extension-blocked). Pitch cards now support `platform` + `href`
+  overrides so a card can show its bigger platform number and link there (Pinch = 42.6K on Instagram, links
+  the reels tab until he supplies the reel URL). Rule: a card badge shows the BEST platform number, not TikTok by default.
 - 2026-09-14: `/bohobites/crunchy-center/` LIVE (deployed 09-14 ~11:30pm on his ask, curl-verified 200). Pitch page for Crunchy
   Center, the fried-chicken truck at Rancho Rio Eatery, 2512 Rio Grande (inbound email). Austin-angled: five Austin
   posts with live views, fried-chicken list, 100 Bites series block, paid-vs-free "what you get". Four new covers.
