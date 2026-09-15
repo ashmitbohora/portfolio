@@ -1,6 +1,10 @@
 # ashmitbohora.com portfolio
 
 ## Current State
+- 2026-09-14: `/bohobites/crunchy-center/` COMMITTED LOCAL, NOT DEPLOYED (needs his go). Pitch page for Crunchy
+  Center, the fried-chicken truck at Rancho Rio Eatery, 2512 Rio Grande (inbound email). Austin-angled: five Austin
+  posts with live views, fried-chicken list, 100 Bites series block, paid-vs-free "what you get". Four new covers.
+  No rate card, noindex, out of sitemap. Verified: build green, 390px scrollWidth 390, covers 200, zero em dashes.
 - 2026-09-14: `/bohobites/txnygyro/` LIVE (deploy 6baa4c4b, curl-verified 200). Pitch page for TX NY Famous
   Halal Gyro's new Legacy Dr, Plano location (inbound TikTok DM). Same template as flaming-bites, six gyro/shawarma/
   halal posts with views pulled live by yt-dlp 09-14 (63 posts on the profile), four new cover frames in
