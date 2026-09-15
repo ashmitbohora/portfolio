@@ -1,7 +1,7 @@
 # ashmitbohora.com portfolio
 
 ## Current State
-- 2026-09-14: `/bohobites/crunchy-center/` COMMITTED LOCAL, NOT DEPLOYED (needs his go). Pitch page for Crunchy
+- 2026-09-14: `/bohobites/crunchy-center/` LIVE (deployed 09-14 ~11:30pm on his ask, curl-verified 200). Pitch page for Crunchy
   Center, the fried-chicken truck at Rancho Rio Eatery, 2512 Rio Grande (inbound email). Austin-angled: five Austin
   posts with live views, fried-chicken list, 100 Bites series block, paid-vs-free "what you get". Four new covers.
   No rate card, noindex, out of sitemap. Verified: build green, 390px scrollWidth 390, covers 200, zero em dashes.
