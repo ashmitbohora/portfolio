@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 
 <Base
   title="Ashmit Bohora Resume | UT Austin Data Science, Software & AI"
-  description="Resume of Ashmit Bohora, a UT Austin Statistics & Data Science student (Class of 2029): GTM engineering at WLF Club, founder of Webspansion and Prospansion, builder of Warvis, Guruji, and BohoQuest."
+  description="Resume of Ashmit Bohora, a UT Austin Statistics & Data Science student (Class of 2029): Growth Engineer at WLF Club, founder of Webspansion and Prospansion, creator of BohoBites, builder of Warvis and Guruji."
 >
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -37,7 +37,7 @@ import Base from '../layouts/Base.astro';
       <h1>Ashmit Bohora <span class="lit">Resume</span></h1>
       <p class="resume-dek">
         UT Austin Statistics &amp; Data Science, Class of 2029. Seeking Summer 2027 internships in
-        data science, software engineering, machine learning, or AI. The same one-pager recruiters
+        data analytics, marketing analytics, growth, and data science. The same one-pager recruiters
         get, as a real page.
       </p>
       <div class="cta">
@@ -56,7 +56,7 @@ import Base from '../layouts/Base.astro';
             &middot; <a href="https://github.com/ashmitbohora" target="_blank" rel="noopener noreferrer">github.com/ashmitbohora</a>
             &middot; <a href="/">ashmitbohora.com</a>
           </p>
-          <p class="sheet-tagline">CS student and AI engineer building local-first AI systems (Warvis), growth and automation infrastructure, and free community tech (Webspansion, Guruji)</p>
+          <p class="sheet-tagline">Statistics &amp; Data Science sophomore who builds the software and owns the marketing it feeds: analytics stacks, CRM attribution, growth automation, and the content on top</p>
         </header>
 
         <h2>Education</h2>
@@ -65,56 +65,61 @@ import Base from '../layouts/Base.astro';
             <span class="role">The University of Texas at Austin <span class="sub">&middot; B.S. Statistics and Data Science</span></span>
             <span class="meta">Expected May 2029 &middot; GPA 3.75/4.0</span>
           </div>
-          <p class="honors">QuestBridge Finalist (2024) &middot; UT Austin Impact Scholar ($48,000 merit award) &middot; Thomas &amp; Elizabeth Merner Scholarship in Natural Sciences ($2,000, 2026&ndash;2027)</p>
-          <p class="honors">Coursework: Elements of Software Design, Linear Algebra, Probability &amp; Statistical Inference (Fall 2026) &middot; Intro to Data Science, Statistical Thinking, Multivariable Calculus</p>
+          <p class="honors">QuestBridge Finalist (2024) &middot; UT Austin Impact Scholar ($48,000 merit award) &middot; Merner Scholarship in Natural Sciences ($2,000, 2026&ndash;27)</p>
+          <p class="honors">Coursework: Probability &amp; Statistical Inference, Linear Algebra, Elements of Software Design (Fall 2026) &middot; Intro to Data Science, Statistical Thinking, Multivariable Calculus</p>
         </section>
 
         <h2>Experience</h2>
         <section class="block">
           <div class="row">
-            <span class="role">GTM Engineer <span class="sub">&middot; WLF Club</span></span>
+            <span class="role">Growth Engineer <span class="sub">&middot; WLF Club (chiropractic &amp; longevity clinic)</span></span>
             <span class="meta">Fort Worth, TX &rarr; Remote (Austin) &middot; May 2026 &ndash; Present</span>
           </div>
+          <p class="honors">Owns the online side: analytics, tracking, website, CRM automation, reporting (contract, 1099)</p>
           <ul>
-            <li>Rebuilt wlfclub.com in-house, replacing a $15,000 agency build that still had 12 Lorem Ipsum placeholder pages live in production: 30+ pages, new hosting, and a verify-gated deploy pipeline, ending agency billing entirely</li>
-            <li>Migrated a live medical clinic's DNS to Cloudflare with zero downtime and zero mail interruption, verifying 29 records and SPF/DKIM/DMARC under a p=reject policy before cutover</li>
-            <li>Built Warvis, an internal RAG assistant hosted for the whole team with a HIPAA-aware PHI-scanning gate and fail-closed access control (229 passing tests); the owner now talks to it by voice to check on the business</li>
-            <li>Built a member health portal (Cloudflare Workers + D1) replacing paid HeadsUp Health software: WHOOP/Apple Health wearable sync, a 17-marker labs engine, and an AI assistant over members' own data, plus a companion native app live on TestFlight</li>
+            <li>Stood up the clinic&rsquo;s measurement stack from zero: GA4, Meta Pixel, Microsoft Clarity, and a privacy-gated first-party tracker on every page (8,597 human events and 567 durable visitor IDs in the first weeks), then an identity-resolution layer that matches anonymous visitors to named CRM contacts through a GoHighLevel webhook, verified end to end in production</li>
+            <li>Analyzed 780+ CRM sales opportunities and found 95% never reached a decision despite a 92% win rate when worked; reframed the growth plan from &ldquo;buy more ads&rdquo; to working the existing backlog</li>
+            <li>Rebuilt wlfclub.com in-house, replacing a $15,000 agency build that had 12 Lorem Ipsum pages live: 31 pages, JSON-LD on every page, a 121-rule redirect map with zero broken targets, and a zero-downtime DNS cutover to Cloudflare (a 3,217-contact email send delivered at 99.74% the same day)</li>
+            <li>Cut homepage weight from 2,027 KB to 814 KB (mobile Lighthouse 68 to 91); ran the first paid Meta campaign, diagnosed a 51% sub-3-second bounce on a 1.78 MB landing page, and paused spend until the page was fixed</li>
+            <li>Built Warvis, the team&rsquo;s internal AI assistant (retrieval over 391 business notes, HIPAA-aware PHI-scanning gate, 610 passing tests, hosted at ~$12/mo) and its weekly Data Room, which pulls appointments, invoices, and lead sources straight from the GoHighLevel API so the owner reads live numbers instead of a spreadsheet</li>
+            <li>Shipped an AI front-desk chat on every page, red-teamed it with 20 hostile prompts and fixed 7 defects; built a member health portal (Cloudflare Workers + D1) with WHOOP/Apple Health sync and a 17-marker labs engine to replace paid software</li>
           </ul>
         </section>
         <section class="block">
           <div class="row">
             <span class="role">Webspansion &amp; Prospansion <span class="sub">&middot; Founder</span></span>
-            <span class="meta">Euless, TX &middot; Apr 2024 &ndash; Present</span>
+            <span class="meta">Euless, TX / Austin, TX &middot; Dec 2023 &ndash; Present</span>
+          </div>
+          <p class="honors">Free web studio for small businesses and nonprofits, plus a paid build arm</p>
+          <ul>
+            <li>Shipped 19 live websites solo (intake, scope, build, deploy, handoff) for immigrant-owned businesses, nonprofits, and student groups; closed the first paid build ($999) in Aug 2026</li>
+            <li>Built a cookieless first-party analytics platform (Cloudflare Workers + D1) that now tracks 27 client domains; ran the studio&rsquo;s own growth with 23+ SEO-optimized posts, 8 case studies, 118 UTM-tagged outbound links, and per-page Open Graph cards generated by a Python pipeline</li>
+          </ul>
+        </section>
+        <section class="block">
+          <div class="row">
+            <span class="role">BohoBites <span class="sub">&middot; Founder &amp; Creator (TikTok food reviews, DFW &amp; Austin)</span></span>
+            <span class="meta">2025 &ndash; Present</span>
           </div>
           <ul>
-            <li><span class="k">Webspansion (free tier):</span> founded a pro bono, accessibility-first web studio as community service, shipping 19+ free live websites (intake through deploy) for nonprofits, immigrant-owned local businesses, and community groups</li>
-            <li><span class="k">Prospansion (paid tier):</span> the technical/data arm, offering analytics (GA4, Microsoft Clarity, GTM), SEO, and automation; built its technical flagship, Prospansion Studio, a multi-tenant Cloudflare Workers + D1 CMS giving paying clients self-serve site editing, with hardened auth (invite-only signup, hashed tokens, single-use resets) and a fixed sanitizer-bypass XSS vulnerability (allowlist parser, verified via exploit proof-of-fix), deployed for nonprofit client Ocura</li>
-            <li>Drove SEO and brand imagery at scale by writing 23+ optimized blog posts and 8 case studies, and automating OG/blog-hero image generation (Python, Playwright, Pillow, fal.ai)</li>
+            <li>Grew the account to 7.2K followers and 122K likes across 67 posts, with a top video at 558K views; built the analytics pipeline in Python (pandas, Plotly, Shiny) with rolling 30&ndash;365 day KPI windows and posting-time models, and a pitch page per inbound restaurant with live view counts</li>
           </ul>
         </section>
 
         <h2>Projects</h2>
         <section class="block">
-          <div class="row">
-            <span class="role">Shipped Production Apps <span class="sub">&middot; Guruji, BohoQuest</span></span>
-            <span class="meta">React &middot; Expo/React Native &middot; Supabase</span>
-          </div>
           <ul>
-            <li><span class="k">Guruji (<a href="https://getguruji.com" target="_blank" rel="noopener noreferrer">getguruji.com</a>):</span> built and deployed a free, gamified Duolingo-style community-education PWA (React, TypeScript, Supabase) with RLS-scoped auth, AA-verified UI, and a self-run security audit against the live database (zero exploitable vulnerabilities)</li>
-            <li>Drove real impact: a cousin used Guruji to realize he was overpaying an agency $100+/month for work he could do himself and canceled, saving $1,200+ a year</li>
-            <li>Authored Guruji's multi-track curriculum, naming Data Decoded (data science) and QuickClaude (coding) as tracks alongside English and digital-literacy content</li>
-            <li><span class="k">BohoQuest (<a href="https://app.bohoquest.app" target="_blank" rel="noopener noreferrer">app.bohoquest.app</a>):</span> shipped a gamified check-in app (Expo/React Native) with server-side anti-cheat verification (Supabase RPC), Apple Sign-In, and a 121-test suite; live in TestFlight</li>
+            <li><span class="k">Retrieval systems, built three times:</span> Warvis for WLF (above); a bilingual English/Nepali family assistant at family.ashmitbohora.com (Cloudflare Worker, signed-cookie auth, rate-limited); and BoHub, a local knowledge OS that indexes 1,000+ markdown notes into SQLite FTS5 with tiered Claude API routing</li>
+            <li><span class="k">Guruji (<a href="https://getguruji.com" target="_blank" rel="noopener noreferrer">getguruji.com</a>):</span> free, gamified community-education web app (React, TypeScript, Supabase) with row-level-security auth and an AA-verified UI</li>
           </ul>
-          <p class="also">Also: PickMyPath (<a href="https://app.pickmypath.app" target="_blank" rel="noopener noreferrer">app.pickmypath.app</a>, live, paused). BohoQuest is part of the Boho family alongside BohoBites (food/content, 6K+ followers) and Bohos BTS (behind-the-scenes content)</p>
         </section>
 
-        <h2>Leadership &amp; Skills</h2>
+        <h2>Skills &amp; Leadership</h2>
         <section class="block skills">
-          <p><span class="k">Community, DFW &amp; NST Mandir (2021&ndash;Present):</span> co-led youth programs raising $10,000+; ran logistics for health camps, blood drives, and community events; extended free education (Guruji) and free websites (Webspansion) to nonprofits, immigrant-owned businesses, and community groups</p>
-          <p><span class="k">Languages:</span> Python, R, SQL, TypeScript, JavaScript &nbsp;|&nbsp; Pandas, NumPy, Plotly, Shiny, FastAPI</p>
-          <p><span class="k">Frameworks &amp; data:</span> React 19, Next.js 16, Astro, Tailwind &middot; Supabase/PostgreSQL, SQLite/libSQL &middot; GoHighLevel, GA4</p>
-          <p><span class="k">AI &amp; tooling:</span> Claude Code, Codex, Claude &amp; Gemini APIs, RAG &middot; Git, Playwright, Vercel, Cloudflare</p>
+          <p><span class="k">Analytics &amp; growth:</span> SQL, GA4, Microsoft Clarity, Meta Pixel &amp; Ads, Google Ads, GoHighLevel CRM, UTM attribution, identity resolution, SEO &amp; schema markup, Core Web Vitals</p>
+          <p><span class="k">Languages &amp; data:</span> Python (pandas, NumPy, Plotly, Shiny), R, SQL, TypeScript/JavaScript &middot; PostgreSQL (Supabase), SQLite/D1</p>
+          <p><span class="k">Web &amp; AI:</span> React, Next.js, Astro, Cloudflare Workers, Vercel &middot; Claude Code, Claude &amp; Gemini APIs, RAG &middot; Git, Playwright</p>
+          <p><span class="k">Leadership:</span> Director of Social, Nepalese Student Association at UT (2026&ndash;) &middot; DFW &amp; NST Mandir youth programs (2021&ndash;): co-led fundraising of $10,000+, ran logistics for health camps and blood drives</p>
           <p><span class="k">Spoken:</span> English, Nepali (fluent); Hindi, Spanish (intermediate)</p>
         </section>
       </article>
