@@ -1,7 +1,7 @@
 # ashmitbohora.com portfolio
 
 ## Current State
-- 2026-09-14: `/bohobites/txnygyro/` COMMITTED LOCAL, NOT DEPLOYED (needs his go). Pitch page for TX NY Famous
+- 2026-09-14: `/bohobites/txnygyro/` LIVE (deploy 6baa4c4b, curl-verified 200). Pitch page for TX NY Famous
   Halal Gyro's new Legacy Dr, Plano location (inbound TikTok DM). Same template as flaming-bites, six gyro/shawarma/
   halal posts with views pulled live by yt-dlp 09-14 (63 posts on the profile), four new cover frames in
   `public/bohobites-posts/`, no rate card, noindex, out of the sitemap. Verified: build green, 390px iframe
