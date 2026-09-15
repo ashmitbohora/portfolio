@@ -1,6 +1,11 @@
 # ashmitbohora.com portfolio
 
 ## Current State
+- 2026-09-14: `/bohobites/txnygyro/` COMMITTED LOCAL, NOT DEPLOYED (needs his go). Pitch page for TX NY Famous
+  Halal Gyro's new Legacy Dr, Plano location (inbound TikTok DM). Same template as flaming-bites, six gyro/shawarma/
+  halal posts with views pulled live by yt-dlp 09-14 (63 posts on the profile), four new cover frames in
+  `public/bohobites-posts/`, no rate card, noindex, out of the sitemap. Verified: build green, 390px iframe
+  scrollWidth 390, all covers 200, zero em dashes.
 - 2026-09-13: MICROSOFT CLARITY LIVE ON THE SITE (id `yhs4n8e6a1`, under ashmitbohora1@gmail.com, in the local `.env`). Deployed 09-13 on his go (deploy 4546180d, also shipped the 09-08 bohobites refresh, so live == HEAD). ON EVERY PAGE incl. the static `/bohobites-map/` (the sync script injects the same tag, reading the id from `.env`) and the 404 page; live-checked 7/7 on 09-13 after deploy 928e1df0. VERIFIED WORKING 09-13: tag 200 + scripts.clarity.ms/0.8.69/clarity.js 200 + a.clarity.ms/collect 204 x3, zero console errors. Gotcha: a brand-new project serves an EMPTY 204 from clarity.ms/tag/<id> for ~20 min after creation, then flips to 200; do not debug the site during that window. `src/layouts/Base.astro`
   emits the official IIFE bootstrap only when `PUBLIC_CLARITY_PROJECT_ID` is set at build time (see
   `.env.example`; put the id in `.env`, which is gitignored). No id = zero scripts (verified: 0 hits in
