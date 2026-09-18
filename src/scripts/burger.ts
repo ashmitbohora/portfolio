@@ -95,12 +95,15 @@ export function initBurger(stack: HTMLElement, reduced: boolean) {
   // ---- scroll drives everything ----
   const tagEl = document.getElementById('layerTag')!;
   const tagText = [
-    '<b>01 / 06</b> &nbsp;TOP BUN · FRONTEND',
-    '<b>02 / 06</b> &nbsp;LETTUCE · DESIGN & CLIENTS',
-    '<b>03 / 06</b> &nbsp;CHEESE · APIs & AUTOMATION',
-    '<b>04 / 06</b> &nbsp;PATTY · DATA',
+    // KEEP IN SYNC with the six .chapter .tag labels in src/pages/index.astro.
+    // These two lists drifted before (02 said "DESIGN & CLIENTS" here and
+    // "The fresh stuff" there); if you rename a layer, rename it in both.
+    '<b>01 / 06</b> &nbsp;TOP BUN · THE REBUILD',
+    '<b>02 / 06</b> &nbsp;LETTUCE · THE FREE TIER',
+    '<b>03 / 06</b> &nbsp;CHEESE · THE PAID TIER',
+    '<b>04 / 06</b> &nbsp;PATTY · THE DATA',
     '<b>05 / 06</b> &nbsp;SPECIAL SAUCE · SHIPPED',
-    '<b>06 / 06</b> &nbsp;BOTTOM BUN · FOUNDATION',
+    '<b>06 / 06</b> &nbsp;BOTTOM BUN · THE FOUNDATION',
   ];
   const smooth = (t: number) => t * t * (3 - 2 * t);
   let activeIdx = -1;
