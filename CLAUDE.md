@@ -1,6 +1,25 @@
 # ashmitbohora.com portfolio
 
 ## Current State
+- 2026-09-17: **FULL CONTENT REFRESH, DEPLOYED + LIVE** (commit `257d5c6`, pushed, deploy `72aa7faa`,
+  curl-verified on the apex). The live site had been serving 08-13 era facts. Now matches resume v3.
+  Corrected: WLF title GTM Engineer -> **Growth Engineer**; Warvis was described as local-only with
+  700+ docs and 229 tests, it is **hosted for the whole team, BM25 over 391 allowlisted notes**;
+  "rising sophomore" -> sophomore; Webspansion founded 2024 -> **Dec 2023**; "19+" -> **19**;
+  Prospansion "launching soon" -> **first paid build $999**; merit award $48K -> **$50K**
+  ($48,000 Impact + $2,000 Merner, his call 09-17). Added, previously missing entirely: the
+  measurement stack + **first-party identity resolution**, the members platform replacing
+  **Heads Up Health at $12,000/yr**, the wlfclub.com AEO find (**dead $79.99 template pricing served
+  to crawlers**), PHI-free-by-architecture framing + Vertex AI under a signed GCP BAA, NSA Director
+  of Social, **US permanent resident**, Family Assistant + BohoBites analytics in Sides.
+  HERO: dek cut 7 lines -> 2. "Full-stack. Literally." KEPT (his pick) and now carries a floating
+  hand-annotation with a curved arrow, `.h1-note`: **absolute above 1000px, normal flow below**, so
+  it can never widen the page. Also rewrote `public/llms.txt` and the JSON-LD graph in Base.astro
+  (Warvis + members platform added, knowsAbout retargeted at growth/analytics keywords).
+  RULE CONFIRMED: contact email stays **ashmitbohora@utexas.edu** everywhere (matches the resume PDF,
+  LinkedIn, and every application; `ashmitbohora@gmail.com` is not an account he owns).
+  Verified: build green, zero em dashes, **zero horizontal overflow at 390/768/1000/1080/1280/1512**
+  (iframe harness, not window-size), stale-fact sweep of dist clean, Clarity on all 9 pages.
 - 2026-09-14 LATE: ALL BohoBites pages REDEPLOYED with live counts (TikTok 7,235 / IG 378 / YT 230; IG + YT
   from his screenshots since instagram.com is extension-blocked). Pitch cards now support `platform` + `href`
   overrides so a card can show its bigger platform number and link there (Pinch = 42.6K on Instagram, links
