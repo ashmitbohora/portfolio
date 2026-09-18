@@ -78,16 +78,18 @@ import Base from '../layouts/Base.astro';
         <div class="chapters" id="chapters">
 
           <section class="chapter" data-layer="0">
-            <span class="tag"><span class="swatch" style="background:#DD9A4E"></span><span class="t"><b>Layer 01</b> · Top bun · The rebuild</span></span>
+            <span class="tag"><span class="swatch" style="background:#DD9A4E"></span><span class="t"><b>Layer 01</b> · Top bun · The job</span></span>
             <h2>WLF Club</h2>
-            <p class="lead">Growth &amp; Analytics Engineer at a healthcare clinic. <span>I found what the agency left live.</span></p>
-            <p class="body">A $15,000 agency built wlfclub.com and then left it running. It was still serving template membership pricing that was never the real offer, sitting next to twelve Lorem Ipsum pages, all of it perfectly readable to Google and to AI crawlers.</p>
-            <p class="body">I rebuilt it in house. Sitewide JSON-LD, FAQ schema, and an llms.txt so answer engines read the actual business, behind a deploy pipeline that refuses to ship unverified. The agency billing ended.</p>
-            <p class="body">Then I moved the clinic's DNS to Cloudflare. I checked 29 records and SPF, DKIM and DMARC under a strict reject policy before cutover.</p>
+            <p class="lead">Growth &amp; Analytics Engineer at a HIPAA chiropractic and performance clinic. <span>I own analytics, tracking, and CRM reporting.</span></p>
+            <p class="body">I pulled two CSV exports out of the clinic's CRM and read all 782 sales opportunities. 95% had never reached a decision. The ones that got worked closed at 92%. The problem was not lead volume, it was follow-up, and the growth plan moved from buying more ads to working the backlog.</p>
+            <p class="body">62% of those wins had no recorded source at all. So I built the measurement stack from zero: GA4, Meta Pixel, Microsoft Clarity, and a first-party tracker that resolves anonymous visitors to named CRM contacts. Ad spend became attributable for the first time.</p>
+            <p class="body">I replaced Heads Up Health, a $12,000/yr vendor, with a web portal and a companion iOS app on one database. WHOOP and Apple Health ingestion, a 17-marker labs engine, and AI on Vertex AI under a signed GCP business associate agreement.</p>
+            <p class="body">I replaced the weekly report, which a person used to assemble by hand from three systems, with a one-click data room reconciling GoHighLevel, QuickBooks and GA4. It runs on Warvis: BM25 retrieval over 391 internal notes behind a fail-closed rail that keeps PHI out of every prompt.</p>
+            <p class="body">And I rebuilt wlfclub.com. A $15,000 agency had left it serving template membership pricing that was never the real offer, next to twelve Lorem Ipsum pages, all of it perfectly readable to Google and to AI crawlers. Page weight went from 2,027 KB to 814 KB, and the agency billing ended.</p>
             <div class="stats">
-              <div class="stat"><div class="n">$79.99</div><div class="l">dead template price still live</div></div>
-              <div class="stat"><div class="n">814 KB</div><div class="l">homepage weight, down from 2,027</div></div>
-              <div class="stat"><div class="n">0</div><div class="l">downtime, zero mail interruption</div></div>
+              <div class="stat"><div class="n">782</div><div class="l">CRM deals read by hand</div></div>
+              <div class="stat"><div class="n">$12,000/yr</div><div class="l">vendor software replaced</div></div>
+              <div class="stat"><div class="n">60%</div><div class="l">page weight cut on wlfclub.com</div></div>
             </div>
             <figure class="proof">
               <span class="shot"><img src="/proof/wlfclub.jpg" width="1280" height="800" alt="The live WLF Club homepage: Recover Smarter, Feel Better, Live Longer" loading="lazy" decoding="async"></span>
@@ -142,14 +144,14 @@ import Base from '../layouts/Base.astro';
           <section class="chapter" data-layer="3">
             <span class="tag"><span class="swatch" style="background:#C79A5B"></span><span class="t"><b>Layer 04</b> · Patty · The data</span></span>
             <h2>Measurement, Attribution &amp; Warvis</h2>
-            <p class="lead">The data layer. <span>Read 782 deals, found the real bottleneck.</span></p>
-            <p class="body">I pulled two CSV exports out of the clinic's CRM and read all 782 sales opportunities. 95% had never reached a decision. The ones that got worked closed at 92%. The problem was not lead volume, it was follow-up, and the growth plan moved from buying more ads to working the backlog.</p>
-            <p class="body">62% of the wins had no recorded source at all. That is why I instrumented the place from zero: GA4, Meta Pixel, Microsoft Clarity, and a first-party tracker that resolves anonymous visitors to named CRM contacts, so spend can be traced to real people.</p>
-            <p class="body">On top of that I built Warvis, the team's internal assistant, now live for everyone. BM25 retrieval over 391 allowlisted notes. A weekly report that pulls GoHighLevel, QuickBooks and GA4 into one page. Every system is PHI-free by design. The one place AI touches member data runs through Vertex AI under a signed GCP business associate agreement, never a consumer API.</p>
+            <p class="lead">The data layer, up close. <span>How the measurement actually works.</span></p>
+            <p class="body">The tracker is first-party and cookieless, and it writes to Cloudflare D1. When someone who browsed anonymously later fills in a form, it resolves that visit to a named CRM contact, so an ad click and a booked appointment end up on the same row.</p>
+            <p class="body">Warvis is the internal assistant sitting on top of all of it, live for the whole team. BM25 retrieval over 391 allowlisted notes, the weekly data room, and an identity-resolution dashboard the staff actually open.</p>
+            <p class="body">Every system is PHI-free by design rather than by policy. The one place AI touches member data runs through Vertex AI under a signed GCP business associate agreement, and the retrieval path throws rather than send protected data to a model that is not covered by it.</p>
             <p class="joke">Unrelated, but worth saying: the patty's grilled chicken, not beef. <b>I'm Hindu, so I swapped it.</b></p>
             <div class="stats">
-              <div class="stat"><div class="n">782</div><div class="l">CRM deals analyzed by hand</div></div>
-              <div class="stat"><div class="n">92%</div><div class="l">win rate once a deal got worked</div></div>
+              <div class="stat"><div class="n">391</div><div class="l">notes behind Warvis retrieval</div></div>
+              <div class="stat"><div class="n">62%</div><div class="l">of wins had no recorded source</div></div>
               <div class="stat"><div class="n">PHI-free</div><div class="l">by architecture, not by policy</div></div>
             </div>
             <div class="links"><a href="https://github.com/ashmitbohora" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile: Warvis">GitHub profile →</a></div>
@@ -158,13 +160,12 @@ import Base from '../layouts/Base.astro';
           <section class="chapter" data-layer="4" id="shipped">
             <span class="tag"><span class="swatch" style="background:#B93018"></span><span class="t"><b>Layer 05</b> · Special sauce · Shipped</span></span>
             <h2>Shipped Production Apps</h2>
-            <p class="lead">Software that replaced something people were paying for. <span>And one model I trained myself.</span></p>
-            <p class="body">The WLF members platform replaced Heads Up Health, a $12,000/yr vendor, with a build of my own. A web portal and a companion native app on TestFlight, sharing one database. WHOOP and Apple Health ingestion, a 17-marker labs engine, role-scoped access.</p>
+            <p class="lead">A free app for adult beginners. <span>And a model I trained on my own machine.</span></p>
             <p class="body">Guruji is a free app that teaches AI and coding to adult beginners, South Asian and immigrant families first, replacing $100/month tutoring for its first users. 196 lessons across 7 prerequisite-chained tracks, row-level-security auth, and WCAG AA type and tap targets because the learners are older.</p>
             <p class="body">Auditing its own question bank is the part I am proudest of. 57 of 58 newly written quiz items had the correct answer sitting in the same slot, so a learner could score 100% without reading a lesson. I reshuffled the catalog and shipped a regression test that fails any track putting more than 55% of its answers in one position.</p>
             <p class="body">Kiln goes the other direction. It fine-tunes a 7B model on my own machine, with Claude as the teacher, to turn a scraped website into a structured redesign record. Held-out score went 0.84 to 0.99 in one round. The keep-or-rollback gate later rejected a candidate that scored worse, which is the part that makes it safe to leave running.</p>
             <div class="stats">
-              <div class="stat"><div class="n">$12,000/yr</div><div class="l">vendor software replaced</div></div>
+              <div class="stat"><div class="n">196</div><div class="l">lessons across 7 chained tracks</div></div>
               <div class="stat"><div class="n">57 of 58</div><div class="l">biased quiz items I caught</div></div>
               <div class="stat"><div class="n">0.84&rarr;0.99</div><div class="l">Kiln held-out score, one round</div></div>
             </div>
