@@ -1,6 +1,6 @@
 # Ashmit Bohora
 
-> Statistics & Data Science sophomore at UT Austin (Class of 2029, GPA 3.75) and Growth Engineer at WLF Club, a healthcare clinic, where he owns analytics, tracking, the website, and CRM automation. He replaced a $12,000/yr vendor with software he built, instrumented the clinic's measurement stack from zero including first-party identity resolution, and shipped 19 free client websites solo through Webspansion. Seeking Summer 2027 internships in growth engineering, marketing analytics, product analytics, and data science. US permanent resident, no sponsorship required.
+> Statistics & Data Science sophomore at UT Austin (Class of 2029, GPA 3.75) and Growth & Analytics Engineer at WLF Club, a healthcare clinic, where he owns analytics, tracking, the website, and CRM automation. He replaced a $12,000/yr vendor with software he built, instrumented the clinic's measurement stack from zero including first-party identity resolution, and shipped 19 free client websites solo through Webspansion. Seeking Summer 2027 internships in growth engineering, marketing analytics, product analytics, and data science. US permanent resident, no sponsorship required.
 
 ## About
 
@@ -16,7 +16,7 @@
 
 ## Experience
 
-- **WLF Club, Growth Engineer (May 2026-present, Fort Worth TX, remote from Austin since Aug 2026).** A healthcare provider operating under HIPAA. He owns analytics, tracking, the website, and CRM automation.
+- **WLF Club, Growth & Analytics Engineer (May 2026-present, Fort Worth TX, remote from Austin since Aug 2026).** A healthcare provider operating under HIPAA. He owns analytics, tracking, the website, and CRM automation.
   - Instrumented the clinic from zero: GA4, Meta Pixel, Microsoft Clarity, and a first-party tracker doing identity resolution, stitching anonymous website visitors to named CRM contacts so marketing spend traces to real people.
   - Replaced Heads Up Health, a $12,000/yr vendor, with a members platform built in-house on Cloudflare Workers and D1: WHOOP and Apple Health sync, a 17-marker labs engine, role-scoped access, and a companion native app on TestFlight. AI in that platform routes through Vertex AI under a signed GCP business associate agreement rather than a consumer API; every other system is architected PHI-free and out of HIPAA scope by design.
   - Built Warvis, the team's internal retrieval-augmented assistant, hosted for everyone: BM25 retrieval over 391 allowlisted notes, a weekly report pulling GoHighLevel, QuickBooks, and GA4 into one page, and an identity-resolution dashboard.

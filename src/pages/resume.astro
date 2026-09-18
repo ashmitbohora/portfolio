@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 
 <Base
   title="Ashmit Bohora Resume | UT Austin Data Science, Software & AI"
-  description="Resume of Ashmit Bohora, a UT Austin Statistics & Data Science student (Class of 2029): Growth Engineer at WLF Club, founder of Webspansion and Prospansion, creator of BohoBites, builder of Warvis and Guruji."
+  description="Resume of Ashmit Bohora, a UT Austin Statistics & Data Science student (Class of 2029): Growth & Analytics Engineer at WLF Club, founder of Webspansion and Prospansion, creator of BohoBites, builder of Warvis and Guruji."
 >
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -56,7 +56,7 @@ import Base from '../layouts/Base.astro';
             &middot; <a href="https://github.com/ashmitbohora" target="_blank" rel="noopener noreferrer">github.com/ashmitbohora</a>
             &middot; <a href="/">ashmitbohora.com</a>
           </p>
-          <p class="sheet-tagline">Statistics &amp; Data Science sophomore who builds the growth stack and owns the revenue it feeds: attribution, CRM automation, paid campaigns, and the software underneath</p>
+          <p class="sheet-tagline">Statistics &amp; Data Science sophomore building the growth stack and the software beneath it: attribution, CRM automation, ads.</p>
         </header>
 
         <h2>Education</h2>
@@ -65,67 +65,62 @@ import Base from '../layouts/Base.astro';
             <span class="role">The University of Texas at Austin <span class="sub">&middot; B.S. Statistics and Data Science</span></span>
             <span class="meta">Expected May 2029 &middot; GPA 3.75/4.0</span>
           </div>
-          <p class="honors">QuestBridge Finalist &middot; UT Austin Impact Scholar &middot; Merner Scholarship in Natural Sciences</p>
-          <p class="honors">Coursework: Probability &amp; Statistical Inference, Linear Algebra, Elements of Software Design, Intro to Data Science, Statistical Thinking</p>
+          <p class="honors">Coursework: Probability &amp; Statistical Inference (estimation, hypothesis testing, confidence intervals), Linear Algebra, Intro to Data Science, Software Design</p>
+        </section>
+
+        <h2>Skills</h2>
+        <section class="block skills">
+          <p><span class="k">Data &amp; analysis:</span> Python (pandas, NumPy, Plotly, Shiny), R, SQL (PostgreSQL, SQLite), Excel, dashboards, data pipelines</p>
+          <p><span class="k">Analytics &amp; growth:</span> GA4, Microsoft Clarity, Meta Pixel &amp; Ads, Google Ads, GoHighLevel CRM, UTM attribution, identity resolution, HIPAA-aware data handling</p>
+          <p><span class="k">Software:</span> TypeScript, React, Next.js, Cloudflare Workers, Supabase, Git, Claude Code, Claude &amp; Gemini APIs, RAG</p>
         </section>
 
         <h2>Experience</h2>
         <section class="block">
           <div class="row">
-            <span class="role">Growth Engineer <span class="sub">&middot; WLF Club</span></span>
+            <span class="role">WLF Club <span class="sub">&middot; Growth &amp; Analytics Engineer (part-time)</span></span>
             <span class="meta">Fort Worth, TX / Remote &middot; May 2026 &ndash; Present</span>
           </div>
-          <p class="honors">Healthcare provider under HIPAA. Owns analytics, tracking, website, and CRM automation</p>
+          <p class="honors">HIPAA chiropractic and performance clinic; owns analytics, tracking, and CRM reporting (3,050 contacts)</p>
           <ul>
-            <li>Analyzed 780+ CRM opportunities and found only 37 ever reached a decision, 34 of them wins; recommended fixing follow-up before scaling ad spend</li>
-            <li>Rebuilt wlfclub.com after finding the $15,000 agency build still served dead $79.99 template pricing and Lorem Ipsum to AI crawlers; added sitewide JSON-LD, FAQ schema, and llms.txt, cut over DNS to Cloudflare with zero downtime, and cut page weight 2,027 KB to 814 KB (Lighthouse 68 to 91)</li>
-            <li>Replaced a $12,000/yr vendor (Heads Up Health) with a members platform: WHOOP and Apple Health sync, a 17-marker labs engine, role-scoped access, and AI routed to Vertex AI under a signed GCP BAA rather than a consumer API; every other system architected PHI-free and out of HIPAA scope</li>
-            <li>Instrumented the clinic from zero: GA4, Meta Pixel, Microsoft Clarity, and a first-party tracker doing identity resolution from anonymous visitors to named CRM contacts</li>
-            <li>Built Warvis, the team&rsquo;s internal RAG assistant: BM25 retrieval over 391 notes, a weekly report pulling GoHighLevel, QuickBooks, and GA4, and an identity-resolution dashboard linking anonymous visits to known contacts</li>
+            <li>Cut wlfclub.com page weight 60% (2,027 KB to 814 KB) and raised Lighthouse 68 to 91 by rebuilding a $15,000 agency site that still served dead $79.99 template pricing to AI crawlers</li>
+            <li>Made ad spend attributable for the first time by building the measurement stack from zero: GA4, Meta Pixel, Microsoft Clarity, and a first-party tracker resolving anonymous visitors to named CRM contacts</li>
+            <li>Cut $12,000/yr in vendor spend by replacing Heads Up Health with an in-house members platform: WHOOP and Apple Health sync, a 17-marker labs engine, and AI on Vertex AI under a signed GCP BAA</li>
+            <li>Analyzed 782 CRM sales opportunities from two CSV exports and found 95% never reached a decision while decided deals won 92%; the finding moved the growth plan from more ad spend to follow-up</li>
+            <li>Replaced a weekly report hand-assembled from three systems with a one-click data room reconciling GoHighLevel, QuickBooks, and GA4; built Warvis, BM25 search over 391 internal notes</li>
           </ul>
         </section>
         <section class="block">
           <div class="row">
-            <span class="role">Webspansion &amp; Prospansion <span class="sub">&middot; Founder</span></span>
+            <span class="role">Webspansion &amp; Prospansion <span class="sub">&middot; Founder &amp; Web Developer</span></span>
             <span class="meta">Euless / Austin, TX &middot; Dec 2023 &ndash; Present</span>
           </div>
-          <p class="honors">Webspansion: free sites for nonprofits and small businesses. Prospansion: paid client builds</p>
+          <p class="honors">Free sites for nonprofits and immigrant-owned businesses; paid client builds under Prospansion</p>
           <ul>
-            <li>Shipped 19 live websites solo, intake through handoff, for immigrant-owned businesses, nonprofits, and student groups; closed the first paid build at $999</li>
-            <li>Engineered a cookieless first-party analytics platform (Cloudflare Workers, D1) tracking 27 client domains; ran the studio&rsquo;s own growth with 23 SEO posts and 8 case studies</li>
+            <li>Shipped 19 live client websites solo, intake through handoff, and closed the first paid build at $999</li>
+            <li>Built a cookieless first-party analytics platform on Cloudflare Workers and D1 that tracks 27 client domains; live builds average 97 Lighthouse SEO with WCAG AA contrast and keyboard paths</li>
           </ul>
+        </section>
+        <section class="block">
+          <div class="row">
+            <span class="role">Nepalese Student Association at UT Austin <span class="sub">&middot; Director of Social</span></span>
+            <span class="meta">Austin, TX &middot; 2026 &ndash; Present</span>
+          </div>
         </section>
 
         <h2>Projects</h2>
         <section class="block">
           <ul>
-            <li><span class="k">BohoBites &amp; Bohos BTS</span> (TikTok, DFW and Austin) &mdash; food-review brand grown to 7.2K followers and 122K likes across 67 posts, top video 558K views; Python analytics pipeline (pandas, Plotly, Shiny) behind it</li>
-            <li><span class="k">Family Assistant</span> (<a href="https://family.ashmitbohora.com" target="_blank" rel="noopener noreferrer">family.ashmitbohora.com</a>) &mdash; bilingual English/Nepali retrieval assistant on Cloudflare Workers with signed-cookie auth and rate limiting</li>
-            <li><span class="k">Guruji</span> (<a href="https://getguruji.com" target="_blank" rel="noopener noreferrer">getguruji.com</a>) &mdash; free gamified app that teaches beginners to code, replacing $100/month paid tutoring for its first users; row-level-security auth, accessibility-verified UI</li>
-            <li><span class="k">BohoQuest</span> (<a href="https://app.bohoquest.app" target="_blank" rel="noopener noreferrer">app.bohoquest.app</a>) &mdash; check-in app with server-side anti-cheat, shipped to TestFlight (Expo, Supabase)</li>
-            <li><span class="k">PickMyPath</span> (<a href="https://app.pickmypath.app" target="_blank" rel="noopener noreferrer">pickmypath.app</a>) &mdash; guitar practice platform with a 73-song dataset and a Jaccard-similarity recommender (Next.js, PostgreSQL)</li>
+            <li><span class="k">BohoBites posting analytics</span> (<a href="https://www.tiktok.com/@bohobites" target="_blank" rel="noopener noreferrer">tiktok.com/@bohobites</a>; Python, pandas, Plotly, Shiny) &mdash; recovered the full 67-post history after TikTok&rsquo;s export capped at 15 videos, then built per-hour engagement heatmaps and best-time-to-post in a Shiny dashboard that schedules a 7.2K-follower account (top video 558K views)</li>
+            <li><span class="k">Guruji</span> (<a href="https://getguruji.com" target="_blank" rel="noopener noreferrer">getguruji.com</a>; React, Expo, Supabase, TypeScript) &mdash; found 57 of 58 new quiz items placed the correct answer in the same slot, so a learner could score 100% without reading; reshuffled the catalog and shipped a regression test that fails any track over 55% in one slot. Free app teaching AI and coding to adult beginners, South Asian and immigrant families first: 196 lessons in 7 prerequisite-chained tracks, WCAG AA, replacing $100/month tutoring for its first users</li>
+            <li><span class="k">Family Assistant</span> (<a href="https://family.ashmitbohora.com" target="_blank" rel="noopener noreferrer">family.ashmitbohora.com</a>; Cloudflare Workers, KV, RAG) &mdash; bilingual English/Nepali retrieval assistant over private family records, so relatives who do not read English can ask about bills and insurance; HMAC-signed sessions, rate-limited, fails closed</li>
+            <li><span class="k">PickMyPath</span> (<a href="https://pickmypath.app" target="_blank" rel="noopener noreferrer">pickmypath.app</a>; Next.js, PostgreSQL) &mdash; built a Jaccard-similarity recommender over a 73-song dataset that sequences the next practice song from what a guitarist already knows</li>
           </ul>
         </section>
 
-        <h2>Leadership</h2>
+        <h2>Honors &amp; Awards</h2>
         <section class="block">
-          <div class="row">
-            <span class="role">Director of Social <span class="sub">&middot; Nepalese Student Association at UT Austin</span></span>
-            <span class="meta">2026 &ndash; Present</span>
-          </div>
-          <div class="row">
-            <span class="role">Youth Programs Volunteer <span class="sub">&middot; DFW &amp; NST Mandir</span></span>
-            <span class="meta">2021 &ndash; Present</span>
-          </div>
-          <p class="honors">Co-led $10,000+ in fundraising and ran logistics for health camps and blood drives.</p>
-        </section>
-
-        <h2>Skills</h2>
-        <section class="block skills">
-          <p><span class="k">Analytics &amp; growth:</span> SQL, GA4, Microsoft Clarity, Meta Pixel &amp; Ads, Google Ads, GoHighLevel CRM, UTM attribution, identity resolution, HIPAA-aware data handling (de-identified aggregates, PHI scanning), SEO &amp; schema markup</p>
-          <p><span class="k">Languages &amp; data:</span> Python (pandas, NumPy, Plotly, Shiny), R, SQL, TypeScript/JavaScript &middot; PostgreSQL, SQLite/D1</p>
-          <p><span class="k">Web &amp; AI:</span> React, Next.js, Astro, Cloudflare Workers, Vercel &middot; Claude Code, Codex, Claude &amp; Gemini APIs, RAG &middot; Git, Playwright</p>
-          <p><span class="k">Spoken:</span> English, Nepali (fluent); Hindi, Spanish (intermediate)</p>
+          <p class="honors">QuestBridge College Match Finalist (2024) &middot; UT Austin Impact Scholar ($48,000) &middot; Merner Scholarship ($2,000)</p>
         </section>
       </article>
 
