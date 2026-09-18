@@ -175,8 +175,17 @@ const schema = {
           author: { '@id': 'https://ashmitbohora.com/#person' },
         },
         {
-          '@type': 'CreativeWork',
+          '@type': 'SoftwareApplication',
           position: 9,
+          name: 'Kiln',
+          applicationCategory: 'DeveloperApplication',
+          description:
+            'Self-improving local training loop: fine-tunes a 7B model on-device (MLX, LoRA) with Claude as teacher to turn a scraped website into a structured redesign record. Held-out score 0.84 to 0.99 in one round, with a keep-or-rollback gate that rejects regressions.',
+          author: { '@id': 'https://ashmitbohora.com/#person' },
+        },
+        {
+          '@type': 'CreativeWork',
+          position: 10,
           name: 'BoHub',
           description:
             'Local-first AI personal OS: Claude API with tiered model routing, SQLite full-text search, prompt-injection defense.',

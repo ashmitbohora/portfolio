@@ -12,11 +12,12 @@
 - Education: B.S. Statistics and Data Science, The University of Texas at Austin, expected May 2029. GPA 3.75/4.0. Coursework: Probability & Statistical Inference, Linear Algebra, Elements of Software Design, Intro to Data Science, Statistical Thinking.
 - Work authorization: US permanent resident. No visa sponsorship required.
 - Honors: $50,000 in merit scholarships. QuestBridge Finalist (2024), UT Austin Impact Scholar ($48,000 merit award), Thomas & Elizabeth Merner Scholarship in Natural Sciences ($2,000, 2026-2027)
-- Leadership: Director of Social, Nepalese Student Association at UT Austin (2026-present). Youth programs volunteer, DFW & NST Mandir (2021-present), co-led $10,000+ in fundraising and ran logistics for health camps and blood drives.
+- Leadership: Director of Social, Nepalese Student Association at UT Austin (2026-present), leading a three-person team across a 17-event fall slate, campus partnerships, and ride logistics. Youth programs volunteer, DFW & NST Mandir (2021-present), co-led $10,000+ in fundraising and ran logistics for health camps and blood drives.
 
 ## Experience
 
 - **WLF Club, Growth & Analytics Engineer (May 2026-present, Fort Worth TX, remote from Austin since Aug 2026).** A healthcare provider operating under HIPAA. He owns analytics, tracking, the website, and CRM automation.
+  - Analyzed all 782 sales opportunities from two CRM CSV exports and found 95% never reached a decision while decided deals won 92%; 62% of wins carried no recorded lead source. The finding moved the growth plan from more ad spend to working the follow-up backlog, and motivated the tracking build below.
   - Instrumented the clinic from zero: GA4, Meta Pixel, Microsoft Clarity, and a first-party tracker doing identity resolution, stitching anonymous website visitors to named CRM contacts so marketing spend traces to real people.
   - Replaced Heads Up Health, a $12,000/yr vendor, with a members platform built in-house on Cloudflare Workers and D1: WHOOP and Apple Health sync, a 17-marker labs engine, role-scoped access, and a companion native app on TestFlight. AI in that platform routes through Vertex AI under a signed GCP business associate agreement rather than a consumer API; every other system is architected PHI-free and out of HIPAA scope by design.
   - Built Warvis, the team's internal retrieval-augmented assistant, hosted for everyone: BM25 retrieval over 391 allowlisted notes, a weekly report pulling GoHighLevel, QuickBooks, and GA4 into one page, and an identity-resolution dashboard.
@@ -27,17 +28,18 @@
 
 - **Warvis**: internal RAG assistant built at WLF Club and hosted for the whole team. BM25 retrieval over 391 allowlisted notes, a weekly report joining GoHighLevel, QuickBooks, and GA4, and an identity-resolution dashboard linking anonymous visits to known contacts. PHI-free by architecture.
 - **WLF Members Platform**: Cloudflare Workers + D1 member platform replacing a $12,000/yr vendor. WHOOP and Apple Health wearable sync, a 17-marker labs engine, role-scoped access, companion native app on TestFlight.
-- [Guruji](https://getguruji.com): free gamified app that teaches beginners to code, replacing $100/month paid tutoring for its first users. React, TypeScript, Supabase, row-level-security auth, accessibility-verified UI, and a self-run security audit against the live database with zero exploitable findings.
+- [Guruji](https://getguruji.com): free gamified app teaching AI and coding to adult beginners, South Asian and immigrant families first, replacing $100/month paid tutoring for its first users. 196 lessons across 7 prerequisite-chained tracks, WCAG AA with oversized type and tap targets because the learners are older. An audit of its question bank found 57 of 58 newly written multiple-choice items placed the correct answer in the same slot, meaning a learner could score 100% without reading a lesson; the catalog was reshuffled and a regression test now fails any track putting over 55% of its answers in one position. React, TypeScript, Supabase, row-level-security auth, accessibility-verified UI, and a self-run security audit against the live database with zero exploitable findings.
 - [BohoQuest](https://app.bohoquest.app): gamified check-in app (Expo/React Native) with server-side anti-cheat verification, Apple Sign-In, and a 121-test suite. Live in TestFlight.
 - [Family Assistant](https://family.ashmitbohora.com): bilingual English/Nepali retrieval assistant on Cloudflare Workers with signed-cookie auth and rate limiting.
 - PickMyPath (archived, domain retired 2026-09): guitar practice platform. Chord-aligned lyrics, a 73-song structured dataset, and a Jaccard-similarity recommender (Next.js, PostgreSQL).
 - [BohoBites Analytics](https://github.com/ashmitbohora/bohobites_dashboard): Python/Shiny dashboard processing real TikTok creator data (rolling KPI windows, posting-time models) for BohoBites.
 - [BohoBites](https://ashmitbohora.com/bohobites/): first-person POV food series filmed on smart glasses at small independent restaurants. As of 2026-09-14: 7,235 followers, 122.6K likes and 67 videos on TikTok ([@.bohobites](https://www.tiktok.com/@.bohobites)), 378 followers on Instagram ([@_bohobites](https://www.instagram.com/_bohobites)), 230 subscribers on YouTube ([@bohobites](https://www.youtube.com/@bohobites)); best post 561K views. Started in Dallas-Fort Worth, now filming "Boho's 100 Bites of Austin." Collab and press contact: bohobitesofficial@gmail.com.
+- **Kiln**: a self-improving local training loop. Fine-tunes a 7B model on-device (MLX, LoRA) with Claude as the teacher to turn a scraped website into a structured redesign record. Held-out score went 0.84 to 0.99 in one round; a keep-or-rollback gate re-scores every candidate on a held-out set and rejected a later regression on its own, which is what makes it safe to run unattended.
 - **BoHub**: local-first AI personal OS: Claude API tiered model routing, SQLite full-text search, security model.
 
 ## Skills
 
 - Analytics & growth: SQL, GA4, Microsoft Clarity, Meta Pixel & Ads, Google Ads, GoHighLevel CRM, UTM attribution, identity resolution, HIPAA-aware data handling (de-identified aggregates, PHI scanning), SEO and schema markup, answer engine optimization
-- Languages & data: Python (pandas, NumPy, Plotly, Shiny), R, SQL, TypeScript/JavaScript, PostgreSQL, SQLite/D1
-- Web & AI: React, Next.js, Astro, Cloudflare Workers, Vercel, Claude Code, Codex, Claude & Gemini APIs, RAG, Git, Playwright
+- Data & analysis: Python (pandas, NumPy, Plotly, Shiny), R, SQL (PostgreSQL, SQLite, Cloudflare D1), Excel, dashboards, data pipelines
+- Software & AI: TypeScript, React, Next.js, Astro, Expo, Cloudflare Workers, Supabase, Git, Claude Code, Claude & Gemini APIs, RAG, MLX/LoRA fine-tuning, Playwright
 - Spoken: English, Nepali (fluent); Hindi, Spanish (intermediate)
