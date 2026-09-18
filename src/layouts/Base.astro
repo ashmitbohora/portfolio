@@ -25,12 +25,23 @@ const schema = {
       url: 'https://ashmitbohora.com/',
       image: ogImage.href,
       email: 'mailto:ashmitbohora@utexas.edu',
-      jobTitle: 'Statistics & Data Science Student',
+      jobTitle: 'Growth Engineer',
       description:
-        'UT Austin Statistics & Data Science student (Class of 2029) seeking Summer 2027 internships in data science, software engineering, machine learning, or AI. Founder of Webspansion (19+ live client sites), builder of Guruji and BohoQuest, and GTM Engineer at WLF Club.',
+        'UT Austin Statistics & Data Science sophomore (Class of 2029, GPA 3.75) and Growth Engineer at WLF Club, where he owns analytics, tracking, the website, and CRM automation, and replaced a $12,000/yr vendor with software he built. Founder of Webspansion (19 live client sites shipped solo) and Prospansion. Seeking Summer 2027 internships in growth engineering, marketing analytics, product analytics, and data science. US permanent resident, no sponsorship required.',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'WLF Club',
+        url: 'https://wlfclub.com',
+      },
+      alumniOf: {
+        '@type': 'CollegeOrUniversity',
+        name: 'The University of Texas at Austin',
+      },
       award: [
         'QuestBridge Finalist (2024)',
         'UT Austin Impact Scholar ($48,000 merit award)',
+        // $48,000 Impact + $2,000 Merner = the $50K figure the site shows
+        'Thomas & Elizabeth Merner Scholarship in Natural Sciences ($2,000, 2026-2027)',
       ],
       affiliation: {
         '@type': 'CollegeOrUniversity',
@@ -58,14 +69,22 @@ const schema = {
       ],
       knowsAbout: [
         'Data Science',
-        'Software Engineering',
-        'Machine Learning',
+        'Data Analytics',
+        'Growth Engineering',
+        'Marketing Analytics',
+        'Identity Resolution',
+        'Marketing Attribution',
+        'Google Analytics 4',
+        'Retrieval-Augmented Generation',
+        'Answer Engine Optimization',
         'Python',
+        'pandas',
+        'SQL',
         'TypeScript',
         'React',
         'Next.js',
-        'SQL',
-        'Data Analytics',
+        'Cloudflare Workers',
+        'Software Engineering',
         'AI-assisted Development',
       ],
     },
@@ -81,36 +100,54 @@ const schema = {
       name: 'Projects by Ashmit Bohora',
       itemListElement: [
         {
-          '@type': 'Organization',
-          position: 1,
-          name: 'Webspansion',
-          url: 'https://getwebspansion.org',
-          description:
-            'Free-tier web studio founded by Ashmit Bohora at 17: 19+ live client websites built solo, pro bono, for local businesses and nonprofits.',
-          founder: { '@id': 'https://ashmitbohora.com/#person' },
-        },
-        {
-          '@type': 'Organization',
-          position: 2,
-          name: 'Prospansion',
-          url: 'https://prospansion.com',
-          description:
-            'Paid technical/data arm offering analytics, SEO, and automation. Flagship product Prospansion Studio is a multi-tenant Cloudflare Workers + D1 CMS deployed for nonprofit client Ocura.',
-          founder: { '@id': 'https://ashmitbohora.com/#person' },
-        },
-        {
           '@type': 'SoftwareApplication',
-          position: 3,
-          name: 'Guruji',
-          url: 'https://getguruji.com',
-          applicationCategory: 'EducationalApplication',
+          position: 1,
+          name: 'Warvis',
+          applicationCategory: 'BusinessApplication',
           description:
-            'Gamified Duolingo-style learning PWA (React, TypeScript, Supabase) with RLS-scoped auth, AA-verified UI, and a self-run security audit.',
+            'Internal retrieval-augmented assistant built for WLF Club and hosted for the whole team: BM25 retrieval over 391 allowlisted notes, a weekly report pulling GoHighLevel, QuickBooks, and GA4 into one page, and an identity-resolution dashboard linking anonymous website visits to known CRM contacts. Architected PHI-free and out of HIPAA scope.',
           author: { '@id': 'https://ashmitbohora.com/#person' },
         },
         {
           '@type': 'SoftwareApplication',
+          position: 2,
+          name: 'WLF Members Platform',
+          applicationCategory: 'HealthApplication',
+          description:
+            'Member platform built in-house on Cloudflare Workers and D1 to replace Heads Up Health, a $12,000/yr vendor: WHOOP and Apple Health sync, a 17-marker labs engine, role-scoped access, a companion native app on TestFlight, and AI routed through Vertex AI under a signed GCP business associate agreement rather than a consumer API.',
+          author: { '@id': 'https://ashmitbohora.com/#person' },
+        },
+        {
+          '@type': 'Organization',
+          position: 3,
+          name: 'Webspansion',
+          url: 'https://getwebspansion.org',
+          description:
+            'Free-tier web studio founded by Ashmit Bohora at 17 (Dec 2023): 19 live client websites built solo, pro bono, for nonprofits, immigrant-owned local businesses, and community groups. Runs on a cookieless first-party analytics platform he engineered on Cloudflare Workers and D1, now tracking 27 client domains.',
+          founder: { '@id': 'https://ashmitbohora.com/#person' },
+        },
+        {
+          '@type': 'Organization',
           position: 4,
+          name: 'Prospansion',
+          url: 'https://prospansion.com',
+          description:
+            'Paid technical/data arm offering analytics, SEO, and automation; first paid build closed at $999. Flagship product Prospansion Studio is a multi-tenant Cloudflare Workers + D1 CMS with hardened auth and a fixed sanitizer-bypass XSS vulnerability, deployed for nonprofit client Ocura.',
+          founder: { '@id': 'https://ashmitbohora.com/#person' },
+        },
+        {
+          '@type': 'SoftwareApplication',
+          position: 5,
+          name: 'Guruji',
+          url: 'https://getguruji.com',
+          applicationCategory: 'EducationalApplication',
+          description:
+            'Free gamified app that teaches beginners to code, replacing $100/month paid tutoring for its first users. React, TypeScript, Supabase, with row-level-security auth, accessibility-verified UI, and a self-run security audit against the live database.',
+          author: { '@id': 'https://ashmitbohora.com/#person' },
+        },
+        {
+          '@type': 'SoftwareApplication',
+          position: 6,
           name: 'BohoQuest',
           url: 'https://app.bohoquest.app',
           applicationCategory: 'LifestyleApplication',
@@ -120,20 +157,30 @@ const schema = {
         },
         {
           '@type': 'SoftwareApplication',
-          position: 5,
+          position: 7,
+          name: 'Family Assistant',
+          url: 'https://family.ashmitbohora.com',
+          applicationCategory: 'UtilitiesApplication',
+          description:
+            'Bilingual English/Nepali retrieval assistant on Cloudflare Workers with signed-cookie auth and rate limiting.',
+          author: { '@id': 'https://ashmitbohora.com/#person' },
+        },
+        {
+          '@type': 'SoftwareApplication',
+          position: 8,
           name: 'PickMyPath',
           url: 'https://app.pickmypath.app',
           applicationCategory: 'EducationalApplication',
           description:
-            'Guitar-learning app with chord-aligned lyrics, practice tracking, and a recommendation engine. Live but paused. Next.js, React, TypeScript, Supabase/PostgreSQL.',
+            'Guitar practice platform with chord-aligned lyrics, a 73-song structured dataset, and a Jaccard-similarity recommender. Live but paused. Next.js, React, TypeScript, PostgreSQL.',
           author: { '@id': 'https://ashmitbohora.com/#person' },
         },
         {
           '@type': 'CreativeWork',
-          position: 6,
+          position: 9,
           name: 'BoHub',
           description:
-            'Architecture-complete AI personal OS: Claude API with tiered model routing, SQLite full-text search, prompt-injection defense.',
+            'Local-first AI personal OS: Claude API with tiered model routing, SQLite full-text search, prompt-injection defense.',
           author: { '@id': 'https://ashmitbohora.com/#person' },
         },
       ],
@@ -165,7 +212,7 @@ const schema = {
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Ashmit Bohora: Full-stack. Literally. UT Austin Statistics & Data Science, seeking Summer 2027 internships." />
+    <meta property="og:image:alt" content="Ashmit Bohora: Full-stack. Literally. UT Austin Statistics & Data Science sophomore and Growth Engineer, seeking Summer 2027 internships." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />

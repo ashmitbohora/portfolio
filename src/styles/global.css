@@ -93,7 +93,21 @@ header.site{border-bottom:3px solid var(--ink);background:var(--kraft);position:
 .hero .kicker b{color:var(--ketchup)}
 h1{font-family:var(--disp);font-weight:400;font-size:clamp(46px,7vw,86px);line-height:1.02}
 h1 .lit{color:var(--ketchup)}
-.hero .dek{margin:22px auto 0;font-size:20px;color:var(--ink-soft);max-width:48ch}
+.h1-wrap{position:relative}
+/* Quirky hand-annotation that explains the burger gag. Absolute on desktop so it floats
+   off the centered h1; falls back to normal flow under 1000px so it can never push the
+   page wide (the 390px scrollWidth check is the gate). */
+.h1-note{position:absolute;left:50%;top:100%;transform:translate(min(15vw,215px),-4px) rotate(-3deg);
+  display:flex;align-items:flex-start;gap:8px;margin:0;
+  font-family:var(--mono);font-size:12.5px;line-height:1.45;letter-spacing:.02em;
+  color:var(--ketchup);text-align:left;white-space:nowrap;pointer-events:none}
+.h1-note .note-arrow{width:46px;height:35px;flex:none;margin-top:-10px;color:var(--mustard)}
+@media(max-width:1000px){
+  .h1-note{position:static;transform:rotate(-2deg);justify-content:center;
+    margin:16px auto 0;white-space:normal;max-width:30ch}
+  .h1-note .note-arrow{transform:scaleX(-1);margin-top:-6px}
+}
+.hero .dek{margin:26px auto 0;font-size:20px;color:var(--ink-soft);max-width:56ch}
 .hero .dek b{color:var(--ink);font-weight:600}
 .hero-numbers{margin:30px auto 0;display:flex;gap:34px;justify-content:center;flex-wrap:wrap}
 .hero-numbers .hn .n{font-family:var(--disp);font-size:32px;color:var(--ink)}

@@ -1,31 +1,43 @@
 # Ashmit Bohora
 
-> Statistics & Data Science student at UT Austin (Class of 2029, GPA 3.75) seeking Summer 2027 internships in data science, software engineering, or AI. Shipped 19+ live client websites solo through Webspansion, built production apps with real users (Guruji, BohoQuest), and rebuilt WLF Club's website and infrastructure as their GTM Engineer.
+> Statistics & Data Science sophomore at UT Austin (Class of 2029, GPA 3.75) and Growth Engineer at WLF Club, a healthcare clinic, where he owns analytics, tracking, the website, and CRM automation. He replaced a $12,000/yr vendor with software he built, instrumented the clinic's measurement stack from zero including first-party identity resolution, and shipped 19 free client websites solo through Webspansion. Seeking Summer 2027 internships in growth engineering, marketing analytics, product analytics, and data science. US permanent resident, no sponsorship required.
 
 ## About
 
-- Location: Austin, TX
+- Location: Austin, TX (open to Dallas-Fort Worth and remote)
 - Email: ashmitbohora@utexas.edu
 - Website: https://ashmitbohora.com (plain one-page resume: https://ashmitbohora.com/resume/)
 - GitHub: https://github.com/ashmitbohora
 - LinkedIn: https://www.linkedin.com/in/ashmitbohora
-- Honors: QuestBridge Finalist (2024), UT Austin Impact Scholar ($48,000 merit award), Thomas & Elizabeth Merner Scholarship in Natural Sciences ($2,000, 2026-2027)
+- Education: B.S. Statistics and Data Science, The University of Texas at Austin, expected May 2029. GPA 3.75/4.0. Coursework: Probability & Statistical Inference, Linear Algebra, Elements of Software Design, Intro to Data Science, Statistical Thinking.
+- Work authorization: US permanent resident. No visa sponsorship required.
+- Honors: $50,000 in merit scholarships. QuestBridge Finalist (2024), UT Austin Impact Scholar ($48,000 merit award), Thomas & Elizabeth Merner Scholarship in Natural Sciences ($2,000, 2026-2027)
+- Leadership: Director of Social, Nepalese Student Association at UT Austin (2026-present). Youth programs volunteer, DFW & NST Mandir (2021-present), co-led $10,000+ in fundraising and ran logistics for health camps and blood drives.
 
 ## Experience
 
-- WLF Club (GTM Engineer, May 2026-present, Fort Worth TX, remote from Austin since Aug 2026): rebuilt wlfclub.com in-house, replacing a $15,000 agency build that still had 12 Lorem Ipsum pages live in production (30+ pages, new hosting, verify-gated deploy pipeline, ending agency billing entirely). Migrated the clinic's DNS to Cloudflare with zero downtime and zero mail interruption, verifying 29 records and SPF/DKIM/DMARC under a p=reject policy before cutover. Built Warvis, an internal RAG assistant hosted for the whole team, and a member health portal (Cloudflare Workers + D1) replacing paid HeadsUp Health software: WHOOP/Apple Health wearable sync, a 17-marker labs engine, and a companion native app live on TestFlight.
-- Webspansion & Prospansion (founder, Apr 2024-present): Webspansion (free tier) is a pro bono studio: 19+ free live websites shipped as community service for nonprofits, immigrant-owned local businesses, and community groups, solo, accessibility-first, intake through deploy. Prospansion (paid tier) is the technical/data arm offering analytics, SEO, and automation; its flagship is Prospansion Studio, a multi-tenant Cloudflare Workers + D1 CMS with hardened auth (invite-only signup, hashed tokens, single-use resets) and a fixed sanitizer-bypass XSS vulnerability verified via exploit proof-of-fix, deployed for nonprofit client Ocura.
+- **WLF Club, Growth Engineer (May 2026-present, Fort Worth TX, remote from Austin since Aug 2026).** A healthcare provider operating under HIPAA. He owns analytics, tracking, the website, and CRM automation.
+  - Instrumented the clinic from zero: GA4, Meta Pixel, Microsoft Clarity, and a first-party tracker doing identity resolution, stitching anonymous website visitors to named CRM contacts so marketing spend traces to real people.
+  - Replaced Heads Up Health, a $12,000/yr vendor, with a members platform built in-house on Cloudflare Workers and D1: WHOOP and Apple Health sync, a 17-marker labs engine, role-scoped access, and a companion native app on TestFlight. AI in that platform routes through Vertex AI under a signed GCP business associate agreement rather than a consumer API; every other system is architected PHI-free and out of HIPAA scope by design.
+  - Built Warvis, the team's internal retrieval-augmented assistant, hosted for everyone: BM25 retrieval over 391 allowlisted notes, a weekly report pulling GoHighLevel, QuickBooks, and GA4 into one page, and an identity-resolution dashboard.
+  - Rebuilt wlfclub.com after finding the $15,000 agency build was still serving dead $79.99 template membership pricing and 12 Lorem Ipsum pages, off the real offer by an order of magnitude and fully readable to Google and to AI crawlers. Added sitewide JSON-LD, FAQ schema, and an llms.txt so answer engines read the real business; migrated DNS to Cloudflare with zero downtime and zero mail interruption (29 records plus SPF/DKIM/DMARC verified under a strict reject policy before cutover); cut homepage weight from 2,027 KB to 814 KB and Lighthouse performance from 68 to 91.
+- **Webspansion & Prospansion, Founder (Dec 2023-present, Euless and Austin TX).** Webspansion is a free tier: accessibility-first websites built pro bono, as community service, for nonprofits, immigrant-owned local businesses, and community groups, intake through handoff, all solo. 19 live sites shipped. He also engineered the studio's cookieless first-party analytics platform on Cloudflare Workers and D1, now tracking 27 client domains, and ran its growth with 23 SEO posts and 8 case studies. Prospansion is the paid arm (analytics, SEO, automation); its flagship is Prospansion Studio, a multi-tenant Cloudflare Workers + D1 CMS with hardened auth (invite-only signup, hashed tokens, single-use resets) and a fixed sanitizer-bypass XSS vulnerability verified via exploit proof-of-fix, deployed for nonprofit client Ocura. First paid outside build closed at $999.
 
 ## Projects
 
-- Warvis: RAG knowledge system ingesting 700+ documents into a cited hybrid-search graph (SQLite FTS5 + local embeddings) with a HIPAA-aware PHI-scanning gate and fail-closed access control on every query (229 passing tests). Built at WLF Club, hosted for the whole team.
-- [Guruji](https://getguruji.com): gamified Duolingo-style learning PWA (React, TypeScript, Supabase) with RLS-scoped auth and a self-run security audit against the live database (zero exploitable vulnerabilities). Multi-track curriculum: Data Decoded (data science) and QuickClaude (coding) alongside English and digital-literacy content.
+- **Warvis**: internal RAG assistant built at WLF Club and hosted for the whole team. BM25 retrieval over 391 allowlisted notes, a weekly report joining GoHighLevel, QuickBooks, and GA4, and an identity-resolution dashboard linking anonymous visits to known contacts. PHI-free by architecture.
+- **WLF Members Platform**: Cloudflare Workers + D1 member platform replacing a $12,000/yr vendor. WHOOP and Apple Health wearable sync, a 17-marker labs engine, role-scoped access, companion native app on TestFlight.
+- [Guruji](https://getguruji.com): free gamified app that teaches beginners to code, replacing $100/month paid tutoring for its first users. React, TypeScript, Supabase, row-level-security auth, accessibility-verified UI, and a self-run security audit against the live database with zero exploitable findings.
 - [BohoQuest](https://app.bohoquest.app): gamified check-in app (Expo/React Native) with server-side anti-cheat verification, Apple Sign-In, and a 121-test suite. Live in TestFlight.
-- [PickMyPath](https://app.pickmypath.app): guitar-learning app, live but paused: chord-aligned lyrics, 73-song structured dataset, recommendation engine (Next.js, Supabase/PostgreSQL).
-- [BohoBites Analytics](https://github.com/ashmitbohora/bohobites_dashboard): Python/Shiny dashboard processing real TikTok creator data (rolling KPI windows, posting-time models) for BohoBites, a 7K+ follower food brand.
-- [BohoBites](https://ashmitbohora.com/bohobites/): first-person POV food series filmed on smart glasses at small independent restaurants. As of 2026-08-23: 7,212 followers, 120.9K likes and 60 videos on TikTok ([@.bohobites](https://www.tiktok.com/@.bohobites)), 277 followers on Instagram ([@_bohobites](https://www.instagram.com/_bohobites)), 218 subscribers on YouTube ([@bohobites](https://www.youtube.com/@bohobites)); best post 560.7K views. Started in Dallas-Fort Worth, now filming "Boho's 100 Bites of Austin." Collab and press contact: bohobitesofficial@gmail.com.
-- BoHub: local-first AI personal OS: Claude API tiered model routing, SQLite full-text search, security model.
+- [Family Assistant](https://family.ashmitbohora.com): bilingual English/Nepali retrieval assistant on Cloudflare Workers with signed-cookie auth and rate limiting.
+- [PickMyPath](https://app.pickmypath.app): guitar practice platform, live but paused. Chord-aligned lyrics, a 73-song structured dataset, and a Jaccard-similarity recommender (Next.js, PostgreSQL).
+- [BohoBites Analytics](https://github.com/ashmitbohora/bohobites_dashboard): Python/Shiny dashboard processing real TikTok creator data (rolling KPI windows, posting-time models) for BohoBites.
+- [BohoBites](https://ashmitbohora.com/bohobites/): first-person POV food series filmed on smart glasses at small independent restaurants. As of 2026-09-14: 7,235 followers, 122.6K likes and 67 videos on TikTok ([@.bohobites](https://www.tiktok.com/@.bohobites)), 378 followers on Instagram ([@_bohobites](https://www.instagram.com/_bohobites)), 230 subscribers on YouTube ([@bohobites](https://www.youtube.com/@bohobites)); best post 561K views. Started in Dallas-Fort Worth, now filming "Boho's 100 Bites of Austin." Collab and press contact: bohobitesofficial@gmail.com.
+- **BoHub**: local-first AI personal OS: Claude API tiered model routing, SQLite full-text search, security model.
 
 ## Skills
 
-Python, Pandas, SQL (PostgreSQL, SQLite/libSQL), TypeScript, React, Next.js, Supabase, R (coursework), Shiny, Plotly, FastAPI, Remotion, Claude Code, Codex, Claude & Gemini APIs, RAG, Git, Playwright, Vercel, Cloudflare.
+- Analytics & growth: SQL, GA4, Microsoft Clarity, Meta Pixel & Ads, Google Ads, GoHighLevel CRM, UTM attribution, identity resolution, HIPAA-aware data handling (de-identified aggregates, PHI scanning), SEO and schema markup, answer engine optimization
+- Languages & data: Python (pandas, NumPy, Plotly, Shiny), R, SQL, TypeScript/JavaScript, PostgreSQL, SQLite/D1
+- Web & AI: React, Next.js, Astro, Cloudflare Workers, Vercel, Claude Code, Codex, Claude & Gemini APIs, RAG, Git, Playwright
+- Spoken: English, Nepali (fluent); Hindi, Spanish (intermediate)
