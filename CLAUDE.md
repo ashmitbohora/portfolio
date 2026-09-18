@@ -1,6 +1,20 @@
 # ashmitbohora.com portfolio
 
 ## Current State
+- 2026-09-17 (later): **BURGER LAYER LABELS FIXED + DEPLOYED** (commit `3209260`, deploy `72d57fdd`,
+  all 12 labels curl-verified live). They still described the site as it was in July. 01 said
+  "Frontend" over a chapter that is now an AEO discovery + DNS cutover; 03 said "APIs & automation"
+  over the Prospansion paid-tier chapter. Now: 01 **The rebuild**, 02 **The free tier**,
+  03 **The paid tier**, 04 The data / 05 Shipped / 06 The foundation unchanged. 02+03 read as a pair
+  because that is literally what Webspansion and Prospansion are.
+  ⚠️ **GOTCHA, THE REAL FIX:** the layer labels live in **TWO hardcoded lists** and they had DRIFTED,
+  layer 02 rendered as "DESIGN & CLIENTS" in the sticky pane and "The fresh stuff" in the chapter at
+  the same time. Sources: `src/scripts/burger.ts` (~line 98, sticky-pane tags) AND the six
+  `.chapter .tag` spans in `src/pages/index.astro`, plus the initial `#layerTag` div.
+  **Rename a layer = edit all three places.** A comment in burger.ts now says so.
+  ⚠️ VERIFY GOTCHA: `dist/index.html` does NOT reference `burger.*.js` by name (Astro dynamic-imports
+  it via an entry chunk), so grepping index.html for the sticky labels silently "passes" on the
+  homepage. Fetch the bundle directly: `curl -s https://ashmitbohora.com/_astro/burger.<hash>.js`.
 - 2026-09-17: **FULL CONTENT REFRESH, DEPLOYED + LIVE** (commit `257d5c6`, pushed, deploy `72aa7faa`,
   curl-verified on the apex). The live site had been serving 08-13 era facts. Now matches resume v3.
   Corrected: WLF title GTM Engineer -> **Growth Engineer**; Warvis was described as local-only with
