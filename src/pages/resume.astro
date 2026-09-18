@@ -85,9 +85,9 @@ import Base from '../layouts/Base.astro';
           <ul>
             <li>Cut wlfclub.com page weight 60% (2,027 KB to 814 KB) and raised Lighthouse 68 to 91 by rebuilding a $15,000 agency site that still served dead $79.99 template pricing to AI crawlers</li>
             <li>Made ad spend attributable for the first time by building the measurement stack from zero: GA4, Meta Pixel, Microsoft Clarity, and a first-party tracker resolving anonymous visitors to named CRM contacts</li>
-            <li>Cut $12,000/yr in vendor spend by replacing Heads Up Health with an in-house members platform: WHOOP and Apple Health sync, a 17-marker labs engine, and AI on Vertex AI under a signed GCP BAA</li>
+            <li>Cut $12,000/yr in vendor spend by replacing Heads Up Health with a web portal and an iOS app on one database: WHOOP and Apple Health ingestion, a 17-marker labs engine, and AI on Vertex AI under a signed GCP BAA</li>
             <li>Analyzed 782 CRM sales opportunities from two CSV exports and found 95% never reached a decision while decided deals won 92%; the finding moved the growth plan from more ad spend to follow-up</li>
-            <li>Replaced a weekly report hand-assembled from three systems with a one-click data room reconciling GoHighLevel, QuickBooks, and GA4; built Warvis, BM25 search over 391 internal notes</li>
+            <li>Replaced a weekly report hand-assembled from three systems with a one-click data room reconciling GoHighLevel, QuickBooks, and GA4, built on Warvis: BM25 retrieval over 391 internal notes behind a fail-closed rail that keeps PHI out of every prompt</li>
           </ul>
         </section>
         <section class="block">
@@ -98,7 +98,8 @@ import Base from '../layouts/Base.astro';
           <p class="honors">Free sites for nonprofits and immigrant-owned businesses; paid client builds under Prospansion</p>
           <ul>
             <li>Shipped 19 live client websites solo, intake through handoff, and closed the first paid build at $999</li>
-            <li>Built a cookieless first-party analytics platform on Cloudflare Workers and D1 that tracks 27 client domains; live builds average 97 Lighthouse SEO with WCAG AA contrast and keyboard paths</li>
+            <li>Built a cookieless, first-party analytics platform on Cloudflare Workers and D1 tracking 27 client domains: designed the 8-table SQL schema with identity resolution and wrote the bot-filtered aggregations behind every dashboard number</li>
+            <li>Live client builds average 97 Lighthouse SEO with WCAG AA contrast and full keyboard paths</li>
           </ul>
         </section>
 
@@ -108,7 +109,6 @@ import Base from '../layouts/Base.astro';
             <li><span class="k">BohoBites posting analytics</span> (<a href="https://www.tiktok.com/@.bohobites" target="_blank" rel="noopener noreferrer">tiktok.com/@.bohobites</a>; Python, pandas, Plotly, Shiny) &mdash; recovered the full 67-post history after TikTok&rsquo;s export capped at 15 videos, then built per-hour engagement heatmaps and best-time-to-post in a Shiny dashboard that schedules a 7.2K-follower account (top video 558K views)</li>
             <li><span class="k">Guruji</span> (<a href="https://getguruji.com" target="_blank" rel="noopener noreferrer">getguruji.com</a>; React, Expo, Supabase, TypeScript) &mdash; found 57 of 58 new quiz items placed the correct answer in the same slot, so a learner could score 100% without reading; reshuffled the catalog and shipped a regression test that fails any track over 55% in one slot. Free app teaching AI and coding to adult beginners, South Asian and immigrant families first: 196 lessons in 7 prerequisite-chained tracks, WCAG AA, replacing $100/month tutoring for its first users</li>
             <li><span class="k">Kiln</span> (local model training loop; Python, MLX, LoRA, Ollama) &mdash; fine-tuned a 7B model on-device to turn scraped websites into structured redesign records, with Claude as the teacher: held-out score 0.84 to 0.99 in one round, then a keep-or-rollback gate that rejected a later regression on its own</li>
-            <li><span class="k">PickMyPath</span> (guitar practice platform, archived; Next.js, PostgreSQL) &mdash; built a Jaccard-similarity recommender over a 73-song dataset that sequences the next practice song from what a guitarist already knows</li>
           </ul>
         </section>
 
